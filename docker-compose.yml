@@ -1,0 +1,16 @@
+version: '1'
+services:
+  generate-proto:
+    container_name: johnny-proto-generator
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: >
+      sh -c "
+        rm -rf ./proto_out && 
+        mkdir -p ./proto_out/pbjs && 
+        pbjs --target static-module -p js --wrap commonjs --keep-case -o ./proto_out/pbjs/compiled.js ./proto/*
+        pbts -o proto_out/pbjs/compiled.d.ts ./proto_out/pbjs/compiled.js
+      "
+    volumes: 
+      - ./workdir/:/usr/src/app
