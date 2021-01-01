@@ -2,7 +2,8 @@
     "name": "johnny-proto",
     "version": "1.0.0",
     "description": "",
-    "main": "johnnyproto.js",
+    "main": "workdir/proto_out/compiled.js",
+    "types": "workdir/proto_out/compiled.d.ts",
     "private": true,
     "scripts": {
     },
