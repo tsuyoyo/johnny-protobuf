@@ -1,0 +1,13 @@
+{
+    "name": "johnny-proto",
+    "version": "1.0.0",
+    "description": "",
+    "main": "johnnyproto.js",
+    "private": true,
+    "scripts": {
+    },
+    "dependencies": {
+    },
+    "author": "Tsuyoshi Yoshioka",
+    "license": "GNUGPL"
+}
