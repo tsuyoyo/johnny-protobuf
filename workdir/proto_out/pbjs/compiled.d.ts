@@ -450,6 +450,1164 @@ export namespace pj {
                     }
                 }
 
+                /** Properties of an Instrument. */
+                interface IInstrument {
+
+                    /** Instrument id */
+                    id?: (number|null);
+
+                    /** Instrument name */
+                    name?: (string|null);
+
+                    /** Instrument authorId */
+                    authorId?: (string|null);
+                }
+
+                /** Represents an Instrument. */
+                class Instrument implements IInstrument {
+
+                    /**
+                     * Constructs a new Instrument.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IInstrument);
+
+                    /** Instrument id. */
+                    public id: number;
+
+                    /** Instrument name. */
+                    public name: string;
+
+                    /** Instrument authorId. */
+                    public authorId: string;
+
+                    /**
+                     * Creates a new Instrument instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns Instrument instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IInstrument): pj.sakuchin.percussion.proto.Instrument;
+
+                    /**
+                     * Encodes the specified Instrument message. Does not implicitly {@link pj.sakuchin.percussion.proto.Instrument.verify|verify} messages.
+                     * @param message Instrument message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IInstrument, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified Instrument message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.Instrument.verify|verify} messages.
+                     * @param message Instrument message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IInstrument, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes an Instrument message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns Instrument
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.Instrument;
+
+                    /**
+                     * Decodes an Instrument message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns Instrument
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.Instrument;
+
+                    /**
+                     * Verifies an Instrument message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates an Instrument message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns Instrument
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.Instrument;
+
+                    /**
+                     * Creates a plain object from an Instrument message. Also converts values to other types if specified.
+                     * @param message Instrument
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.Instrument, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this Instrument to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PostInstrumentRequest. */
+                interface IPostInstrumentRequest {
+
+                    /** PostInstrumentRequest name */
+                    name?: (string|null);
+                }
+
+                /** Represents a PostInstrumentRequest. */
+                class PostInstrumentRequest implements IPostInstrumentRequest {
+
+                    /**
+                     * Constructs a new PostInstrumentRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPostInstrumentRequest);
+
+                    /** PostInstrumentRequest name. */
+                    public name: string;
+
+                    /**
+                     * Creates a new PostInstrumentRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PostInstrumentRequest instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPostInstrumentRequest): pj.sakuchin.percussion.proto.PostInstrumentRequest;
+
+                    /**
+                     * Encodes the specified PostInstrumentRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostInstrumentRequest.verify|verify} messages.
+                     * @param message PostInstrumentRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPostInstrumentRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PostInstrumentRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostInstrumentRequest.verify|verify} messages.
+                     * @param message PostInstrumentRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPostInstrumentRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PostInstrumentRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PostInstrumentRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PostInstrumentRequest;
+
+                    /**
+                     * Decodes a PostInstrumentRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PostInstrumentRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PostInstrumentRequest;
+
+                    /**
+                     * Verifies a PostInstrumentRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PostInstrumentRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PostInstrumentRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PostInstrumentRequest;
+
+                    /**
+                     * Creates a plain object from a PostInstrumentRequest message. Also converts values to other types if specified.
+                     * @param message PostInstrumentRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PostInstrumentRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PostInstrumentRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a GetInstrumentByIdResoponse. */
+                interface IGetInstrumentByIdResoponse {
+
+                    /** GetInstrumentByIdResoponse instrument */
+                    instrument?: (pj.sakuchin.percussion.proto.IInstrument|null);
+                }
+
+                /** Represents a GetInstrumentByIdResoponse. */
+                class GetInstrumentByIdResoponse implements IGetInstrumentByIdResoponse {
+
+                    /**
+                     * Constructs a new GetInstrumentByIdResoponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IGetInstrumentByIdResoponse);
+
+                    /** GetInstrumentByIdResoponse instrument. */
+                    public instrument?: (pj.sakuchin.percussion.proto.IInstrument|null);
+
+                    /**
+                     * Creates a new GetInstrumentByIdResoponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns GetInstrumentByIdResoponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IGetInstrumentByIdResoponse): pj.sakuchin.percussion.proto.GetInstrumentByIdResoponse;
+
+                    /**
+                     * Encodes the specified GetInstrumentByIdResoponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetInstrumentByIdResoponse.verify|verify} messages.
+                     * @param message GetInstrumentByIdResoponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IGetInstrumentByIdResoponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified GetInstrumentByIdResoponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetInstrumentByIdResoponse.verify|verify} messages.
+                     * @param message GetInstrumentByIdResoponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IGetInstrumentByIdResoponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a GetInstrumentByIdResoponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns GetInstrumentByIdResoponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.GetInstrumentByIdResoponse;
+
+                    /**
+                     * Decodes a GetInstrumentByIdResoponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns GetInstrumentByIdResoponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.GetInstrumentByIdResoponse;
+
+                    /**
+                     * Verifies a GetInstrumentByIdResoponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a GetInstrumentByIdResoponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns GetInstrumentByIdResoponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.GetInstrumentByIdResoponse;
+
+                    /**
+                     * Creates a plain object from a GetInstrumentByIdResoponse message. Also converts values to other types if specified.
+                     * @param message GetInstrumentByIdResoponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.GetInstrumentByIdResoponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this GetInstrumentByIdResoponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PutInstrumentByIdRequest. */
+                interface IPutInstrumentByIdRequest {
+
+                    /** PutInstrumentByIdRequest instrument */
+                    instrument?: (pj.sakuchin.percussion.proto.IInstrument|null);
+                }
+
+                /** Represents a PutInstrumentByIdRequest. */
+                class PutInstrumentByIdRequest implements IPutInstrumentByIdRequest {
+
+                    /**
+                     * Constructs a new PutInstrumentByIdRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPutInstrumentByIdRequest);
+
+                    /** PutInstrumentByIdRequest instrument. */
+                    public instrument?: (pj.sakuchin.percussion.proto.IInstrument|null);
+
+                    /**
+                     * Creates a new PutInstrumentByIdRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PutInstrumentByIdRequest instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPutInstrumentByIdRequest): pj.sakuchin.percussion.proto.PutInstrumentByIdRequest;
+
+                    /**
+                     * Encodes the specified PutInstrumentByIdRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutInstrumentByIdRequest.verify|verify} messages.
+                     * @param message PutInstrumentByIdRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPutInstrumentByIdRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PutInstrumentByIdRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutInstrumentByIdRequest.verify|verify} messages.
+                     * @param message PutInstrumentByIdRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPutInstrumentByIdRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PutInstrumentByIdRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PutInstrumentByIdRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PutInstrumentByIdRequest;
+
+                    /**
+                     * Decodes a PutInstrumentByIdRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PutInstrumentByIdRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PutInstrumentByIdRequest;
+
+                    /**
+                     * Verifies a PutInstrumentByIdRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PutInstrumentByIdRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PutInstrumentByIdRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PutInstrumentByIdRequest;
+
+                    /**
+                     * Creates a plain object from a PutInstrumentByIdRequest message. Also converts values to other types if specified.
+                     * @param message PutInstrumentByIdRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PutInstrumentByIdRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PutInstrumentByIdRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a GetInstrumentsResponse. */
+                interface IGetInstrumentsResponse {
+
+                    /** GetInstrumentsResponse instruments */
+                    instruments?: (pj.sakuchin.percussion.proto.IInstrument[]|null);
+                }
+
+                /** Represents a GetInstrumentsResponse. */
+                class GetInstrumentsResponse implements IGetInstrumentsResponse {
+
+                    /**
+                     * Constructs a new GetInstrumentsResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IGetInstrumentsResponse);
+
+                    /** GetInstrumentsResponse instruments. */
+                    public instruments: pj.sakuchin.percussion.proto.IInstrument[];
+
+                    /**
+                     * Creates a new GetInstrumentsResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns GetInstrumentsResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IGetInstrumentsResponse): pj.sakuchin.percussion.proto.GetInstrumentsResponse;
+
+                    /**
+                     * Encodes the specified GetInstrumentsResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetInstrumentsResponse.verify|verify} messages.
+                     * @param message GetInstrumentsResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IGetInstrumentsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified GetInstrumentsResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetInstrumentsResponse.verify|verify} messages.
+                     * @param message GetInstrumentsResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IGetInstrumentsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a GetInstrumentsResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns GetInstrumentsResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.GetInstrumentsResponse;
+
+                    /**
+                     * Decodes a GetInstrumentsResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns GetInstrumentsResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.GetInstrumentsResponse;
+
+                    /**
+                     * Verifies a GetInstrumentsResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a GetInstrumentsResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns GetInstrumentsResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.GetInstrumentsResponse;
+
+                    /**
+                     * Creates a plain object from a GetInstrumentsResponse message. Also converts values to other types if specified.
+                     * @param message GetInstrumentsResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.GetInstrumentsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this GetInstrumentsResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a Player. */
+                interface IPlayer {
+
+                    /** Player id */
+                    id?: (string|null);
+
+                    /** Player name */
+                    name?: (string|null);
+
+                    /** Player icon */
+                    icon?: (string|null);
+                }
+
+                /** Represents a Player. */
+                class Player implements IPlayer {
+
+                    /**
+                     * Constructs a new Player.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPlayer);
+
+                    /** Player id. */
+                    public id: string;
+
+                    /** Player name. */
+                    public name: string;
+
+                    /** Player icon. */
+                    public icon: string;
+
+                    /**
+                     * Creates a new Player instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns Player instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPlayer): pj.sakuchin.percussion.proto.Player;
+
+                    /**
+                     * Encodes the specified Player message. Does not implicitly {@link pj.sakuchin.percussion.proto.Player.verify|verify} messages.
+                     * @param message Player message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPlayer, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified Player message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.Player.verify|verify} messages.
+                     * @param message Player message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPlayer, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a Player message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns Player
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.Player;
+
+                    /**
+                     * Decodes a Player message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns Player
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.Player;
+
+                    /**
+                     * Verifies a Player message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a Player message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns Player
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.Player;
+
+                    /**
+                     * Creates a plain object from a Player message. Also converts values to other types if specified.
+                     * @param message Player
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.Player, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this Player to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PlayerDetail. */
+                interface IPlayerDetail {
+
+                    /** PlayerDetail id */
+                    id?: (string|null);
+
+                    /** PlayerDetail name */
+                    name?: (string|null);
+
+                    /** PlayerDetail icon */
+                    icon?: (string|null);
+
+                    /** PlayerDetail introduction */
+                    introduction?: (string|null);
+
+                    /** PlayerDetail activeAreas */
+                    activeAreas?: (pj.sakuchin.percussion.proto.ICity[]|null);
+
+                    /** PlayerDetail instruments */
+                    instruments?: (pj.sakuchin.percussion.proto.IInstrument[]|null);
+                }
+
+                /** Represents a PlayerDetail. */
+                class PlayerDetail implements IPlayerDetail {
+
+                    /**
+                     * Constructs a new PlayerDetail.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPlayerDetail);
+
+                    /** PlayerDetail id. */
+                    public id: string;
+
+                    /** PlayerDetail name. */
+                    public name: string;
+
+                    /** PlayerDetail icon. */
+                    public icon: string;
+
+                    /** PlayerDetail introduction. */
+                    public introduction: string;
+
+                    /** PlayerDetail activeAreas. */
+                    public activeAreas: pj.sakuchin.percussion.proto.ICity[];
+
+                    /** PlayerDetail instruments. */
+                    public instruments: pj.sakuchin.percussion.proto.IInstrument[];
+
+                    /**
+                     * Creates a new PlayerDetail instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PlayerDetail instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPlayerDetail): pj.sakuchin.percussion.proto.PlayerDetail;
+
+                    /**
+                     * Encodes the specified PlayerDetail message. Does not implicitly {@link pj.sakuchin.percussion.proto.PlayerDetail.verify|verify} messages.
+                     * @param message PlayerDetail message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPlayerDetail, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PlayerDetail message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PlayerDetail.verify|verify} messages.
+                     * @param message PlayerDetail message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPlayerDetail, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PlayerDetail message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PlayerDetail
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PlayerDetail;
+
+                    /**
+                     * Decodes a PlayerDetail message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PlayerDetail
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PlayerDetail;
+
+                    /**
+                     * Verifies a PlayerDetail message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PlayerDetail message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PlayerDetail
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PlayerDetail;
+
+                    /**
+                     * Creates a plain object from a PlayerDetail message. Also converts values to other types if specified.
+                     * @param message PlayerDetail
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PlayerDetail, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PlayerDetail to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a GetPlayerDetailResponse. */
+                interface IGetPlayerDetailResponse {
+
+                    /** GetPlayerDetailResponse detail */
+                    detail?: (pj.sakuchin.percussion.proto.IPlayerDetail|null);
+                }
+
+                /** Represents a GetPlayerDetailResponse. */
+                class GetPlayerDetailResponse implements IGetPlayerDetailResponse {
+
+                    /**
+                     * Constructs a new GetPlayerDetailResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IGetPlayerDetailResponse);
+
+                    /** GetPlayerDetailResponse detail. */
+                    public detail?: (pj.sakuchin.percussion.proto.IPlayerDetail|null);
+
+                    /**
+                     * Creates a new GetPlayerDetailResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns GetPlayerDetailResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IGetPlayerDetailResponse): pj.sakuchin.percussion.proto.GetPlayerDetailResponse;
+
+                    /**
+                     * Encodes the specified GetPlayerDetailResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetPlayerDetailResponse.verify|verify} messages.
+                     * @param message GetPlayerDetailResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IGetPlayerDetailResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified GetPlayerDetailResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetPlayerDetailResponse.verify|verify} messages.
+                     * @param message GetPlayerDetailResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IGetPlayerDetailResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a GetPlayerDetailResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns GetPlayerDetailResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.GetPlayerDetailResponse;
+
+                    /**
+                     * Decodes a GetPlayerDetailResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns GetPlayerDetailResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.GetPlayerDetailResponse;
+
+                    /**
+                     * Verifies a GetPlayerDetailResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a GetPlayerDetailResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns GetPlayerDetailResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.GetPlayerDetailResponse;
+
+                    /**
+                     * Creates a plain object from a GetPlayerDetailResponse message. Also converts values to other types if specified.
+                     * @param message GetPlayerDetailResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.GetPlayerDetailResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this GetPlayerDetailResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PutPlayDetailReqest. */
+                interface IPutPlayDetailReqest {
+
+                    /** PutPlayDetailReqest detail */
+                    detail?: (pj.sakuchin.percussion.proto.IPlayerDetail|null);
+                }
+
+                /** Represents a PutPlayDetailReqest. */
+                class PutPlayDetailReqest implements IPutPlayDetailReqest {
+
+                    /**
+                     * Constructs a new PutPlayDetailReqest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPutPlayDetailReqest);
+
+                    /** PutPlayDetailReqest detail. */
+                    public detail?: (pj.sakuchin.percussion.proto.IPlayerDetail|null);
+
+                    /**
+                     * Creates a new PutPlayDetailReqest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PutPlayDetailReqest instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPutPlayDetailReqest): pj.sakuchin.percussion.proto.PutPlayDetailReqest;
+
+                    /**
+                     * Encodes the specified PutPlayDetailReqest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutPlayDetailReqest.verify|verify} messages.
+                     * @param message PutPlayDetailReqest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPutPlayDetailReqest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PutPlayDetailReqest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutPlayDetailReqest.verify|verify} messages.
+                     * @param message PutPlayDetailReqest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPutPlayDetailReqest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PutPlayDetailReqest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PutPlayDetailReqest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PutPlayDetailReqest;
+
+                    /**
+                     * Decodes a PutPlayDetailReqest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PutPlayDetailReqest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PutPlayDetailReqest;
+
+                    /**
+                     * Verifies a PutPlayDetailReqest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PutPlayDetailReqest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PutPlayDetailReqest
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PutPlayDetailReqest;
+
+                    /**
+                     * Creates a plain object from a PutPlayDetailReqest message. Also converts values to other types if specified.
+                     * @param message PutPlayDetailReqest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PutPlayDetailReqest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PutPlayDetailReqest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a GetPlayerDetailAreaResponse. */
+                interface IGetPlayerDetailAreaResponse {
+
+                    /** GetPlayerDetailAreaResponse activeAreas */
+                    activeAreas?: (pj.sakuchin.percussion.proto.ICity[]|null);
+                }
+
+                /** Represents a GetPlayerDetailAreaResponse. */
+                class GetPlayerDetailAreaResponse implements IGetPlayerDetailAreaResponse {
+
+                    /**
+                     * Constructs a new GetPlayerDetailAreaResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IGetPlayerDetailAreaResponse);
+
+                    /** GetPlayerDetailAreaResponse activeAreas. */
+                    public activeAreas: pj.sakuchin.percussion.proto.ICity[];
+
+                    /**
+                     * Creates a new GetPlayerDetailAreaResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns GetPlayerDetailAreaResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IGetPlayerDetailAreaResponse): pj.sakuchin.percussion.proto.GetPlayerDetailAreaResponse;
+
+                    /**
+                     * Encodes the specified GetPlayerDetailAreaResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetPlayerDetailAreaResponse.verify|verify} messages.
+                     * @param message GetPlayerDetailAreaResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IGetPlayerDetailAreaResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified GetPlayerDetailAreaResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetPlayerDetailAreaResponse.verify|verify} messages.
+                     * @param message GetPlayerDetailAreaResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IGetPlayerDetailAreaResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a GetPlayerDetailAreaResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns GetPlayerDetailAreaResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.GetPlayerDetailAreaResponse;
+
+                    /**
+                     * Decodes a GetPlayerDetailAreaResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns GetPlayerDetailAreaResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.GetPlayerDetailAreaResponse;
+
+                    /**
+                     * Verifies a GetPlayerDetailAreaResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a GetPlayerDetailAreaResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns GetPlayerDetailAreaResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.GetPlayerDetailAreaResponse;
+
+                    /**
+                     * Creates a plain object from a GetPlayerDetailAreaResponse message. Also converts values to other types if specified.
+                     * @param message GetPlayerDetailAreaResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.GetPlayerDetailAreaResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this GetPlayerDetailAreaResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PutPlayerDetailAreaRequest. */
+                interface IPutPlayerDetailAreaRequest {
+
+                    /** PutPlayerDetailAreaRequest activeAreas */
+                    activeAreas?: (pj.sakuchin.percussion.proto.ICity[]|null);
+                }
+
+                /** Represents a PutPlayerDetailAreaRequest. */
+                class PutPlayerDetailAreaRequest implements IPutPlayerDetailAreaRequest {
+
+                    /**
+                     * Constructs a new PutPlayerDetailAreaRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPutPlayerDetailAreaRequest);
+
+                    /** PutPlayerDetailAreaRequest activeAreas. */
+                    public activeAreas: pj.sakuchin.percussion.proto.ICity[];
+
+                    /**
+                     * Creates a new PutPlayerDetailAreaRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PutPlayerDetailAreaRequest instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPutPlayerDetailAreaRequest): pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest;
+
+                    /**
+                     * Encodes the specified PutPlayerDetailAreaRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest.verify|verify} messages.
+                     * @param message PutPlayerDetailAreaRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPutPlayerDetailAreaRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PutPlayerDetailAreaRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest.verify|verify} messages.
+                     * @param message PutPlayerDetailAreaRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPutPlayerDetailAreaRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PutPlayerDetailAreaRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PutPlayerDetailAreaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest;
+
+                    /**
+                     * Decodes a PutPlayerDetailAreaRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PutPlayerDetailAreaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest;
+
+                    /**
+                     * Verifies a PutPlayerDetailAreaRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PutPlayerDetailAreaRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PutPlayerDetailAreaRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest;
+
+                    /**
+                     * Creates a plain object from a PutPlayerDetailAreaRequest message. Also converts values to other types if specified.
+                     * @param message PutPlayerDetailAreaRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PutPlayerDetailAreaRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a Studio. */
+                interface IStudio {
+
+                    /** Studio id */
+                    id?: (number|null);
+
+                    /** Studio name */
+                    name?: (string|null);
+
+                    /** Studio url */
+                    url?: (string|null);
+
+                    /** Studio city */
+                    city?: (pj.sakuchin.percussion.proto.ICity|null);
+
+                    /** Studio author */
+                    author?: (string|null);
+                }
+
+                /** Represents a Studio. */
+                class Studio implements IStudio {
+
+                    /**
+                     * Constructs a new Studio.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IStudio);
+
+                    /** Studio id. */
+                    public id: number;
+
+                    /** Studio name. */
+                    public name: string;
+
+                    /** Studio url. */
+                    public url: string;
+
+                    /** Studio city. */
+                    public city?: (pj.sakuchin.percussion.proto.ICity|null);
+
+                    /** Studio author. */
+                    public author: string;
+
+                    /**
+                     * Creates a new Studio instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns Studio instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IStudio): pj.sakuchin.percussion.proto.Studio;
+
+                    /**
+                     * Encodes the specified Studio message. Does not implicitly {@link pj.sakuchin.percussion.proto.Studio.verify|verify} messages.
+                     * @param message Studio message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IStudio, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified Studio message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.Studio.verify|verify} messages.
+                     * @param message Studio message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IStudio, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a Studio message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns Studio
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.Studio;
+
+                    /**
+                     * Decodes a Studio message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns Studio
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.Studio;
+
+                    /**
+                     * Verifies a Studio message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a Studio message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns Studio
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.Studio;
+
+                    /**
+                     * Creates a plain object from a Studio message. Also converts values to other types if specified.
+                     * @param message Studio
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.Studio, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this Studio to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
                 /** Properties of a GetSuggestCityResponse. */
                 interface IGetSuggestCityResponse {
 

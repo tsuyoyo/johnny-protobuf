@@ -1,4 +1,4 @@
-version: '1'
+version: '2'
 services:
   generate-proto:
     container_name: johnny-proto-generator
