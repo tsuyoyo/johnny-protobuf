@@ -1273,6 +1273,230 @@ $root.pj = (function() {
                     return PercussionApiError;
                 })();
 
+                proto.EditHistory = (function() {
+
+                    /**
+                     * Properties of an EditHistory.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IEditHistory
+                     * @property {number|Long|null} [timeStamp] EditHistory timeStamp
+                     * @property {string|null} [playerId] EditHistory playerId
+                     */
+
+                    /**
+                     * Constructs a new EditHistory.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents an EditHistory.
+                     * @implements IEditHistory
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IEditHistory=} [properties] Properties to set
+                     */
+                    function EditHistory(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * EditHistory timeStamp.
+                     * @member {number|Long} timeStamp
+                     * @memberof pj.sakuchin.percussion.proto.EditHistory
+                     * @instance
+                     */
+                    EditHistory.prototype.timeStamp = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+
+                    /**
+                     * EditHistory playerId.
+                     * @member {string} playerId
+                     * @memberof pj.sakuchin.percussion.proto.EditHistory
+                     * @instance
+                     */
+                    EditHistory.prototype.playerId = "";
+
+                    /**
+                     * Creates a new EditHistory instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.EditHistory
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IEditHistory=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.EditHistory} EditHistory instance
+                     */
+                    EditHistory.create = function create(properties) {
+                        return new EditHistory(properties);
+                    };
+
+                    /**
+                     * Encodes the specified EditHistory message. Does not implicitly {@link pj.sakuchin.percussion.proto.EditHistory.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.EditHistory
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IEditHistory} message EditHistory message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    EditHistory.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.timeStamp != null && Object.hasOwnProperty.call(message, "timeStamp"))
+                            writer.uint32(/* id 1, wireType 0 =*/8).int64(message.timeStamp);
+                        if (message.playerId != null && Object.hasOwnProperty.call(message, "playerId"))
+                            writer.uint32(/* id 2, wireType 2 =*/18).string(message.playerId);
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified EditHistory message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.EditHistory.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.EditHistory
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IEditHistory} message EditHistory message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    EditHistory.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes an EditHistory message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.EditHistory
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.EditHistory} EditHistory
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    EditHistory.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.EditHistory();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.timeStamp = reader.int64();
+                                break;
+                            case 2:
+                                message.playerId = reader.string();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes an EditHistory message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.EditHistory
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.EditHistory} EditHistory
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    EditHistory.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies an EditHistory message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.EditHistory
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    EditHistory.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.timeStamp != null && message.hasOwnProperty("timeStamp"))
+                            if (!$util.isInteger(message.timeStamp) && !(message.timeStamp && $util.isInteger(message.timeStamp.low) && $util.isInteger(message.timeStamp.high)))
+                                return "timeStamp: integer|Long expected";
+                        if (message.playerId != null && message.hasOwnProperty("playerId"))
+                            if (!$util.isString(message.playerId))
+                                return "playerId: string expected";
+                        return null;
+                    };
+
+                    /**
+                     * Creates an EditHistory message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.EditHistory
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.EditHistory} EditHistory
+                     */
+                    EditHistory.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.EditHistory)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.EditHistory();
+                        if (object.timeStamp != null)
+                            if ($util.Long)
+                                (message.timeStamp = $util.Long.fromValue(object.timeStamp)).unsigned = false;
+                            else if (typeof object.timeStamp === "string")
+                                message.timeStamp = parseInt(object.timeStamp, 10);
+                            else if (typeof object.timeStamp === "number")
+                                message.timeStamp = object.timeStamp;
+                            else if (typeof object.timeStamp === "object")
+                                message.timeStamp = new $util.LongBits(object.timeStamp.low >>> 0, object.timeStamp.high >>> 0).toNumber();
+                        if (object.playerId != null)
+                            message.playerId = String(object.playerId);
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from an EditHistory message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.EditHistory
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.EditHistory} message EditHistory
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    EditHistory.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults) {
+                            if ($util.Long) {
+                                var long = new $util.Long(0, 0, false);
+                                object.timeStamp = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                            } else
+                                object.timeStamp = options.longs === String ? "0" : 0;
+                            object.playerId = "";
+                        }
+                        if (message.timeStamp != null && message.hasOwnProperty("timeStamp"))
+                            if (typeof message.timeStamp === "number")
+                                object.timeStamp = options.longs === String ? String(message.timeStamp) : message.timeStamp;
+                            else
+                                object.timeStamp = options.longs === String ? $util.Long.prototype.toString.call(message.timeStamp) : options.longs === Number ? new $util.LongBits(message.timeStamp.low >>> 0, message.timeStamp.high >>> 0).toNumber() : message.timeStamp;
+                        if (message.playerId != null && message.hasOwnProperty("playerId"))
+                            object.playerId = message.playerId;
+                        return object;
+                    };
+
+                    /**
+                     * Converts this EditHistory to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.EditHistory
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    EditHistory.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return EditHistory;
+                })();
+
                 proto.Instrument = (function() {
 
                     /**
@@ -2282,6 +2506,214 @@ $root.pj = (function() {
                     };
 
                     return GetInstrumentsResponse;
+                })();
+
+                proto.GetInstrumentEditorsResponse = (function() {
+
+                    /**
+                     * Properties of a GetInstrumentEditorsResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IGetInstrumentEditorsResponse
+                     * @property {Array.<pj.sakuchin.percussion.proto.IEditHistory>|null} [history] GetInstrumentEditorsResponse history
+                     */
+
+                    /**
+                     * Constructs a new GetInstrumentEditorsResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a GetInstrumentEditorsResponse.
+                     * @implements IGetInstrumentEditorsResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IGetInstrumentEditorsResponse=} [properties] Properties to set
+                     */
+                    function GetInstrumentEditorsResponse(properties) {
+                        this.history = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * GetInstrumentEditorsResponse history.
+                     * @member {Array.<pj.sakuchin.percussion.proto.IEditHistory>} history
+                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse
+                     * @instance
+                     */
+                    GetInstrumentEditorsResponse.prototype.history = $util.emptyArray;
+
+                    /**
+                     * Creates a new GetInstrumentEditorsResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetInstrumentEditorsResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse} GetInstrumentEditorsResponse instance
+                     */
+                    GetInstrumentEditorsResponse.create = function create(properties) {
+                        return new GetInstrumentEditorsResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified GetInstrumentEditorsResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetInstrumentEditorsResponse} message GetInstrumentEditorsResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    GetInstrumentEditorsResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.history != null && message.history.length)
+                            for (var i = 0; i < message.history.length; ++i)
+                                $root.pj.sakuchin.percussion.proto.EditHistory.encode(message.history[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified GetInstrumentEditorsResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetInstrumentEditorsResponse} message GetInstrumentEditorsResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    GetInstrumentEditorsResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a GetInstrumentEditorsResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse} GetInstrumentEditorsResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    GetInstrumentEditorsResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.history && message.history.length))
+                                    message.history = [];
+                                message.history.push($root.pj.sakuchin.percussion.proto.EditHistory.decode(reader, reader.uint32()));
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a GetInstrumentEditorsResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse} GetInstrumentEditorsResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    GetInstrumentEditorsResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a GetInstrumentEditorsResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    GetInstrumentEditorsResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.history != null && message.hasOwnProperty("history")) {
+                            if (!Array.isArray(message.history))
+                                return "history: array expected";
+                            for (var i = 0; i < message.history.length; ++i) {
+                                var error = $root.pj.sakuchin.percussion.proto.EditHistory.verify(message.history[i]);
+                                if (error)
+                                    return "history." + error;
+                            }
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a GetInstrumentEditorsResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse} GetInstrumentEditorsResponse
+                     */
+                    GetInstrumentEditorsResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse();
+                        if (object.history) {
+                            if (!Array.isArray(object.history))
+                                throw TypeError(".pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse.history: array expected");
+                            message.history = [];
+                            for (var i = 0; i < object.history.length; ++i) {
+                                if (typeof object.history[i] !== "object")
+                                    throw TypeError(".pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse.history: object expected");
+                                message.history[i] = $root.pj.sakuchin.percussion.proto.EditHistory.fromObject(object.history[i]);
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a GetInstrumentEditorsResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse} message GetInstrumentEditorsResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    GetInstrumentEditorsResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.history = [];
+                        if (message.history && message.history.length) {
+                            object.history = [];
+                            for (var j = 0; j < message.history.length; ++j)
+                                object.history[j] = $root.pj.sakuchin.percussion.proto.EditHistory.toObject(message.history[j], options);
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this GetInstrumentEditorsResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    GetInstrumentEditorsResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return GetInstrumentEditorsResponse;
                 })();
 
                 proto.Player = (function() {
@@ -3668,7 +4100,7 @@ $root.pj = (function() {
                      * @property {string|null} [name] Studio name
                      * @property {string|null} [url] Studio url
                      * @property {pj.sakuchin.percussion.proto.ICity|null} [city] Studio city
-                     * @property {string|null} [author] Studio author
+                     * @property {string|null} [authorPlayerId] Studio authorPlayerId
                      */
 
                     /**
@@ -3719,12 +4151,12 @@ $root.pj = (function() {
                     Studio.prototype.city = null;
 
                     /**
-                     * Studio author.
-                     * @member {string} author
+                     * Studio authorPlayerId.
+                     * @member {string} authorPlayerId
                      * @memberof pj.sakuchin.percussion.proto.Studio
                      * @instance
                      */
-                    Studio.prototype.author = "";
+                    Studio.prototype.authorPlayerId = "";
 
                     /**
                      * Creates a new Studio instance using the specified properties.
@@ -3758,8 +4190,8 @@ $root.pj = (function() {
                             writer.uint32(/* id 3, wireType 2 =*/26).string(message.url);
                         if (message.city != null && Object.hasOwnProperty.call(message, "city"))
                             $root.pj.sakuchin.percussion.proto.City.encode(message.city, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
-                        if (message.author != null && Object.hasOwnProperty.call(message, "author"))
-                            writer.uint32(/* id 5, wireType 2 =*/42).string(message.author);
+                        if (message.authorPlayerId != null && Object.hasOwnProperty.call(message, "authorPlayerId"))
+                            writer.uint32(/* id 5, wireType 2 =*/42).string(message.authorPlayerId);
                         return writer;
                     };
 
@@ -3807,7 +4239,7 @@ $root.pj = (function() {
                                 message.city = $root.pj.sakuchin.percussion.proto.City.decode(reader, reader.uint32());
                                 break;
                             case 5:
-                                message.author = reader.string();
+                                message.authorPlayerId = reader.string();
                                 break;
                             default:
                                 reader.skipType(tag & 7);
@@ -3858,9 +4290,9 @@ $root.pj = (function() {
                             if (error)
                                 return "city." + error;
                         }
-                        if (message.author != null && message.hasOwnProperty("author"))
-                            if (!$util.isString(message.author))
-                                return "author: string expected";
+                        if (message.authorPlayerId != null && message.hasOwnProperty("authorPlayerId"))
+                            if (!$util.isString(message.authorPlayerId))
+                                return "authorPlayerId: string expected";
                         return null;
                     };
 
@@ -3887,8 +4319,8 @@ $root.pj = (function() {
                                 throw TypeError(".pj.sakuchin.percussion.proto.Studio.city: object expected");
                             message.city = $root.pj.sakuchin.percussion.proto.City.fromObject(object.city);
                         }
-                        if (object.author != null)
-                            message.author = String(object.author);
+                        if (object.authorPlayerId != null)
+                            message.authorPlayerId = String(object.authorPlayerId);
                         return message;
                     };
 
@@ -3910,7 +4342,7 @@ $root.pj = (function() {
                             object.name = "";
                             object.url = "";
                             object.city = null;
-                            object.author = "";
+                            object.authorPlayerId = "";
                         }
                         if (message.id != null && message.hasOwnProperty("id"))
                             object.id = message.id;
@@ -3920,8 +4352,8 @@ $root.pj = (function() {
                             object.url = message.url;
                         if (message.city != null && message.hasOwnProperty("city"))
                             object.city = $root.pj.sakuchin.percussion.proto.City.toObject(message.city, options);
-                        if (message.author != null && message.hasOwnProperty("author"))
-                            object.author = message.author;
+                        if (message.authorPlayerId != null && message.hasOwnProperty("authorPlayerId"))
+                            object.authorPlayerId = message.authorPlayerId;
                         return object;
                     };
 
@@ -3937,6 +4369,868 @@ $root.pj = (function() {
                     };
 
                     return Studio;
+                })();
+
+                proto.GetStudioResponse = (function() {
+
+                    /**
+                     * Properties of a GetStudioResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IGetStudioResponse
+                     * @property {Array.<pj.sakuchin.percussion.proto.IStudio>|null} [studios] GetStudioResponse studios
+                     */
+
+                    /**
+                     * Constructs a new GetStudioResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a GetStudioResponse.
+                     * @implements IGetStudioResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IGetStudioResponse=} [properties] Properties to set
+                     */
+                    function GetStudioResponse(properties) {
+                        this.studios = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * GetStudioResponse studios.
+                     * @member {Array.<pj.sakuchin.percussion.proto.IStudio>} studios
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioResponse
+                     * @instance
+                     */
+                    GetStudioResponse.prototype.studios = $util.emptyArray;
+
+                    /**
+                     * Creates a new GetStudioResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetStudioResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.GetStudioResponse} GetStudioResponse instance
+                     */
+                    GetStudioResponse.create = function create(properties) {
+                        return new GetStudioResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified GetStudioResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetStudioResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetStudioResponse} message GetStudioResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    GetStudioResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.studios != null && message.studios.length)
+                            for (var i = 0; i < message.studios.length; ++i)
+                                $root.pj.sakuchin.percussion.proto.Studio.encode(message.studios[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified GetStudioResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetStudioResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetStudioResponse} message GetStudioResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    GetStudioResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a GetStudioResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.GetStudioResponse} GetStudioResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    GetStudioResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.GetStudioResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.studios && message.studios.length))
+                                    message.studios = [];
+                                message.studios.push($root.pj.sakuchin.percussion.proto.Studio.decode(reader, reader.uint32()));
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a GetStudioResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.GetStudioResponse} GetStudioResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    GetStudioResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a GetStudioResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    GetStudioResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.studios != null && message.hasOwnProperty("studios")) {
+                            if (!Array.isArray(message.studios))
+                                return "studios: array expected";
+                            for (var i = 0; i < message.studios.length; ++i) {
+                                var error = $root.pj.sakuchin.percussion.proto.Studio.verify(message.studios[i]);
+                                if (error)
+                                    return "studios." + error;
+                            }
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a GetStudioResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.GetStudioResponse} GetStudioResponse
+                     */
+                    GetStudioResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.GetStudioResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.GetStudioResponse();
+                        if (object.studios) {
+                            if (!Array.isArray(object.studios))
+                                throw TypeError(".pj.sakuchin.percussion.proto.GetStudioResponse.studios: array expected");
+                            message.studios = [];
+                            for (var i = 0; i < object.studios.length; ++i) {
+                                if (typeof object.studios[i] !== "object")
+                                    throw TypeError(".pj.sakuchin.percussion.proto.GetStudioResponse.studios: object expected");
+                                message.studios[i] = $root.pj.sakuchin.percussion.proto.Studio.fromObject(object.studios[i]);
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a GetStudioResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.GetStudioResponse} message GetStudioResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    GetStudioResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.studios = [];
+                        if (message.studios && message.studios.length) {
+                            object.studios = [];
+                            for (var j = 0; j < message.studios.length; ++j)
+                                object.studios[j] = $root.pj.sakuchin.percussion.proto.Studio.toObject(message.studios[j], options);
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this GetStudioResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    GetStudioResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return GetStudioResponse;
+                })();
+
+                proto.PostStudioRequest = (function() {
+
+                    /**
+                     * Properties of a PostStudioRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IPostStudioRequest
+                     * @property {string|null} [name] PostStudioRequest name
+                     * @property {string|null} [url] PostStudioRequest url
+                     * @property {string|null} [cityId] PostStudioRequest cityId
+                     * @property {string|null} [authorPlayerId] PostStudioRequest authorPlayerId
+                     */
+
+                    /**
+                     * Constructs a new PostStudioRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a PostStudioRequest.
+                     * @implements IPostStudioRequest
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IPostStudioRequest=} [properties] Properties to set
+                     */
+                    function PostStudioRequest(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PostStudioRequest name.
+                     * @member {string} name
+                     * @memberof pj.sakuchin.percussion.proto.PostStudioRequest
+                     * @instance
+                     */
+                    PostStudioRequest.prototype.name = "";
+
+                    /**
+                     * PostStudioRequest url.
+                     * @member {string} url
+                     * @memberof pj.sakuchin.percussion.proto.PostStudioRequest
+                     * @instance
+                     */
+                    PostStudioRequest.prototype.url = "";
+
+                    /**
+                     * PostStudioRequest cityId.
+                     * @member {string} cityId
+                     * @memberof pj.sakuchin.percussion.proto.PostStudioRequest
+                     * @instance
+                     */
+                    PostStudioRequest.prototype.cityId = "";
+
+                    /**
+                     * PostStudioRequest authorPlayerId.
+                     * @member {string} authorPlayerId
+                     * @memberof pj.sakuchin.percussion.proto.PostStudioRequest
+                     * @instance
+                     */
+                    PostStudioRequest.prototype.authorPlayerId = "";
+
+                    /**
+                     * Creates a new PostStudioRequest instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.PostStudioRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostStudioRequest=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.PostStudioRequest} PostStudioRequest instance
+                     */
+                    PostStudioRequest.create = function create(properties) {
+                        return new PostStudioRequest(properties);
+                    };
+
+                    /**
+                     * Encodes the specified PostStudioRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostStudioRequest.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.PostStudioRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostStudioRequest} message PostStudioRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostStudioRequest.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.name != null && Object.hasOwnProperty.call(message, "name"))
+                            writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
+                        if (message.url != null && Object.hasOwnProperty.call(message, "url"))
+                            writer.uint32(/* id 2, wireType 2 =*/18).string(message.url);
+                        if (message.cityId != null && Object.hasOwnProperty.call(message, "cityId"))
+                            writer.uint32(/* id 3, wireType 2 =*/26).string(message.cityId);
+                        if (message.authorPlayerId != null && Object.hasOwnProperty.call(message, "authorPlayerId"))
+                            writer.uint32(/* id 4, wireType 2 =*/34).string(message.authorPlayerId);
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PostStudioRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostStudioRequest.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostStudioRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostStudioRequest} message PostStudioRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostStudioRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PostStudioRequest message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.PostStudioRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.PostStudioRequest} PostStudioRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostStudioRequest.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PostStudioRequest();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.name = reader.string();
+                                break;
+                            case 2:
+                                message.url = reader.string();
+                                break;
+                            case 3:
+                                message.cityId = reader.string();
+                                break;
+                            case 4:
+                                message.authorPlayerId = reader.string();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PostStudioRequest message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostStudioRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.PostStudioRequest} PostStudioRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostStudioRequest.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PostStudioRequest message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.PostStudioRequest
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PostStudioRequest.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.name != null && message.hasOwnProperty("name"))
+                            if (!$util.isString(message.name))
+                                return "name: string expected";
+                        if (message.url != null && message.hasOwnProperty("url"))
+                            if (!$util.isString(message.url))
+                                return "url: string expected";
+                        if (message.cityId != null && message.hasOwnProperty("cityId"))
+                            if (!$util.isString(message.cityId))
+                                return "cityId: string expected";
+                        if (message.authorPlayerId != null && message.hasOwnProperty("authorPlayerId"))
+                            if (!$util.isString(message.authorPlayerId))
+                                return "authorPlayerId: string expected";
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PostStudioRequest message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.PostStudioRequest
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.PostStudioRequest} PostStudioRequest
+                     */
+                    PostStudioRequest.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.PostStudioRequest)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.PostStudioRequest();
+                        if (object.name != null)
+                            message.name = String(object.name);
+                        if (object.url != null)
+                            message.url = String(object.url);
+                        if (object.cityId != null)
+                            message.cityId = String(object.cityId);
+                        if (object.authorPlayerId != null)
+                            message.authorPlayerId = String(object.authorPlayerId);
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PostStudioRequest message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.PostStudioRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.PostStudioRequest} message PostStudioRequest
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PostStudioRequest.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults) {
+                            object.name = "";
+                            object.url = "";
+                            object.cityId = "";
+                            object.authorPlayerId = "";
+                        }
+                        if (message.name != null && message.hasOwnProperty("name"))
+                            object.name = message.name;
+                        if (message.url != null && message.hasOwnProperty("url"))
+                            object.url = message.url;
+                        if (message.cityId != null && message.hasOwnProperty("cityId"))
+                            object.cityId = message.cityId;
+                        if (message.authorPlayerId != null && message.hasOwnProperty("authorPlayerId"))
+                            object.authorPlayerId = message.authorPlayerId;
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PostStudioRequest to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.PostStudioRequest
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PostStudioRequest.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PostStudioRequest;
+                })();
+
+                proto.PutStudioRequest = (function() {
+
+                    /**
+                     * Properties of a PutStudioRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IPutStudioRequest
+                     * @property {pj.sakuchin.percussion.proto.IStudio|null} [studio] PutStudioRequest studio
+                     */
+
+                    /**
+                     * Constructs a new PutStudioRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a PutStudioRequest.
+                     * @implements IPutStudioRequest
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IPutStudioRequest=} [properties] Properties to set
+                     */
+                    function PutStudioRequest(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PutStudioRequest studio.
+                     * @member {pj.sakuchin.percussion.proto.IStudio|null|undefined} studio
+                     * @memberof pj.sakuchin.percussion.proto.PutStudioRequest
+                     * @instance
+                     */
+                    PutStudioRequest.prototype.studio = null;
+
+                    /**
+                     * Creates a new PutStudioRequest instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.PutStudioRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutStudioRequest=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.PutStudioRequest} PutStudioRequest instance
+                     */
+                    PutStudioRequest.create = function create(properties) {
+                        return new PutStudioRequest(properties);
+                    };
+
+                    /**
+                     * Encodes the specified PutStudioRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutStudioRequest.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.PutStudioRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutStudioRequest} message PutStudioRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PutStudioRequest.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.studio != null && Object.hasOwnProperty.call(message, "studio"))
+                            $root.pj.sakuchin.percussion.proto.Studio.encode(message.studio, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PutStudioRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutStudioRequest.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PutStudioRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutStudioRequest} message PutStudioRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PutStudioRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PutStudioRequest message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.PutStudioRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.PutStudioRequest} PutStudioRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PutStudioRequest.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PutStudioRequest();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.studio = $root.pj.sakuchin.percussion.proto.Studio.decode(reader, reader.uint32());
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PutStudioRequest message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PutStudioRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.PutStudioRequest} PutStudioRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PutStudioRequest.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PutStudioRequest message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.PutStudioRequest
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PutStudioRequest.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.studio != null && message.hasOwnProperty("studio")) {
+                            var error = $root.pj.sakuchin.percussion.proto.Studio.verify(message.studio);
+                            if (error)
+                                return "studio." + error;
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PutStudioRequest message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.PutStudioRequest
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.PutStudioRequest} PutStudioRequest
+                     */
+                    PutStudioRequest.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.PutStudioRequest)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.PutStudioRequest();
+                        if (object.studio != null) {
+                            if (typeof object.studio !== "object")
+                                throw TypeError(".pj.sakuchin.percussion.proto.PutStudioRequest.studio: object expected");
+                            message.studio = $root.pj.sakuchin.percussion.proto.Studio.fromObject(object.studio);
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PutStudioRequest message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.PutStudioRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.PutStudioRequest} message PutStudioRequest
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PutStudioRequest.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            object.studio = null;
+                        if (message.studio != null && message.hasOwnProperty("studio"))
+                            object.studio = $root.pj.sakuchin.percussion.proto.Studio.toObject(message.studio, options);
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PutStudioRequest to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.PutStudioRequest
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PutStudioRequest.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PutStudioRequest;
+                })();
+
+                proto.GetStudioEditorsResponse = (function() {
+
+                    /**
+                     * Properties of a GetStudioEditorsResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IGetStudioEditorsResponse
+                     * @property {Array.<pj.sakuchin.percussion.proto.IEditHistory>|null} [history] GetStudioEditorsResponse history
+                     */
+
+                    /**
+                     * Constructs a new GetStudioEditorsResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a GetStudioEditorsResponse.
+                     * @implements IGetStudioEditorsResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IGetStudioEditorsResponse=} [properties] Properties to set
+                     */
+                    function GetStudioEditorsResponse(properties) {
+                        this.history = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * GetStudioEditorsResponse history.
+                     * @member {Array.<pj.sakuchin.percussion.proto.IEditHistory>} history
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioEditorsResponse
+                     * @instance
+                     */
+                    GetStudioEditorsResponse.prototype.history = $util.emptyArray;
+
+                    /**
+                     * Creates a new GetStudioEditorsResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioEditorsResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetStudioEditorsResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.GetStudioEditorsResponse} GetStudioEditorsResponse instance
+                     */
+                    GetStudioEditorsResponse.create = function create(properties) {
+                        return new GetStudioEditorsResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified GetStudioEditorsResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetStudioEditorsResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioEditorsResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetStudioEditorsResponse} message GetStudioEditorsResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    GetStudioEditorsResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.history != null && message.history.length)
+                            for (var i = 0; i < message.history.length; ++i)
+                                $root.pj.sakuchin.percussion.proto.EditHistory.encode(message.history[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified GetStudioEditorsResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetStudioEditorsResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioEditorsResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetStudioEditorsResponse} message GetStudioEditorsResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    GetStudioEditorsResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a GetStudioEditorsResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioEditorsResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.GetStudioEditorsResponse} GetStudioEditorsResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    GetStudioEditorsResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.GetStudioEditorsResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.history && message.history.length))
+                                    message.history = [];
+                                message.history.push($root.pj.sakuchin.percussion.proto.EditHistory.decode(reader, reader.uint32()));
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a GetStudioEditorsResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioEditorsResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.GetStudioEditorsResponse} GetStudioEditorsResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    GetStudioEditorsResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a GetStudioEditorsResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioEditorsResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    GetStudioEditorsResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.history != null && message.hasOwnProperty("history")) {
+                            if (!Array.isArray(message.history))
+                                return "history: array expected";
+                            for (var i = 0; i < message.history.length; ++i) {
+                                var error = $root.pj.sakuchin.percussion.proto.EditHistory.verify(message.history[i]);
+                                if (error)
+                                    return "history." + error;
+                            }
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a GetStudioEditorsResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioEditorsResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.GetStudioEditorsResponse} GetStudioEditorsResponse
+                     */
+                    GetStudioEditorsResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.GetStudioEditorsResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.GetStudioEditorsResponse();
+                        if (object.history) {
+                            if (!Array.isArray(object.history))
+                                throw TypeError(".pj.sakuchin.percussion.proto.GetStudioEditorsResponse.history: array expected");
+                            message.history = [];
+                            for (var i = 0; i < object.history.length; ++i) {
+                                if (typeof object.history[i] !== "object")
+                                    throw TypeError(".pj.sakuchin.percussion.proto.GetStudioEditorsResponse.history: object expected");
+                                message.history[i] = $root.pj.sakuchin.percussion.proto.EditHistory.fromObject(object.history[i]);
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a GetStudioEditorsResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioEditorsResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.GetStudioEditorsResponse} message GetStudioEditorsResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    GetStudioEditorsResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.history = [];
+                        if (message.history && message.history.length) {
+                            object.history = [];
+                            for (var j = 0; j < message.history.length; ++j)
+                                object.history[j] = $root.pj.sakuchin.percussion.proto.EditHistory.toObject(message.history[j], options);
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this GetStudioEditorsResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioEditorsResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    GetStudioEditorsResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return GetStudioEditorsResponse;
                 })();
 
                 proto.GetSuggestCityResponse = (function() {

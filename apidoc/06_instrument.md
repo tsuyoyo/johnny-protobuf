@@ -59,12 +59,12 @@ Instrument info which's been already registered.
             {
                 "id": 5,
                 "name": "ドラム",
-                "authorId": "user_123", 
+                "authorId": "user_123",
             }
 
 ### Update instrument info [PUT]
 
-When update is success, `200` is returned. This API requires login, otherwise `403` is returned. 
+When update is success, `200` is returned. This API requires login, otherwise `403` is returned.
 
 | Content-Type header | Request | Response |
 | --- | --- | --- |
@@ -74,3 +74,17 @@ When update is success, `200` is returned. This API requires login, otherwise `4
 + Response 403 (applilcation/json)
 + Response 404 (application/json)
 
+## Edit history of instrument edit  [/instrument/{id}/editors]
+
+History of instrument info edit. History is updated when `/instrument/{id}` resource is updated.
+
++ Parameters
+    + id: `123` (string, required) - Instrument ID.
+
+### Get editors [GET]
+
+| Content-Type header | Request | Response |
+| --- | --- | --- |
+| application/protobuf | - | `GetInstrumentEditorsResponse` |
+
++ Response 200 (application/json)
