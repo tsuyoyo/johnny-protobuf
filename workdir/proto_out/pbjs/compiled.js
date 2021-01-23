@@ -2716,6 +2716,764 @@ $root.pj = (function() {
                     return GetInstrumentEditorsResponse;
                 })();
 
+                proto.PostSignupRequest = (function() {
+
+                    /**
+                     * Properties of a PostSignupRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IPostSignupRequest
+                     * @property {string|null} [token] PostSignupRequest token
+                     */
+
+                    /**
+                     * Constructs a new PostSignupRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a PostSignupRequest.
+                     * @implements IPostSignupRequest
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IPostSignupRequest=} [properties] Properties to set
+                     */
+                    function PostSignupRequest(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PostSignupRequest token.
+                     * @member {string} token
+                     * @memberof pj.sakuchin.percussion.proto.PostSignupRequest
+                     * @instance
+                     */
+                    PostSignupRequest.prototype.token = "";
+
+                    /**
+                     * Creates a new PostSignupRequest instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.PostSignupRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostSignupRequest=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.PostSignupRequest} PostSignupRequest instance
+                     */
+                    PostSignupRequest.create = function create(properties) {
+                        return new PostSignupRequest(properties);
+                    };
+
+                    /**
+                     * Encodes the specified PostSignupRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostSignupRequest.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.PostSignupRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostSignupRequest} message PostSignupRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostSignupRequest.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.token != null && Object.hasOwnProperty.call(message, "token"))
+                            writer.uint32(/* id 1, wireType 2 =*/10).string(message.token);
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PostSignupRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostSignupRequest.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostSignupRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostSignupRequest} message PostSignupRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostSignupRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PostSignupRequest message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.PostSignupRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.PostSignupRequest} PostSignupRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostSignupRequest.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PostSignupRequest();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.token = reader.string();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PostSignupRequest message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostSignupRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.PostSignupRequest} PostSignupRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostSignupRequest.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PostSignupRequest message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.PostSignupRequest
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PostSignupRequest.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.token != null && message.hasOwnProperty("token"))
+                            if (!$util.isString(message.token))
+                                return "token: string expected";
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PostSignupRequest message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.PostSignupRequest
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.PostSignupRequest} PostSignupRequest
+                     */
+                    PostSignupRequest.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.PostSignupRequest)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.PostSignupRequest();
+                        if (object.token != null)
+                            message.token = String(object.token);
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PostSignupRequest message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.PostSignupRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.PostSignupRequest} message PostSignupRequest
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PostSignupRequest.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            object.token = "";
+                        if (message.token != null && message.hasOwnProperty("token"))
+                            object.token = message.token;
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PostSignupRequest to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.PostSignupRequest
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PostSignupRequest.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PostSignupRequest;
+                })();
+
+                proto.PostSignupResponse = (function() {
+
+                    /**
+                     * Properties of a PostSignupResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IPostSignupResponse
+                     * @property {pj.sakuchin.percussion.proto.IPlayer|null} [player] PostSignupResponse player
+                     */
+
+                    /**
+                     * Constructs a new PostSignupResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a PostSignupResponse.
+                     * @implements IPostSignupResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IPostSignupResponse=} [properties] Properties to set
+                     */
+                    function PostSignupResponse(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PostSignupResponse player.
+                     * @member {pj.sakuchin.percussion.proto.IPlayer|null|undefined} player
+                     * @memberof pj.sakuchin.percussion.proto.PostSignupResponse
+                     * @instance
+                     */
+                    PostSignupResponse.prototype.player = null;
+
+                    /**
+                     * Creates a new PostSignupResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.PostSignupResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostSignupResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.PostSignupResponse} PostSignupResponse instance
+                     */
+                    PostSignupResponse.create = function create(properties) {
+                        return new PostSignupResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified PostSignupResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostSignupResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.PostSignupResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostSignupResponse} message PostSignupResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostSignupResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.player != null && Object.hasOwnProperty.call(message, "player"))
+                            $root.pj.sakuchin.percussion.proto.Player.encode(message.player, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PostSignupResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostSignupResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostSignupResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostSignupResponse} message PostSignupResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostSignupResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PostSignupResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.PostSignupResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.PostSignupResponse} PostSignupResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostSignupResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PostSignupResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.player = $root.pj.sakuchin.percussion.proto.Player.decode(reader, reader.uint32());
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PostSignupResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostSignupResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.PostSignupResponse} PostSignupResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostSignupResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PostSignupResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.PostSignupResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PostSignupResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.player != null && message.hasOwnProperty("player")) {
+                            var error = $root.pj.sakuchin.percussion.proto.Player.verify(message.player);
+                            if (error)
+                                return "player." + error;
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PostSignupResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.PostSignupResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.PostSignupResponse} PostSignupResponse
+                     */
+                    PostSignupResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.PostSignupResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.PostSignupResponse();
+                        if (object.player != null) {
+                            if (typeof object.player !== "object")
+                                throw TypeError(".pj.sakuchin.percussion.proto.PostSignupResponse.player: object expected");
+                            message.player = $root.pj.sakuchin.percussion.proto.Player.fromObject(object.player);
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PostSignupResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.PostSignupResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.PostSignupResponse} message PostSignupResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PostSignupResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            object.player = null;
+                        if (message.player != null && message.hasOwnProperty("player"))
+                            object.player = $root.pj.sakuchin.percussion.proto.Player.toObject(message.player, options);
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PostSignupResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.PostSignupResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PostSignupResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PostSignupResponse;
+                })();
+
+                proto.PostLoginRequest = (function() {
+
+                    /**
+                     * Properties of a PostLoginRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IPostLoginRequest
+                     * @property {string|null} [token] PostLoginRequest token
+                     */
+
+                    /**
+                     * Constructs a new PostLoginRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a PostLoginRequest.
+                     * @implements IPostLoginRequest
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IPostLoginRequest=} [properties] Properties to set
+                     */
+                    function PostLoginRequest(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PostLoginRequest token.
+                     * @member {string} token
+                     * @memberof pj.sakuchin.percussion.proto.PostLoginRequest
+                     * @instance
+                     */
+                    PostLoginRequest.prototype.token = "";
+
+                    /**
+                     * Creates a new PostLoginRequest instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.PostLoginRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostLoginRequest=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.PostLoginRequest} PostLoginRequest instance
+                     */
+                    PostLoginRequest.create = function create(properties) {
+                        return new PostLoginRequest(properties);
+                    };
+
+                    /**
+                     * Encodes the specified PostLoginRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostLoginRequest.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.PostLoginRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostLoginRequest} message PostLoginRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostLoginRequest.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.token != null && Object.hasOwnProperty.call(message, "token"))
+                            writer.uint32(/* id 1, wireType 2 =*/10).string(message.token);
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PostLoginRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostLoginRequest.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostLoginRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostLoginRequest} message PostLoginRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostLoginRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PostLoginRequest message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.PostLoginRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.PostLoginRequest} PostLoginRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostLoginRequest.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PostLoginRequest();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.token = reader.string();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PostLoginRequest message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostLoginRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.PostLoginRequest} PostLoginRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostLoginRequest.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PostLoginRequest message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.PostLoginRequest
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PostLoginRequest.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.token != null && message.hasOwnProperty("token"))
+                            if (!$util.isString(message.token))
+                                return "token: string expected";
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PostLoginRequest message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.PostLoginRequest
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.PostLoginRequest} PostLoginRequest
+                     */
+                    PostLoginRequest.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.PostLoginRequest)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.PostLoginRequest();
+                        if (object.token != null)
+                            message.token = String(object.token);
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PostLoginRequest message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.PostLoginRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.PostLoginRequest} message PostLoginRequest
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PostLoginRequest.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            object.token = "";
+                        if (message.token != null && message.hasOwnProperty("token"))
+                            object.token = message.token;
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PostLoginRequest to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.PostLoginRequest
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PostLoginRequest.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PostLoginRequest;
+                })();
+
+                proto.PostLoginResponse = (function() {
+
+                    /**
+                     * Properties of a PostLoginResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IPostLoginResponse
+                     * @property {pj.sakuchin.percussion.proto.IPlayer|null} [player] PostLoginResponse player
+                     */
+
+                    /**
+                     * Constructs a new PostLoginResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a PostLoginResponse.
+                     * @implements IPostLoginResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IPostLoginResponse=} [properties] Properties to set
+                     */
+                    function PostLoginResponse(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PostLoginResponse player.
+                     * @member {pj.sakuchin.percussion.proto.IPlayer|null|undefined} player
+                     * @memberof pj.sakuchin.percussion.proto.PostLoginResponse
+                     * @instance
+                     */
+                    PostLoginResponse.prototype.player = null;
+
+                    /**
+                     * Creates a new PostLoginResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.PostLoginResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostLoginResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.PostLoginResponse} PostLoginResponse instance
+                     */
+                    PostLoginResponse.create = function create(properties) {
+                        return new PostLoginResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified PostLoginResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostLoginResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.PostLoginResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostLoginResponse} message PostLoginResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostLoginResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.player != null && Object.hasOwnProperty.call(message, "player"))
+                            $root.pj.sakuchin.percussion.proto.Player.encode(message.player, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PostLoginResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostLoginResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostLoginResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostLoginResponse} message PostLoginResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostLoginResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PostLoginResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.PostLoginResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.PostLoginResponse} PostLoginResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostLoginResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PostLoginResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.player = $root.pj.sakuchin.percussion.proto.Player.decode(reader, reader.uint32());
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PostLoginResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostLoginResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.PostLoginResponse} PostLoginResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostLoginResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PostLoginResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.PostLoginResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PostLoginResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.player != null && message.hasOwnProperty("player")) {
+                            var error = $root.pj.sakuchin.percussion.proto.Player.verify(message.player);
+                            if (error)
+                                return "player." + error;
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PostLoginResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.PostLoginResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.PostLoginResponse} PostLoginResponse
+                     */
+                    PostLoginResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.PostLoginResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.PostLoginResponse();
+                        if (object.player != null) {
+                            if (typeof object.player !== "object")
+                                throw TypeError(".pj.sakuchin.percussion.proto.PostLoginResponse.player: object expected");
+                            message.player = $root.pj.sakuchin.percussion.proto.Player.fromObject(object.player);
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PostLoginResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.PostLoginResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.PostLoginResponse} message PostLoginResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PostLoginResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            object.player = null;
+                        if (message.player != null && message.hasOwnProperty("player"))
+                            object.player = $root.pj.sakuchin.percussion.proto.Player.toObject(message.player, options);
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PostLoginResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.PostLoginResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PostLoginResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PostLoginResponse;
+                })();
+
                 proto.Player = (function() {
 
                     /**
@@ -3288,6 +4046,214 @@ $root.pj = (function() {
                     };
 
                     return PlayerDetail;
+                })();
+
+                proto.GetPlayerResponse = (function() {
+
+                    /**
+                     * Properties of a GetPlayerResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IGetPlayerResponse
+                     * @property {Array.<pj.sakuchin.percussion.proto.IPlayer>|null} [players] GetPlayerResponse players
+                     */
+
+                    /**
+                     * Constructs a new GetPlayerResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a GetPlayerResponse.
+                     * @implements IGetPlayerResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IGetPlayerResponse=} [properties] Properties to set
+                     */
+                    function GetPlayerResponse(properties) {
+                        this.players = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * GetPlayerResponse players.
+                     * @member {Array.<pj.sakuchin.percussion.proto.IPlayer>} players
+                     * @memberof pj.sakuchin.percussion.proto.GetPlayerResponse
+                     * @instance
+                     */
+                    GetPlayerResponse.prototype.players = $util.emptyArray;
+
+                    /**
+                     * Creates a new GetPlayerResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.GetPlayerResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetPlayerResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.GetPlayerResponse} GetPlayerResponse instance
+                     */
+                    GetPlayerResponse.create = function create(properties) {
+                        return new GetPlayerResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified GetPlayerResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetPlayerResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.GetPlayerResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetPlayerResponse} message GetPlayerResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    GetPlayerResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.players != null && message.players.length)
+                            for (var i = 0; i < message.players.length; ++i)
+                                $root.pj.sakuchin.percussion.proto.Player.encode(message.players[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified GetPlayerResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetPlayerResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.GetPlayerResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetPlayerResponse} message GetPlayerResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    GetPlayerResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a GetPlayerResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.GetPlayerResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.GetPlayerResponse} GetPlayerResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    GetPlayerResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.GetPlayerResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.players && message.players.length))
+                                    message.players = [];
+                                message.players.push($root.pj.sakuchin.percussion.proto.Player.decode(reader, reader.uint32()));
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a GetPlayerResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.GetPlayerResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.GetPlayerResponse} GetPlayerResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    GetPlayerResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a GetPlayerResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.GetPlayerResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    GetPlayerResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.players != null && message.hasOwnProperty("players")) {
+                            if (!Array.isArray(message.players))
+                                return "players: array expected";
+                            for (var i = 0; i < message.players.length; ++i) {
+                                var error = $root.pj.sakuchin.percussion.proto.Player.verify(message.players[i]);
+                                if (error)
+                                    return "players." + error;
+                            }
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a GetPlayerResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.GetPlayerResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.GetPlayerResponse} GetPlayerResponse
+                     */
+                    GetPlayerResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.GetPlayerResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.GetPlayerResponse();
+                        if (object.players) {
+                            if (!Array.isArray(object.players))
+                                throw TypeError(".pj.sakuchin.percussion.proto.GetPlayerResponse.players: array expected");
+                            message.players = [];
+                            for (var i = 0; i < object.players.length; ++i) {
+                                if (typeof object.players[i] !== "object")
+                                    throw TypeError(".pj.sakuchin.percussion.proto.GetPlayerResponse.players: object expected");
+                                message.players[i] = $root.pj.sakuchin.percussion.proto.Player.fromObject(object.players[i]);
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a GetPlayerResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.GetPlayerResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.GetPlayerResponse} message GetPlayerResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    GetPlayerResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.players = [];
+                        if (message.players && message.players.length) {
+                            object.players = [];
+                            for (var j = 0; j < message.players.length; ++j)
+                                object.players[j] = $root.pj.sakuchin.percussion.proto.Player.toObject(message.players[j], options);
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this GetPlayerResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.GetPlayerResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    GetPlayerResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return GetPlayerResponse;
                 })();
 
                 proto.GetPlayerDetailResponse = (function() {

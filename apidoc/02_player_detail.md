@@ -26,7 +26,6 @@ Only player-self can update detail info, otherwise `403` is returned.
 + Response 200 (application/json)
 + Response 403 (application/json)
 
-
 ## Active area [/player/{id}/detail/area]
 
 `activeAreas` field of player's detail, which is areas where the player usually visits and play instrument.

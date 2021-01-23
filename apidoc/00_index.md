@@ -11,6 +11,8 @@ FORMAT: 1A
             x-api-token: Access token
             x-user-id: User ID
 
+<!-- include(./01_login.md) -->
+
 <!-- include(./02_player.md) -->
 
 <!-- include(./02_player_detail.md) -->

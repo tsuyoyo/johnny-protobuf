@@ -2,6 +2,7 @@ syntax = "proto3";
 package pj.sakuchin.percussion.proto;
 
 import "proto/area.proto";
+import "proto/player.proto";
 import "proto/instrument.proto";
 
 message Player {
@@ -17,6 +18,10 @@ message PlayerDetail {
     string introduction = 4;
     repeated City activeAreas = 5;
     repeated Instrument instruments = 6;
+}
+
+message GetPlayerResponse {
+    repeated Player players = 1;
 }
 
 message GetPlayerDetailResponse {

@@ -1098,6 +1098,366 @@ export namespace pj {
                     public toJSON(): { [k: string]: any };
                 }
 
+                /** Properties of a PostSignupRequest. */
+                interface IPostSignupRequest {
+
+                    /** PostSignupRequest token */
+                    token?: (string|null);
+                }
+
+                /** Represents a PostSignupRequest. */
+                class PostSignupRequest implements IPostSignupRequest {
+
+                    /**
+                     * Constructs a new PostSignupRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPostSignupRequest);
+
+                    /** PostSignupRequest token. */
+                    public token: string;
+
+                    /**
+                     * Creates a new PostSignupRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PostSignupRequest instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPostSignupRequest): pj.sakuchin.percussion.proto.PostSignupRequest;
+
+                    /**
+                     * Encodes the specified PostSignupRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostSignupRequest.verify|verify} messages.
+                     * @param message PostSignupRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPostSignupRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PostSignupRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostSignupRequest.verify|verify} messages.
+                     * @param message PostSignupRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPostSignupRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PostSignupRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PostSignupRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PostSignupRequest;
+
+                    /**
+                     * Decodes a PostSignupRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PostSignupRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PostSignupRequest;
+
+                    /**
+                     * Verifies a PostSignupRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PostSignupRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PostSignupRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PostSignupRequest;
+
+                    /**
+                     * Creates a plain object from a PostSignupRequest message. Also converts values to other types if specified.
+                     * @param message PostSignupRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PostSignupRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PostSignupRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PostSignupResponse. */
+                interface IPostSignupResponse {
+
+                    /** PostSignupResponse player */
+                    player?: (pj.sakuchin.percussion.proto.IPlayer|null);
+                }
+
+                /** Represents a PostSignupResponse. */
+                class PostSignupResponse implements IPostSignupResponse {
+
+                    /**
+                     * Constructs a new PostSignupResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPostSignupResponse);
+
+                    /** PostSignupResponse player. */
+                    public player?: (pj.sakuchin.percussion.proto.IPlayer|null);
+
+                    /**
+                     * Creates a new PostSignupResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PostSignupResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPostSignupResponse): pj.sakuchin.percussion.proto.PostSignupResponse;
+
+                    /**
+                     * Encodes the specified PostSignupResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostSignupResponse.verify|verify} messages.
+                     * @param message PostSignupResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPostSignupResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PostSignupResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostSignupResponse.verify|verify} messages.
+                     * @param message PostSignupResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPostSignupResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PostSignupResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PostSignupResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PostSignupResponse;
+
+                    /**
+                     * Decodes a PostSignupResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PostSignupResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PostSignupResponse;
+
+                    /**
+                     * Verifies a PostSignupResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PostSignupResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PostSignupResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PostSignupResponse;
+
+                    /**
+                     * Creates a plain object from a PostSignupResponse message. Also converts values to other types if specified.
+                     * @param message PostSignupResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PostSignupResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PostSignupResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PostLoginRequest. */
+                interface IPostLoginRequest {
+
+                    /** PostLoginRequest token */
+                    token?: (string|null);
+                }
+
+                /** Represents a PostLoginRequest. */
+                class PostLoginRequest implements IPostLoginRequest {
+
+                    /**
+                     * Constructs a new PostLoginRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPostLoginRequest);
+
+                    /** PostLoginRequest token. */
+                    public token: string;
+
+                    /**
+                     * Creates a new PostLoginRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PostLoginRequest instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPostLoginRequest): pj.sakuchin.percussion.proto.PostLoginRequest;
+
+                    /**
+                     * Encodes the specified PostLoginRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostLoginRequest.verify|verify} messages.
+                     * @param message PostLoginRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPostLoginRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PostLoginRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostLoginRequest.verify|verify} messages.
+                     * @param message PostLoginRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPostLoginRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PostLoginRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PostLoginRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PostLoginRequest;
+
+                    /**
+                     * Decodes a PostLoginRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PostLoginRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PostLoginRequest;
+
+                    /**
+                     * Verifies a PostLoginRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PostLoginRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PostLoginRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PostLoginRequest;
+
+                    /**
+                     * Creates a plain object from a PostLoginRequest message. Also converts values to other types if specified.
+                     * @param message PostLoginRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PostLoginRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PostLoginRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PostLoginResponse. */
+                interface IPostLoginResponse {
+
+                    /** PostLoginResponse player */
+                    player?: (pj.sakuchin.percussion.proto.IPlayer|null);
+                }
+
+                /** Represents a PostLoginResponse. */
+                class PostLoginResponse implements IPostLoginResponse {
+
+                    /**
+                     * Constructs a new PostLoginResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPostLoginResponse);
+
+                    /** PostLoginResponse player. */
+                    public player?: (pj.sakuchin.percussion.proto.IPlayer|null);
+
+                    /**
+                     * Creates a new PostLoginResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PostLoginResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPostLoginResponse): pj.sakuchin.percussion.proto.PostLoginResponse;
+
+                    /**
+                     * Encodes the specified PostLoginResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostLoginResponse.verify|verify} messages.
+                     * @param message PostLoginResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPostLoginResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PostLoginResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostLoginResponse.verify|verify} messages.
+                     * @param message PostLoginResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPostLoginResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PostLoginResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PostLoginResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PostLoginResponse;
+
+                    /**
+                     * Decodes a PostLoginResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PostLoginResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PostLoginResponse;
+
+                    /**
+                     * Verifies a PostLoginResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PostLoginResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PostLoginResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PostLoginResponse;
+
+                    /**
+                     * Creates a plain object from a PostLoginResponse message. Also converts values to other types if specified.
+                     * @param message PostLoginResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PostLoginResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PostLoginResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
                 /** Properties of a Player. */
                 interface IPlayer {
 
@@ -1315,6 +1675,96 @@ export namespace pj {
 
                     /**
                      * Converts this PlayerDetail to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a GetPlayerResponse. */
+                interface IGetPlayerResponse {
+
+                    /** GetPlayerResponse players */
+                    players?: (pj.sakuchin.percussion.proto.IPlayer[]|null);
+                }
+
+                /** Represents a GetPlayerResponse. */
+                class GetPlayerResponse implements IGetPlayerResponse {
+
+                    /**
+                     * Constructs a new GetPlayerResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IGetPlayerResponse);
+
+                    /** GetPlayerResponse players. */
+                    public players: pj.sakuchin.percussion.proto.IPlayer[];
+
+                    /**
+                     * Creates a new GetPlayerResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns GetPlayerResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IGetPlayerResponse): pj.sakuchin.percussion.proto.GetPlayerResponse;
+
+                    /**
+                     * Encodes the specified GetPlayerResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetPlayerResponse.verify|verify} messages.
+                     * @param message GetPlayerResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IGetPlayerResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified GetPlayerResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetPlayerResponse.verify|verify} messages.
+                     * @param message GetPlayerResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IGetPlayerResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a GetPlayerResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns GetPlayerResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.GetPlayerResponse;
+
+                    /**
+                     * Decodes a GetPlayerResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns GetPlayerResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.GetPlayerResponse;
+
+                    /**
+                     * Verifies a GetPlayerResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a GetPlayerResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns GetPlayerResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.GetPlayerResponse;
+
+                    /**
+                     * Creates a plain object from a GetPlayerResponse message. Also converts values to other types if specified.
+                     * @param message GetPlayerResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.GetPlayerResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this GetPlayerResponse to JSON.
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
