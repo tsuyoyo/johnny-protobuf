@@ -1,0 +1,29 @@
+syntax = "proto3";
+package pj.sakuchin.percussion.proto;
+import "proto/history.proto";
+
+message Instrument {
+  int32 id = 1;
+  string name = 2;
+  string authorId = 3; // User ID who made this instrument entry.
+}
+
+message PostInstrumentRequest {
+  string name = 1;
+}
+
+message GetInstrumentByIdResoponse {
+  Instrument instrument = 1;
+}
+
+message PutInstrumentByIdRequest {
+  Instrument instrument = 1;
+}
+
+message GetInstrumentsResponse {
+  repeated Instrument instruments = 1;
+}
+
+message GetInstrumentEditorsResponse {
+  repeated EditHistory history = 1;
+}

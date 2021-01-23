@@ -1,0 +1,20 @@
+syntax = "proto3";
+package pj.sakuchin.percussion.proto;
+
+import "proto/player.proto";
+
+message PostSignupRequest {
+    string token = 1;
+}
+
+message PostSignupResponse {
+    Player player = 1;
+}
+
+message PostLoginRequest {
+    string token = 1;
+}
+  
+message PostLoginResponse {
+    Player player = 1;
+}

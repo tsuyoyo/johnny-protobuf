@@ -1,0 +1,7 @@
+syntax = "proto3";
+package pj.sakuchin.percussion.proto;
+
+message EditHistory {
+  int64 timeStamp = 1;
+  string playerId = 2;
+}
