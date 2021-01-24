@@ -1,0 +1,36 @@
+syntax = "proto3";
+package pj.sakuchin.percussion.proto;
+
+import "proto/area.proto";
+import "proto/user.proto";
+import "proto/player.proto";
+import "proto/studio.proto";
+import "proto/instrument.proto";
+
+message GetPlayerResponse {
+    repeated Player players = 1;
+}
+
+message GetPlayerDetailResponse {
+    PlayerDetail detail = 1;
+}
+
+message GetPlayerDetailAreaResponse {
+    repeated City activeAreas = 1;
+}
+
+message GetPlayerDetailInstrumentResponse {
+    repeated Instrument instruments = 1;
+}
+
+message GetPlayerDetailStudioResponse {
+    repeated Studio studios = 1;
+}
+
+message GetPlayerDetailFollowerResponse {
+    repeated Player followers = 1;
+}
+
+message GetPlayerDetailFolloweeResponse {
+    repeated Player followers = 1;    
+}

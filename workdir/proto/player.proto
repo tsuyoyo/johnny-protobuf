@@ -22,15 +22,3 @@ message PlayerDetail {
     repeated User followers = 7;
     repeated User followees = 8;
 }
-
-message GetPlayerResponse {
-    repeated Player players = 1;
-}
-
-message GetPlayerDetailResponse {
-    PlayerDetail detail = 1;
-}
-
-message GetPlayerDetailAreaResponse {
-    repeated City activeAreas = 1;
-}

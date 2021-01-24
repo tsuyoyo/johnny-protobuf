@@ -44,29 +44,41 @@ Detail infomation of the player which is presented by `PlayerDetail` object.
                 },
             ]
 
-## Instrumentals [/player/{id}/detail/instruments]
+## Instrumentals [/player/{id}/detail/instrument]
 
 + Parameters
     + id: `test_123` (string, required) - Player ID.
 
-### Get player's instruments [GET]
+### Get player's instrument [GET]
+
+| Content-Type header | Request | Response |
+| --- | --- | --- |
+| application/protobuf | - | `GetPlayerDetailInstrumentResponse` |
 
 + Response 200 (application/json)
 
-## Studios [/player/{id}/detail/studios]
+## Studios [/player/{id}/detail/studio]
 
 + Parameters
     + id: `test_123` (string, required) - Player ID.
 
 ### Get player's studio info [GET]
 
+| Content-Type header | Request | Response |
+| --- | --- | --- |
+| application/protobuf | - | `GetPlayerDetailStudioResponse` |
+
 + Response 200 (application/json)
 
-## Following players [/player/{id}/detail/followers]
+## Following players [/player/{id}/detail/follower]
 
 Players who're are following the player.
 
-### Get followees [GET]
+### Get followers [GET]
+
+| Content-Type header | Request | Response |
+| --- | --- | --- |
+| application/protobuf | - | `GetPlayerDetailFollowerResponse` |
 
 + Response 200 (application/json)
 
@@ -74,6 +86,10 @@ Players who're are following the player.
 
 Players whom the player is following.
 
-### Get followers [GET]
+### Get followees [GET]
+
+| Content-Type header | Request | Response |
+| --- | --- | --- |
+| application/protobuf | - | `GetPlayerDetailFolloweeResponse` |
 
 + Response 200 (application/json)
