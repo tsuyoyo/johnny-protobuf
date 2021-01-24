@@ -3718,6 +3718,8 @@ $root.pj = (function() {
                      * @property {string|null} [introduction] PlayerDetail introduction
                      * @property {Array.<pj.sakuchin.percussion.proto.ICity>|null} [activeAreas] PlayerDetail activeAreas
                      * @property {Array.<pj.sakuchin.percussion.proto.IInstrument>|null} [instruments] PlayerDetail instruments
+                     * @property {Array.<pj.sakuchin.percussion.proto.IUser>|null} [followers] PlayerDetail followers
+                     * @property {Array.<pj.sakuchin.percussion.proto.IUser>|null} [followees] PlayerDetail followees
                      */
 
                     /**
@@ -3731,6 +3733,8 @@ $root.pj = (function() {
                     function PlayerDetail(properties) {
                         this.activeAreas = [];
                         this.instruments = [];
+                        this.followers = [];
+                        this.followees = [];
                         if (properties)
                             for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                                 if (properties[keys[i]] != null)
@@ -3786,6 +3790,22 @@ $root.pj = (function() {
                     PlayerDetail.prototype.instruments = $util.emptyArray;
 
                     /**
+                     * PlayerDetail followers.
+                     * @member {Array.<pj.sakuchin.percussion.proto.IUser>} followers
+                     * @memberof pj.sakuchin.percussion.proto.PlayerDetail
+                     * @instance
+                     */
+                    PlayerDetail.prototype.followers = $util.emptyArray;
+
+                    /**
+                     * PlayerDetail followees.
+                     * @member {Array.<pj.sakuchin.percussion.proto.IUser>} followees
+                     * @memberof pj.sakuchin.percussion.proto.PlayerDetail
+                     * @instance
+                     */
+                    PlayerDetail.prototype.followees = $util.emptyArray;
+
+                    /**
                      * Creates a new PlayerDetail instance using the specified properties.
                      * @function create
                      * @memberof pj.sakuchin.percussion.proto.PlayerDetail
@@ -3823,6 +3843,12 @@ $root.pj = (function() {
                         if (message.instruments != null && message.instruments.length)
                             for (var i = 0; i < message.instruments.length; ++i)
                                 $root.pj.sakuchin.percussion.proto.Instrument.encode(message.instruments[i], writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
+                        if (message.followers != null && message.followers.length)
+                            for (var i = 0; i < message.followers.length; ++i)
+                                $root.pj.sakuchin.percussion.proto.User.encode(message.followers[i], writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
+                        if (message.followees != null && message.followees.length)
+                            for (var i = 0; i < message.followees.length; ++i)
+                                $root.pj.sakuchin.percussion.proto.User.encode(message.followees[i], writer.uint32(/* id 8, wireType 2 =*/66).fork()).ldelim();
                         return writer;
                     };
 
@@ -3878,6 +3904,16 @@ $root.pj = (function() {
                                 if (!(message.instruments && message.instruments.length))
                                     message.instruments = [];
                                 message.instruments.push($root.pj.sakuchin.percussion.proto.Instrument.decode(reader, reader.uint32()));
+                                break;
+                            case 7:
+                                if (!(message.followers && message.followers.length))
+                                    message.followers = [];
+                                message.followers.push($root.pj.sakuchin.percussion.proto.User.decode(reader, reader.uint32()));
+                                break;
+                            case 8:
+                                if (!(message.followees && message.followees.length))
+                                    message.followees = [];
+                                message.followees.push($root.pj.sakuchin.percussion.proto.User.decode(reader, reader.uint32()));
                                 break;
                             default:
                                 reader.skipType(tag & 7);
@@ -3944,6 +3980,24 @@ $root.pj = (function() {
                                     return "instruments." + error;
                             }
                         }
+                        if (message.followers != null && message.hasOwnProperty("followers")) {
+                            if (!Array.isArray(message.followers))
+                                return "followers: array expected";
+                            for (var i = 0; i < message.followers.length; ++i) {
+                                var error = $root.pj.sakuchin.percussion.proto.User.verify(message.followers[i]);
+                                if (error)
+                                    return "followers." + error;
+                            }
+                        }
+                        if (message.followees != null && message.hasOwnProperty("followees")) {
+                            if (!Array.isArray(message.followees))
+                                return "followees: array expected";
+                            for (var i = 0; i < message.followees.length; ++i) {
+                                var error = $root.pj.sakuchin.percussion.proto.User.verify(message.followees[i]);
+                                if (error)
+                                    return "followees." + error;
+                            }
+                        }
                         return null;
                     };
 
@@ -3987,6 +4041,26 @@ $root.pj = (function() {
                                 message.instruments[i] = $root.pj.sakuchin.percussion.proto.Instrument.fromObject(object.instruments[i]);
                             }
                         }
+                        if (object.followers) {
+                            if (!Array.isArray(object.followers))
+                                throw TypeError(".pj.sakuchin.percussion.proto.PlayerDetail.followers: array expected");
+                            message.followers = [];
+                            for (var i = 0; i < object.followers.length; ++i) {
+                                if (typeof object.followers[i] !== "object")
+                                    throw TypeError(".pj.sakuchin.percussion.proto.PlayerDetail.followers: object expected");
+                                message.followers[i] = $root.pj.sakuchin.percussion.proto.User.fromObject(object.followers[i]);
+                            }
+                        }
+                        if (object.followees) {
+                            if (!Array.isArray(object.followees))
+                                throw TypeError(".pj.sakuchin.percussion.proto.PlayerDetail.followees: array expected");
+                            message.followees = [];
+                            for (var i = 0; i < object.followees.length; ++i) {
+                                if (typeof object.followees[i] !== "object")
+                                    throw TypeError(".pj.sakuchin.percussion.proto.PlayerDetail.followees: object expected");
+                                message.followees[i] = $root.pj.sakuchin.percussion.proto.User.fromObject(object.followees[i]);
+                            }
+                        }
                         return message;
                     };
 
@@ -4006,6 +4080,8 @@ $root.pj = (function() {
                         if (options.arrays || options.defaults) {
                             object.activeAreas = [];
                             object.instruments = [];
+                            object.followers = [];
+                            object.followees = [];
                         }
                         if (options.defaults) {
                             object.id = "";
@@ -4030,6 +4106,16 @@ $root.pj = (function() {
                             object.instruments = [];
                             for (var j = 0; j < message.instruments.length; ++j)
                                 object.instruments[j] = $root.pj.sakuchin.percussion.proto.Instrument.toObject(message.instruments[j], options);
+                        }
+                        if (message.followers && message.followers.length) {
+                            object.followers = [];
+                            for (var j = 0; j < message.followers.length; ++j)
+                                object.followers[j] = $root.pj.sakuchin.percussion.proto.User.toObject(message.followers[j], options);
+                        }
+                        if (message.followees && message.followees.length) {
+                            object.followees = [];
+                            for (var j = 0; j < message.followees.length; ++j)
+                                object.followees[j] = $root.pj.sakuchin.percussion.proto.User.toObject(message.followees[j], options);
                         }
                         return object;
                     };

@@ -13,7 +13,7 @@ Detail infomation of the player which is presented by `PlayerDetail` object.
 | --- | --- | --- |
 | application/protobuf | - | `GetPlayerDetailResponse` |
 
-+ Response 200 (application/json)
++ Response 200 (application/json) 
 
 ### Update player's detail [PUT]
 

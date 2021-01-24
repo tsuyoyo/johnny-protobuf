@@ -8,11 +8,14 @@ Clients send token which is got from Firebase by verifying the user in other ser
 
 When the user has already been registered, API returns `200` with existing `Player` data.
 
+`401` is returned, when the token cannot be authorized.
+
 | Content-Type header | Request | Response |
 | --- | --- | --- |
 | application/protobuf | `PostSignupRequest` | `PostSignupResponse` |
 
 + Response 200 (application/json)
++ Response 401 (application/json)
 
 ## Login [/login]
 

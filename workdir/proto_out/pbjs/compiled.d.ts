@@ -1580,6 +1580,12 @@ export namespace pj {
 
                     /** PlayerDetail instruments */
                     instruments?: (pj.sakuchin.percussion.proto.IInstrument[]|null);
+
+                    /** PlayerDetail followers */
+                    followers?: (pj.sakuchin.percussion.proto.IUser[]|null);
+
+                    /** PlayerDetail followees */
+                    followees?: (pj.sakuchin.percussion.proto.IUser[]|null);
                 }
 
                 /** Represents a PlayerDetail. */
@@ -1608,6 +1614,12 @@ export namespace pj {
 
                     /** PlayerDetail instruments. */
                     public instruments: pj.sakuchin.percussion.proto.IInstrument[];
+
+                    /** PlayerDetail followers. */
+                    public followers: pj.sakuchin.percussion.proto.IUser[];
+
+                    /** PlayerDetail followees. */
+                    public followees: pj.sakuchin.percussion.proto.IUser[];
 
                     /**
                      * Creates a new PlayerDetail instance using the specified properties.
