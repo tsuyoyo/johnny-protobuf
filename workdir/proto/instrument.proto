@@ -24,6 +24,6 @@ message GetInstrumentsResponse {
   repeated Instrument instruments = 1;
 }
 
-message GetInstrumentEditorsResponse {
+message GetInstrumentHistoryEditResponse {
   repeated EditHistory history = 1;
 }

@@ -10,8 +10,12 @@ fs.watch('./apidoc', {}, (event, filename) => {
 
 function onBuiltApiDoc(err, stdout, stderr) {
     if (err) {
-        console.log(`!! Fail to build HTML file : ${err} !!`)
-    } else {
+        console.log(`!! Fail to build HTML file !!\n${err}`)
+    }
+    else if (stderr) {
+        console.log(`!! Fail to build HTML file !!\n${stderr}`)
+    }
+    else {
         console.log(` HTML is updated.`)
     }
 }

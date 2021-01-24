@@ -1,1 +1,0 @@
-<!-- API to follow/unfollow other players -->

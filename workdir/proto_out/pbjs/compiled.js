@@ -2508,24 +2508,24 @@ $root.pj = (function() {
                     return GetInstrumentsResponse;
                 })();
 
-                proto.GetInstrumentEditorsResponse = (function() {
+                proto.GetInstrumentHistoryEditResponse = (function() {
 
                     /**
-                     * Properties of a GetInstrumentEditorsResponse.
+                     * Properties of a GetInstrumentHistoryEditResponse.
                      * @memberof pj.sakuchin.percussion.proto
-                     * @interface IGetInstrumentEditorsResponse
-                     * @property {Array.<pj.sakuchin.percussion.proto.IEditHistory>|null} [history] GetInstrumentEditorsResponse history
+                     * @interface IGetInstrumentHistoryEditResponse
+                     * @property {Array.<pj.sakuchin.percussion.proto.IEditHistory>|null} [history] GetInstrumentHistoryEditResponse history
                      */
 
                     /**
-                     * Constructs a new GetInstrumentEditorsResponse.
+                     * Constructs a new GetInstrumentHistoryEditResponse.
                      * @memberof pj.sakuchin.percussion.proto
-                     * @classdesc Represents a GetInstrumentEditorsResponse.
-                     * @implements IGetInstrumentEditorsResponse
+                     * @classdesc Represents a GetInstrumentHistoryEditResponse.
+                     * @implements IGetInstrumentHistoryEditResponse
                      * @constructor
-                     * @param {pj.sakuchin.percussion.proto.IGetInstrumentEditorsResponse=} [properties] Properties to set
+                     * @param {pj.sakuchin.percussion.proto.IGetInstrumentHistoryEditResponse=} [properties] Properties to set
                      */
-                    function GetInstrumentEditorsResponse(properties) {
+                    function GetInstrumentHistoryEditResponse(properties) {
                         this.history = [];
                         if (properties)
                             for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
@@ -2534,35 +2534,35 @@ $root.pj = (function() {
                     }
 
                     /**
-                     * GetInstrumentEditorsResponse history.
+                     * GetInstrumentHistoryEditResponse history.
                      * @member {Array.<pj.sakuchin.percussion.proto.IEditHistory>} history
-                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse
+                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse
                      * @instance
                      */
-                    GetInstrumentEditorsResponse.prototype.history = $util.emptyArray;
+                    GetInstrumentHistoryEditResponse.prototype.history = $util.emptyArray;
 
                     /**
-                     * Creates a new GetInstrumentEditorsResponse instance using the specified properties.
+                     * Creates a new GetInstrumentHistoryEditResponse instance using the specified properties.
                      * @function create
-                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse
+                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse
                      * @static
-                     * @param {pj.sakuchin.percussion.proto.IGetInstrumentEditorsResponse=} [properties] Properties to set
-                     * @returns {pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse} GetInstrumentEditorsResponse instance
+                     * @param {pj.sakuchin.percussion.proto.IGetInstrumentHistoryEditResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse} GetInstrumentHistoryEditResponse instance
                      */
-                    GetInstrumentEditorsResponse.create = function create(properties) {
-                        return new GetInstrumentEditorsResponse(properties);
+                    GetInstrumentHistoryEditResponse.create = function create(properties) {
+                        return new GetInstrumentHistoryEditResponse(properties);
                     };
 
                     /**
-                     * Encodes the specified GetInstrumentEditorsResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse.verify|verify} messages.
+                     * Encodes the specified GetInstrumentHistoryEditResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse.verify|verify} messages.
                      * @function encode
-                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse
+                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse
                      * @static
-                     * @param {pj.sakuchin.percussion.proto.IGetInstrumentEditorsResponse} message GetInstrumentEditorsResponse message or plain object to encode
+                     * @param {pj.sakuchin.percussion.proto.IGetInstrumentHistoryEditResponse} message GetInstrumentHistoryEditResponse message or plain object to encode
                      * @param {$protobuf.Writer} [writer] Writer to encode to
                      * @returns {$protobuf.Writer} Writer
                      */
-                    GetInstrumentEditorsResponse.encode = function encode(message, writer) {
+                    GetInstrumentHistoryEditResponse.encode = function encode(message, writer) {
                         if (!writer)
                             writer = $Writer.create();
                         if (message.history != null && message.history.length)
@@ -2572,33 +2572,33 @@ $root.pj = (function() {
                     };
 
                     /**
-                     * Encodes the specified GetInstrumentEditorsResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse.verify|verify} messages.
+                     * Encodes the specified GetInstrumentHistoryEditResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse.verify|verify} messages.
                      * @function encodeDelimited
-                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse
+                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse
                      * @static
-                     * @param {pj.sakuchin.percussion.proto.IGetInstrumentEditorsResponse} message GetInstrumentEditorsResponse message or plain object to encode
+                     * @param {pj.sakuchin.percussion.proto.IGetInstrumentHistoryEditResponse} message GetInstrumentHistoryEditResponse message or plain object to encode
                      * @param {$protobuf.Writer} [writer] Writer to encode to
                      * @returns {$protobuf.Writer} Writer
                      */
-                    GetInstrumentEditorsResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    GetInstrumentHistoryEditResponse.encodeDelimited = function encodeDelimited(message, writer) {
                         return this.encode(message, writer).ldelim();
                     };
 
                     /**
-                     * Decodes a GetInstrumentEditorsResponse message from the specified reader or buffer.
+                     * Decodes a GetInstrumentHistoryEditResponse message from the specified reader or buffer.
                      * @function decode
-                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse
+                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse
                      * @static
                      * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                      * @param {number} [length] Message length if known beforehand
-                     * @returns {pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse} GetInstrumentEditorsResponse
+                     * @returns {pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse} GetInstrumentHistoryEditResponse
                      * @throws {Error} If the payload is not a reader or valid buffer
                      * @throws {$protobuf.util.ProtocolError} If required fields are missing
                      */
-                    GetInstrumentEditorsResponse.decode = function decode(reader, length) {
+                    GetInstrumentHistoryEditResponse.decode = function decode(reader, length) {
                         if (!(reader instanceof $Reader))
                             reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse();
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse();
                         while (reader.pos < end) {
                             var tag = reader.uint32();
                             switch (tag >>> 3) {
@@ -2616,30 +2616,30 @@ $root.pj = (function() {
                     };
 
                     /**
-                     * Decodes a GetInstrumentEditorsResponse message from the specified reader or buffer, length delimited.
+                     * Decodes a GetInstrumentHistoryEditResponse message from the specified reader or buffer, length delimited.
                      * @function decodeDelimited
-                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse
+                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse
                      * @static
                      * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse} GetInstrumentEditorsResponse
+                     * @returns {pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse} GetInstrumentHistoryEditResponse
                      * @throws {Error} If the payload is not a reader or valid buffer
                      * @throws {$protobuf.util.ProtocolError} If required fields are missing
                      */
-                    GetInstrumentEditorsResponse.decodeDelimited = function decodeDelimited(reader) {
+                    GetInstrumentHistoryEditResponse.decodeDelimited = function decodeDelimited(reader) {
                         if (!(reader instanceof $Reader))
                             reader = new $Reader(reader);
                         return this.decode(reader, reader.uint32());
                     };
 
                     /**
-                     * Verifies a GetInstrumentEditorsResponse message.
+                     * Verifies a GetInstrumentHistoryEditResponse message.
                      * @function verify
-                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse
+                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse
                      * @static
                      * @param {Object.<string,*>} message Plain object to verify
                      * @returns {string|null} `null` if valid, otherwise the reason why it is not
                      */
-                    GetInstrumentEditorsResponse.verify = function verify(message) {
+                    GetInstrumentHistoryEditResponse.verify = function verify(message) {
                         if (typeof message !== "object" || message === null)
                             return "object expected";
                         if (message.history != null && message.hasOwnProperty("history")) {
@@ -2655,24 +2655,24 @@ $root.pj = (function() {
                     };
 
                     /**
-                     * Creates a GetInstrumentEditorsResponse message from a plain object. Also converts values to their respective internal types.
+                     * Creates a GetInstrumentHistoryEditResponse message from a plain object. Also converts values to their respective internal types.
                      * @function fromObject
-                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse
+                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse
                      * @static
                      * @param {Object.<string,*>} object Plain object
-                     * @returns {pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse} GetInstrumentEditorsResponse
+                     * @returns {pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse} GetInstrumentHistoryEditResponse
                      */
-                    GetInstrumentEditorsResponse.fromObject = function fromObject(object) {
-                        if (object instanceof $root.pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse)
+                    GetInstrumentHistoryEditResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse)
                             return object;
-                        var message = new $root.pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse();
+                        var message = new $root.pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse();
                         if (object.history) {
                             if (!Array.isArray(object.history))
-                                throw TypeError(".pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse.history: array expected");
+                                throw TypeError(".pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse.history: array expected");
                             message.history = [];
                             for (var i = 0; i < object.history.length; ++i) {
                                 if (typeof object.history[i] !== "object")
-                                    throw TypeError(".pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse.history: object expected");
+                                    throw TypeError(".pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse.history: object expected");
                                 message.history[i] = $root.pj.sakuchin.percussion.proto.EditHistory.fromObject(object.history[i]);
                             }
                         }
@@ -2680,15 +2680,15 @@ $root.pj = (function() {
                     };
 
                     /**
-                     * Creates a plain object from a GetInstrumentEditorsResponse message. Also converts values to other types if specified.
+                     * Creates a plain object from a GetInstrumentHistoryEditResponse message. Also converts values to other types if specified.
                      * @function toObject
-                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse
+                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse
                      * @static
-                     * @param {pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse} message GetInstrumentEditorsResponse
+                     * @param {pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse} message GetInstrumentHistoryEditResponse
                      * @param {$protobuf.IConversionOptions} [options] Conversion options
                      * @returns {Object.<string,*>} Plain object
                      */
-                    GetInstrumentEditorsResponse.toObject = function toObject(message, options) {
+                    GetInstrumentHistoryEditResponse.toObject = function toObject(message, options) {
                         if (!options)
                             options = {};
                         var object = {};
@@ -2703,17 +2703,17 @@ $root.pj = (function() {
                     };
 
                     /**
-                     * Converts this GetInstrumentEditorsResponse to JSON.
+                     * Converts this GetInstrumentHistoryEditResponse to JSON.
                      * @function toJSON
-                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse
+                     * @memberof pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse
                      * @instance
                      * @returns {Object.<string,*>} JSON object
                      */
-                    GetInstrumentEditorsResponse.prototype.toJSON = function toJSON() {
+                    GetInstrumentHistoryEditResponse.prototype.toJSON = function toJSON() {
                         return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                     };
 
-                    return GetInstrumentEditorsResponse;
+                    return GetInstrumentHistoryEditResponse;
                 })();
 
                 proto.PostSignupRequest = (function() {
@@ -3472,6 +3472,5198 @@ $root.pj = (function() {
                     };
 
                     return PostLoginResponse;
+                })();
+
+                proto.GetMyselfDetailResponse = (function() {
+
+                    /**
+                     * Properties of a GetMyselfDetailResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IGetMyselfDetailResponse
+                     * @property {pj.sakuchin.percussion.proto.IPlayerDetail|null} [detail] GetMyselfDetailResponse detail
+                     */
+
+                    /**
+                     * Constructs a new GetMyselfDetailResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a GetMyselfDetailResponse.
+                     * @implements IGetMyselfDetailResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselfDetailResponse=} [properties] Properties to set
+                     */
+                    function GetMyselfDetailResponse(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * GetMyselfDetailResponse detail.
+                     * @member {pj.sakuchin.percussion.proto.IPlayerDetail|null|undefined} detail
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailResponse
+                     * @instance
+                     */
+                    GetMyselfDetailResponse.prototype.detail = null;
+
+                    /**
+                     * Creates a new GetMyselfDetailResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselfDetailResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselfDetailResponse} GetMyselfDetailResponse instance
+                     */
+                    GetMyselfDetailResponse.create = function create(properties) {
+                        return new GetMyselfDetailResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified GetMyselfDetailResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselfDetailResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselfDetailResponse} message GetMyselfDetailResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    GetMyselfDetailResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.detail != null && Object.hasOwnProperty.call(message, "detail"))
+                            $root.pj.sakuchin.percussion.proto.PlayerDetail.encode(message.detail, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified GetMyselfDetailResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselfDetailResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselfDetailResponse} message GetMyselfDetailResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    GetMyselfDetailResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a GetMyselfDetailResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselfDetailResponse} GetMyselfDetailResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    GetMyselfDetailResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.GetMyselfDetailResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.detail = $root.pj.sakuchin.percussion.proto.PlayerDetail.decode(reader, reader.uint32());
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a GetMyselfDetailResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselfDetailResponse} GetMyselfDetailResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    GetMyselfDetailResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a GetMyselfDetailResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    GetMyselfDetailResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.detail != null && message.hasOwnProperty("detail")) {
+                            var error = $root.pj.sakuchin.percussion.proto.PlayerDetail.verify(message.detail);
+                            if (error)
+                                return "detail." + error;
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a GetMyselfDetailResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselfDetailResponse} GetMyselfDetailResponse
+                     */
+                    GetMyselfDetailResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.GetMyselfDetailResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.GetMyselfDetailResponse();
+                        if (object.detail != null) {
+                            if (typeof object.detail !== "object")
+                                throw TypeError(".pj.sakuchin.percussion.proto.GetMyselfDetailResponse.detail: object expected");
+                            message.detail = $root.pj.sakuchin.percussion.proto.PlayerDetail.fromObject(object.detail);
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a GetMyselfDetailResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.GetMyselfDetailResponse} message GetMyselfDetailResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    GetMyselfDetailResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            object.detail = null;
+                        if (message.detail != null && message.hasOwnProperty("detail"))
+                            object.detail = $root.pj.sakuchin.percussion.proto.PlayerDetail.toObject(message.detail, options);
+                        return object;
+                    };
+
+                    /**
+                     * Converts this GetMyselfDetailResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    GetMyselfDetailResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return GetMyselfDetailResponse;
+                })();
+
+                proto.PutMyselfDetailRequest = (function() {
+
+                    /**
+                     * Properties of a PutMyselfDetailRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IPutMyselfDetailRequest
+                     * @property {pj.sakuchin.percussion.proto.IPlayerDetail|null} [detail] PutMyselfDetailRequest detail
+                     */
+
+                    /**
+                     * Constructs a new PutMyselfDetailRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a PutMyselfDetailRequest.
+                     * @implements IPutMyselfDetailRequest
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselfDetailRequest=} [properties] Properties to set
+                     */
+                    function PutMyselfDetailRequest(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PutMyselfDetailRequest detail.
+                     * @member {pj.sakuchin.percussion.proto.IPlayerDetail|null|undefined} detail
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailRequest
+                     * @instance
+                     */
+                    PutMyselfDetailRequest.prototype.detail = null;
+
+                    /**
+                     * Creates a new PutMyselfDetailRequest instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselfDetailRequest=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselfDetailRequest} PutMyselfDetailRequest instance
+                     */
+                    PutMyselfDetailRequest.create = function create(properties) {
+                        return new PutMyselfDetailRequest(properties);
+                    };
+
+                    /**
+                     * Encodes the specified PutMyselfDetailRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselfDetailRequest.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselfDetailRequest} message PutMyselfDetailRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PutMyselfDetailRequest.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.detail != null && Object.hasOwnProperty.call(message, "detail"))
+                            $root.pj.sakuchin.percussion.proto.PlayerDetail.encode(message.detail, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PutMyselfDetailRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselfDetailRequest.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselfDetailRequest} message PutMyselfDetailRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PutMyselfDetailRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PutMyselfDetailRequest message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselfDetailRequest} PutMyselfDetailRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PutMyselfDetailRequest.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PutMyselfDetailRequest();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.detail = $root.pj.sakuchin.percussion.proto.PlayerDetail.decode(reader, reader.uint32());
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PutMyselfDetailRequest message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselfDetailRequest} PutMyselfDetailRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PutMyselfDetailRequest.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PutMyselfDetailRequest message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailRequest
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PutMyselfDetailRequest.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.detail != null && message.hasOwnProperty("detail")) {
+                            var error = $root.pj.sakuchin.percussion.proto.PlayerDetail.verify(message.detail);
+                            if (error)
+                                return "detail." + error;
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PutMyselfDetailRequest message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailRequest
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselfDetailRequest} PutMyselfDetailRequest
+                     */
+                    PutMyselfDetailRequest.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.PutMyselfDetailRequest)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.PutMyselfDetailRequest();
+                        if (object.detail != null) {
+                            if (typeof object.detail !== "object")
+                                throw TypeError(".pj.sakuchin.percussion.proto.PutMyselfDetailRequest.detail: object expected");
+                            message.detail = $root.pj.sakuchin.percussion.proto.PlayerDetail.fromObject(object.detail);
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PutMyselfDetailRequest message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.PutMyselfDetailRequest} message PutMyselfDetailRequest
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PutMyselfDetailRequest.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            object.detail = null;
+                        if (message.detail != null && message.hasOwnProperty("detail"))
+                            object.detail = $root.pj.sakuchin.percussion.proto.PlayerDetail.toObject(message.detail, options);
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PutMyselfDetailRequest to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailRequest
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PutMyselfDetailRequest.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PutMyselfDetailRequest;
+                })();
+
+                proto.PutMyselfDetailResponse = (function() {
+
+                    /**
+                     * Properties of a PutMyselfDetailResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IPutMyselfDetailResponse
+                     * @property {pj.sakuchin.percussion.proto.IPlayerDetail|null} [detail] PutMyselfDetailResponse detail
+                     */
+
+                    /**
+                     * Constructs a new PutMyselfDetailResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a PutMyselfDetailResponse.
+                     * @implements IPutMyselfDetailResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselfDetailResponse=} [properties] Properties to set
+                     */
+                    function PutMyselfDetailResponse(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PutMyselfDetailResponse detail.
+                     * @member {pj.sakuchin.percussion.proto.IPlayerDetail|null|undefined} detail
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailResponse
+                     * @instance
+                     */
+                    PutMyselfDetailResponse.prototype.detail = null;
+
+                    /**
+                     * Creates a new PutMyselfDetailResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselfDetailResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselfDetailResponse} PutMyselfDetailResponse instance
+                     */
+                    PutMyselfDetailResponse.create = function create(properties) {
+                        return new PutMyselfDetailResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified PutMyselfDetailResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselfDetailResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselfDetailResponse} message PutMyselfDetailResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PutMyselfDetailResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.detail != null && Object.hasOwnProperty.call(message, "detail"))
+                            $root.pj.sakuchin.percussion.proto.PlayerDetail.encode(message.detail, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PutMyselfDetailResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselfDetailResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselfDetailResponse} message PutMyselfDetailResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PutMyselfDetailResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PutMyselfDetailResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselfDetailResponse} PutMyselfDetailResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PutMyselfDetailResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PutMyselfDetailResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.detail = $root.pj.sakuchin.percussion.proto.PlayerDetail.decode(reader, reader.uint32());
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PutMyselfDetailResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselfDetailResponse} PutMyselfDetailResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PutMyselfDetailResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PutMyselfDetailResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PutMyselfDetailResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.detail != null && message.hasOwnProperty("detail")) {
+                            var error = $root.pj.sakuchin.percussion.proto.PlayerDetail.verify(message.detail);
+                            if (error)
+                                return "detail." + error;
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PutMyselfDetailResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselfDetailResponse} PutMyselfDetailResponse
+                     */
+                    PutMyselfDetailResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.PutMyselfDetailResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.PutMyselfDetailResponse();
+                        if (object.detail != null) {
+                            if (typeof object.detail !== "object")
+                                throw TypeError(".pj.sakuchin.percussion.proto.PutMyselfDetailResponse.detail: object expected");
+                            message.detail = $root.pj.sakuchin.percussion.proto.PlayerDetail.fromObject(object.detail);
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PutMyselfDetailResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.PutMyselfDetailResponse} message PutMyselfDetailResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PutMyselfDetailResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            object.detail = null;
+                        if (message.detail != null && message.hasOwnProperty("detail"))
+                            object.detail = $root.pj.sakuchin.percussion.proto.PlayerDetail.toObject(message.detail, options);
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PutMyselfDetailResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PutMyselfDetailResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PutMyselfDetailResponse;
+                })();
+
+                proto.GetMyselfDetailAreaResponse = (function() {
+
+                    /**
+                     * Properties of a GetMyselfDetailAreaResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IGetMyselfDetailAreaResponse
+                     * @property {Array.<pj.sakuchin.percussion.proto.ICity>|null} [cities] GetMyselfDetailAreaResponse cities
+                     */
+
+                    /**
+                     * Constructs a new GetMyselfDetailAreaResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a GetMyselfDetailAreaResponse.
+                     * @implements IGetMyselfDetailAreaResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselfDetailAreaResponse=} [properties] Properties to set
+                     */
+                    function GetMyselfDetailAreaResponse(properties) {
+                        this.cities = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * GetMyselfDetailAreaResponse cities.
+                     * @member {Array.<pj.sakuchin.percussion.proto.ICity>} cities
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse
+                     * @instance
+                     */
+                    GetMyselfDetailAreaResponse.prototype.cities = $util.emptyArray;
+
+                    /**
+                     * Creates a new GetMyselfDetailAreaResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselfDetailAreaResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse} GetMyselfDetailAreaResponse instance
+                     */
+                    GetMyselfDetailAreaResponse.create = function create(properties) {
+                        return new GetMyselfDetailAreaResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified GetMyselfDetailAreaResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselfDetailAreaResponse} message GetMyselfDetailAreaResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    GetMyselfDetailAreaResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.cities != null && message.cities.length)
+                            for (var i = 0; i < message.cities.length; ++i)
+                                $root.pj.sakuchin.percussion.proto.City.encode(message.cities[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified GetMyselfDetailAreaResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselfDetailAreaResponse} message GetMyselfDetailAreaResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    GetMyselfDetailAreaResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a GetMyselfDetailAreaResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse} GetMyselfDetailAreaResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    GetMyselfDetailAreaResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.cities && message.cities.length))
+                                    message.cities = [];
+                                message.cities.push($root.pj.sakuchin.percussion.proto.City.decode(reader, reader.uint32()));
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a GetMyselfDetailAreaResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse} GetMyselfDetailAreaResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    GetMyselfDetailAreaResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a GetMyselfDetailAreaResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    GetMyselfDetailAreaResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.cities != null && message.hasOwnProperty("cities")) {
+                            if (!Array.isArray(message.cities))
+                                return "cities: array expected";
+                            for (var i = 0; i < message.cities.length; ++i) {
+                                var error = $root.pj.sakuchin.percussion.proto.City.verify(message.cities[i]);
+                                if (error)
+                                    return "cities." + error;
+                            }
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a GetMyselfDetailAreaResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse} GetMyselfDetailAreaResponse
+                     */
+                    GetMyselfDetailAreaResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse();
+                        if (object.cities) {
+                            if (!Array.isArray(object.cities))
+                                throw TypeError(".pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse.cities: array expected");
+                            message.cities = [];
+                            for (var i = 0; i < object.cities.length; ++i) {
+                                if (typeof object.cities[i] !== "object")
+                                    throw TypeError(".pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse.cities: object expected");
+                                message.cities[i] = $root.pj.sakuchin.percussion.proto.City.fromObject(object.cities[i]);
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a GetMyselfDetailAreaResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse} message GetMyselfDetailAreaResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    GetMyselfDetailAreaResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.cities = [];
+                        if (message.cities && message.cities.length) {
+                            object.cities = [];
+                            for (var j = 0; j < message.cities.length; ++j)
+                                object.cities[j] = $root.pj.sakuchin.percussion.proto.City.toObject(message.cities[j], options);
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this GetMyselfDetailAreaResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    GetMyselfDetailAreaResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return GetMyselfDetailAreaResponse;
+                })();
+
+                proto.PostMyselfDetailAreaRequest = (function() {
+
+                    /**
+                     * Properties of a PostMyselfDetailAreaRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IPostMyselfDetailAreaRequest
+                     * @property {string|null} [cityId] PostMyselfDetailAreaRequest cityId
+                     */
+
+                    /**
+                     * Constructs a new PostMyselfDetailAreaRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a PostMyselfDetailAreaRequest.
+                     * @implements IPostMyselfDetailAreaRequest
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselfDetailAreaRequest=} [properties] Properties to set
+                     */
+                    function PostMyselfDetailAreaRequest(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PostMyselfDetailAreaRequest cityId.
+                     * @member {string} cityId
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest
+                     * @instance
+                     */
+                    PostMyselfDetailAreaRequest.prototype.cityId = "";
+
+                    /**
+                     * Creates a new PostMyselfDetailAreaRequest instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselfDetailAreaRequest=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest} PostMyselfDetailAreaRequest instance
+                     */
+                    PostMyselfDetailAreaRequest.create = function create(properties) {
+                        return new PostMyselfDetailAreaRequest(properties);
+                    };
+
+                    /**
+                     * Encodes the specified PostMyselfDetailAreaRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselfDetailAreaRequest} message PostMyselfDetailAreaRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostMyselfDetailAreaRequest.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.cityId != null && Object.hasOwnProperty.call(message, "cityId"))
+                            writer.uint32(/* id 1, wireType 2 =*/10).string(message.cityId);
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PostMyselfDetailAreaRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselfDetailAreaRequest} message PostMyselfDetailAreaRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostMyselfDetailAreaRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PostMyselfDetailAreaRequest message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest} PostMyselfDetailAreaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostMyselfDetailAreaRequest.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.cityId = reader.string();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PostMyselfDetailAreaRequest message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest} PostMyselfDetailAreaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostMyselfDetailAreaRequest.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PostMyselfDetailAreaRequest message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PostMyselfDetailAreaRequest.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.cityId != null && message.hasOwnProperty("cityId"))
+                            if (!$util.isString(message.cityId))
+                                return "cityId: string expected";
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PostMyselfDetailAreaRequest message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest} PostMyselfDetailAreaRequest
+                     */
+                    PostMyselfDetailAreaRequest.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest();
+                        if (object.cityId != null)
+                            message.cityId = String(object.cityId);
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PostMyselfDetailAreaRequest message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest} message PostMyselfDetailAreaRequest
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PostMyselfDetailAreaRequest.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            object.cityId = "";
+                        if (message.cityId != null && message.hasOwnProperty("cityId"))
+                            object.cityId = message.cityId;
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PostMyselfDetailAreaRequest to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PostMyselfDetailAreaRequest.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PostMyselfDetailAreaRequest;
+                })();
+
+                proto.PostMyselfDetailAreaResponse = (function() {
+
+                    /**
+                     * Properties of a PostMyselfDetailAreaResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IPostMyselfDetailAreaResponse
+                     * @property {Array.<pj.sakuchin.percussion.proto.ICity>|null} [cities] PostMyselfDetailAreaResponse cities
+                     */
+
+                    /**
+                     * Constructs a new PostMyselfDetailAreaResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a PostMyselfDetailAreaResponse.
+                     * @implements IPostMyselfDetailAreaResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselfDetailAreaResponse=} [properties] Properties to set
+                     */
+                    function PostMyselfDetailAreaResponse(properties) {
+                        this.cities = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PostMyselfDetailAreaResponse cities.
+                     * @member {Array.<pj.sakuchin.percussion.proto.ICity>} cities
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse
+                     * @instance
+                     */
+                    PostMyselfDetailAreaResponse.prototype.cities = $util.emptyArray;
+
+                    /**
+                     * Creates a new PostMyselfDetailAreaResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselfDetailAreaResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse} PostMyselfDetailAreaResponse instance
+                     */
+                    PostMyselfDetailAreaResponse.create = function create(properties) {
+                        return new PostMyselfDetailAreaResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified PostMyselfDetailAreaResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselfDetailAreaResponse} message PostMyselfDetailAreaResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostMyselfDetailAreaResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.cities != null && message.cities.length)
+                            for (var i = 0; i < message.cities.length; ++i)
+                                $root.pj.sakuchin.percussion.proto.City.encode(message.cities[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PostMyselfDetailAreaResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselfDetailAreaResponse} message PostMyselfDetailAreaResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostMyselfDetailAreaResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PostMyselfDetailAreaResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse} PostMyselfDetailAreaResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostMyselfDetailAreaResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.cities && message.cities.length))
+                                    message.cities = [];
+                                message.cities.push($root.pj.sakuchin.percussion.proto.City.decode(reader, reader.uint32()));
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PostMyselfDetailAreaResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse} PostMyselfDetailAreaResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostMyselfDetailAreaResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PostMyselfDetailAreaResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PostMyselfDetailAreaResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.cities != null && message.hasOwnProperty("cities")) {
+                            if (!Array.isArray(message.cities))
+                                return "cities: array expected";
+                            for (var i = 0; i < message.cities.length; ++i) {
+                                var error = $root.pj.sakuchin.percussion.proto.City.verify(message.cities[i]);
+                                if (error)
+                                    return "cities." + error;
+                            }
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PostMyselfDetailAreaResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse} PostMyselfDetailAreaResponse
+                     */
+                    PostMyselfDetailAreaResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse();
+                        if (object.cities) {
+                            if (!Array.isArray(object.cities))
+                                throw TypeError(".pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse.cities: array expected");
+                            message.cities = [];
+                            for (var i = 0; i < object.cities.length; ++i) {
+                                if (typeof object.cities[i] !== "object")
+                                    throw TypeError(".pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse.cities: object expected");
+                                message.cities[i] = $root.pj.sakuchin.percussion.proto.City.fromObject(object.cities[i]);
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PostMyselfDetailAreaResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse} message PostMyselfDetailAreaResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PostMyselfDetailAreaResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.cities = [];
+                        if (message.cities && message.cities.length) {
+                            object.cities = [];
+                            for (var j = 0; j < message.cities.length; ++j)
+                                object.cities[j] = $root.pj.sakuchin.percussion.proto.City.toObject(message.cities[j], options);
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PostMyselfDetailAreaResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PostMyselfDetailAreaResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PostMyselfDetailAreaResponse;
+                })();
+
+                proto.DeleteMyselfDetailAreaRequest = (function() {
+
+                    /**
+                     * Properties of a DeleteMyselfDetailAreaRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IDeleteMyselfDetailAreaRequest
+                     * @property {string|null} [cityId] DeleteMyselfDetailAreaRequest cityId
+                     */
+
+                    /**
+                     * Constructs a new DeleteMyselfDetailAreaRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a DeleteMyselfDetailAreaRequest.
+                     * @implements IDeleteMyselfDetailAreaRequest
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselfDetailAreaRequest=} [properties] Properties to set
+                     */
+                    function DeleteMyselfDetailAreaRequest(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * DeleteMyselfDetailAreaRequest cityId.
+                     * @member {string} cityId
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest
+                     * @instance
+                     */
+                    DeleteMyselfDetailAreaRequest.prototype.cityId = "";
+
+                    /**
+                     * Creates a new DeleteMyselfDetailAreaRequest instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselfDetailAreaRequest=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest} DeleteMyselfDetailAreaRequest instance
+                     */
+                    DeleteMyselfDetailAreaRequest.create = function create(properties) {
+                        return new DeleteMyselfDetailAreaRequest(properties);
+                    };
+
+                    /**
+                     * Encodes the specified DeleteMyselfDetailAreaRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselfDetailAreaRequest} message DeleteMyselfDetailAreaRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    DeleteMyselfDetailAreaRequest.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.cityId != null && Object.hasOwnProperty.call(message, "cityId"))
+                            writer.uint32(/* id 1, wireType 2 =*/10).string(message.cityId);
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified DeleteMyselfDetailAreaRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselfDetailAreaRequest} message DeleteMyselfDetailAreaRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    DeleteMyselfDetailAreaRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a DeleteMyselfDetailAreaRequest message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest} DeleteMyselfDetailAreaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    DeleteMyselfDetailAreaRequest.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.cityId = reader.string();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a DeleteMyselfDetailAreaRequest message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest} DeleteMyselfDetailAreaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    DeleteMyselfDetailAreaRequest.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a DeleteMyselfDetailAreaRequest message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    DeleteMyselfDetailAreaRequest.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.cityId != null && message.hasOwnProperty("cityId"))
+                            if (!$util.isString(message.cityId))
+                                return "cityId: string expected";
+                        return null;
+                    };
+
+                    /**
+                     * Creates a DeleteMyselfDetailAreaRequest message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest} DeleteMyselfDetailAreaRequest
+                     */
+                    DeleteMyselfDetailAreaRequest.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest();
+                        if (object.cityId != null)
+                            message.cityId = String(object.cityId);
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a DeleteMyselfDetailAreaRequest message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest} message DeleteMyselfDetailAreaRequest
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    DeleteMyselfDetailAreaRequest.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            object.cityId = "";
+                        if (message.cityId != null && message.hasOwnProperty("cityId"))
+                            object.cityId = message.cityId;
+                        return object;
+                    };
+
+                    /**
+                     * Converts this DeleteMyselfDetailAreaRequest to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    DeleteMyselfDetailAreaRequest.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return DeleteMyselfDetailAreaRequest;
+                })();
+
+                proto.DeleteMyselfDetailAreaResponse = (function() {
+
+                    /**
+                     * Properties of a DeleteMyselfDetailAreaResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IDeleteMyselfDetailAreaResponse
+                     * @property {Array.<pj.sakuchin.percussion.proto.ICity>|null} [cities] DeleteMyselfDetailAreaResponse cities
+                     */
+
+                    /**
+                     * Constructs a new DeleteMyselfDetailAreaResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a DeleteMyselfDetailAreaResponse.
+                     * @implements IDeleteMyselfDetailAreaResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselfDetailAreaResponse=} [properties] Properties to set
+                     */
+                    function DeleteMyselfDetailAreaResponse(properties) {
+                        this.cities = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * DeleteMyselfDetailAreaResponse cities.
+                     * @member {Array.<pj.sakuchin.percussion.proto.ICity>} cities
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse
+                     * @instance
+                     */
+                    DeleteMyselfDetailAreaResponse.prototype.cities = $util.emptyArray;
+
+                    /**
+                     * Creates a new DeleteMyselfDetailAreaResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselfDetailAreaResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse} DeleteMyselfDetailAreaResponse instance
+                     */
+                    DeleteMyselfDetailAreaResponse.create = function create(properties) {
+                        return new DeleteMyselfDetailAreaResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified DeleteMyselfDetailAreaResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselfDetailAreaResponse} message DeleteMyselfDetailAreaResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    DeleteMyselfDetailAreaResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.cities != null && message.cities.length)
+                            for (var i = 0; i < message.cities.length; ++i)
+                                $root.pj.sakuchin.percussion.proto.City.encode(message.cities[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified DeleteMyselfDetailAreaResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselfDetailAreaResponse} message DeleteMyselfDetailAreaResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    DeleteMyselfDetailAreaResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a DeleteMyselfDetailAreaResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse} DeleteMyselfDetailAreaResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    DeleteMyselfDetailAreaResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.cities && message.cities.length))
+                                    message.cities = [];
+                                message.cities.push($root.pj.sakuchin.percussion.proto.City.decode(reader, reader.uint32()));
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a DeleteMyselfDetailAreaResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse} DeleteMyselfDetailAreaResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    DeleteMyselfDetailAreaResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a DeleteMyselfDetailAreaResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    DeleteMyselfDetailAreaResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.cities != null && message.hasOwnProperty("cities")) {
+                            if (!Array.isArray(message.cities))
+                                return "cities: array expected";
+                            for (var i = 0; i < message.cities.length; ++i) {
+                                var error = $root.pj.sakuchin.percussion.proto.City.verify(message.cities[i]);
+                                if (error)
+                                    return "cities." + error;
+                            }
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a DeleteMyselfDetailAreaResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse} DeleteMyselfDetailAreaResponse
+                     */
+                    DeleteMyselfDetailAreaResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse();
+                        if (object.cities) {
+                            if (!Array.isArray(object.cities))
+                                throw TypeError(".pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse.cities: array expected");
+                            message.cities = [];
+                            for (var i = 0; i < object.cities.length; ++i) {
+                                if (typeof object.cities[i] !== "object")
+                                    throw TypeError(".pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse.cities: object expected");
+                                message.cities[i] = $root.pj.sakuchin.percussion.proto.City.fromObject(object.cities[i]);
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a DeleteMyselfDetailAreaResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse} message DeleteMyselfDetailAreaResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    DeleteMyselfDetailAreaResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.cities = [];
+                        if (message.cities && message.cities.length) {
+                            object.cities = [];
+                            for (var j = 0; j < message.cities.length; ++j)
+                                object.cities[j] = $root.pj.sakuchin.percussion.proto.City.toObject(message.cities[j], options);
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this DeleteMyselfDetailAreaResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    DeleteMyselfDetailAreaResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return DeleteMyselfDetailAreaResponse;
+                })();
+
+                proto.PutMyselfDetailAreaRequest = (function() {
+
+                    /**
+                     * Properties of a PutMyselfDetailAreaRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IPutMyselfDetailAreaRequest
+                     * @property {Array.<pj.sakuchin.percussion.proto.ICity>|null} [area] PutMyselfDetailAreaRequest area
+                     */
+
+                    /**
+                     * Constructs a new PutMyselfDetailAreaRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a PutMyselfDetailAreaRequest.
+                     * @implements IPutMyselfDetailAreaRequest
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselfDetailAreaRequest=} [properties] Properties to set
+                     */
+                    function PutMyselfDetailAreaRequest(properties) {
+                        this.area = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PutMyselfDetailAreaRequest area.
+                     * @member {Array.<pj.sakuchin.percussion.proto.ICity>} area
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest
+                     * @instance
+                     */
+                    PutMyselfDetailAreaRequest.prototype.area = $util.emptyArray;
+
+                    /**
+                     * Creates a new PutMyselfDetailAreaRequest instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselfDetailAreaRequest=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest} PutMyselfDetailAreaRequest instance
+                     */
+                    PutMyselfDetailAreaRequest.create = function create(properties) {
+                        return new PutMyselfDetailAreaRequest(properties);
+                    };
+
+                    /**
+                     * Encodes the specified PutMyselfDetailAreaRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselfDetailAreaRequest} message PutMyselfDetailAreaRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PutMyselfDetailAreaRequest.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.area != null && message.area.length)
+                            for (var i = 0; i < message.area.length; ++i)
+                                $root.pj.sakuchin.percussion.proto.City.encode(message.area[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PutMyselfDetailAreaRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselfDetailAreaRequest} message PutMyselfDetailAreaRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PutMyselfDetailAreaRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PutMyselfDetailAreaRequest message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest} PutMyselfDetailAreaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PutMyselfDetailAreaRequest.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.area && message.area.length))
+                                    message.area = [];
+                                message.area.push($root.pj.sakuchin.percussion.proto.City.decode(reader, reader.uint32()));
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PutMyselfDetailAreaRequest message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest} PutMyselfDetailAreaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PutMyselfDetailAreaRequest.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PutMyselfDetailAreaRequest message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PutMyselfDetailAreaRequest.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.area != null && message.hasOwnProperty("area")) {
+                            if (!Array.isArray(message.area))
+                                return "area: array expected";
+                            for (var i = 0; i < message.area.length; ++i) {
+                                var error = $root.pj.sakuchin.percussion.proto.City.verify(message.area[i]);
+                                if (error)
+                                    return "area." + error;
+                            }
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PutMyselfDetailAreaRequest message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest} PutMyselfDetailAreaRequest
+                     */
+                    PutMyselfDetailAreaRequest.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest();
+                        if (object.area) {
+                            if (!Array.isArray(object.area))
+                                throw TypeError(".pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest.area: array expected");
+                            message.area = [];
+                            for (var i = 0; i < object.area.length; ++i) {
+                                if (typeof object.area[i] !== "object")
+                                    throw TypeError(".pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest.area: object expected");
+                                message.area[i] = $root.pj.sakuchin.percussion.proto.City.fromObject(object.area[i]);
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PutMyselfDetailAreaRequest message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest} message PutMyselfDetailAreaRequest
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PutMyselfDetailAreaRequest.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.area = [];
+                        if (message.area && message.area.length) {
+                            object.area = [];
+                            for (var j = 0; j < message.area.length; ++j)
+                                object.area[j] = $root.pj.sakuchin.percussion.proto.City.toObject(message.area[j], options);
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PutMyselfDetailAreaRequest to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PutMyselfDetailAreaRequest.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PutMyselfDetailAreaRequest;
+                })();
+
+                proto.PutMyselfDetailAreaResponse = (function() {
+
+                    /**
+                     * Properties of a PutMyselfDetailAreaResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IPutMyselfDetailAreaResponse
+                     * @property {Array.<pj.sakuchin.percussion.proto.ICity>|null} [cities] PutMyselfDetailAreaResponse cities
+                     */
+
+                    /**
+                     * Constructs a new PutMyselfDetailAreaResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a PutMyselfDetailAreaResponse.
+                     * @implements IPutMyselfDetailAreaResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselfDetailAreaResponse=} [properties] Properties to set
+                     */
+                    function PutMyselfDetailAreaResponse(properties) {
+                        this.cities = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PutMyselfDetailAreaResponse cities.
+                     * @member {Array.<pj.sakuchin.percussion.proto.ICity>} cities
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse
+                     * @instance
+                     */
+                    PutMyselfDetailAreaResponse.prototype.cities = $util.emptyArray;
+
+                    /**
+                     * Creates a new PutMyselfDetailAreaResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselfDetailAreaResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse} PutMyselfDetailAreaResponse instance
+                     */
+                    PutMyselfDetailAreaResponse.create = function create(properties) {
+                        return new PutMyselfDetailAreaResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified PutMyselfDetailAreaResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselfDetailAreaResponse} message PutMyselfDetailAreaResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PutMyselfDetailAreaResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.cities != null && message.cities.length)
+                            for (var i = 0; i < message.cities.length; ++i)
+                                $root.pj.sakuchin.percussion.proto.City.encode(message.cities[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PutMyselfDetailAreaResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselfDetailAreaResponse} message PutMyselfDetailAreaResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PutMyselfDetailAreaResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PutMyselfDetailAreaResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse} PutMyselfDetailAreaResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PutMyselfDetailAreaResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.cities && message.cities.length))
+                                    message.cities = [];
+                                message.cities.push($root.pj.sakuchin.percussion.proto.City.decode(reader, reader.uint32()));
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PutMyselfDetailAreaResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse} PutMyselfDetailAreaResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PutMyselfDetailAreaResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PutMyselfDetailAreaResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PutMyselfDetailAreaResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.cities != null && message.hasOwnProperty("cities")) {
+                            if (!Array.isArray(message.cities))
+                                return "cities: array expected";
+                            for (var i = 0; i < message.cities.length; ++i) {
+                                var error = $root.pj.sakuchin.percussion.proto.City.verify(message.cities[i]);
+                                if (error)
+                                    return "cities." + error;
+                            }
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PutMyselfDetailAreaResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse} PutMyselfDetailAreaResponse
+                     */
+                    PutMyselfDetailAreaResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse();
+                        if (object.cities) {
+                            if (!Array.isArray(object.cities))
+                                throw TypeError(".pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse.cities: array expected");
+                            message.cities = [];
+                            for (var i = 0; i < object.cities.length; ++i) {
+                                if (typeof object.cities[i] !== "object")
+                                    throw TypeError(".pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse.cities: object expected");
+                                message.cities[i] = $root.pj.sakuchin.percussion.proto.City.fromObject(object.cities[i]);
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PutMyselfDetailAreaResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse} message PutMyselfDetailAreaResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PutMyselfDetailAreaResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.cities = [];
+                        if (message.cities && message.cities.length) {
+                            object.cities = [];
+                            for (var j = 0; j < message.cities.length; ++j)
+                                object.cities[j] = $root.pj.sakuchin.percussion.proto.City.toObject(message.cities[j], options);
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PutMyselfDetailAreaResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PutMyselfDetailAreaResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PutMyselfDetailAreaResponse;
+                })();
+
+                proto.GetMyselDetailInstrumentResponse = (function() {
+
+                    /**
+                     * Properties of a GetMyselDetailInstrumentResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IGetMyselDetailInstrumentResponse
+                     * @property {Array.<pj.sakuchin.percussion.proto.IInstrument>|null} [instruments] GetMyselDetailInstrumentResponse instruments
+                     */
+
+                    /**
+                     * Constructs a new GetMyselDetailInstrumentResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a GetMyselDetailInstrumentResponse.
+                     * @implements IGetMyselDetailInstrumentResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselDetailInstrumentResponse=} [properties] Properties to set
+                     */
+                    function GetMyselDetailInstrumentResponse(properties) {
+                        this.instruments = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * GetMyselDetailInstrumentResponse instruments.
+                     * @member {Array.<pj.sakuchin.percussion.proto.IInstrument>} instruments
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse
+                     * @instance
+                     */
+                    GetMyselDetailInstrumentResponse.prototype.instruments = $util.emptyArray;
+
+                    /**
+                     * Creates a new GetMyselDetailInstrumentResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselDetailInstrumentResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse} GetMyselDetailInstrumentResponse instance
+                     */
+                    GetMyselDetailInstrumentResponse.create = function create(properties) {
+                        return new GetMyselDetailInstrumentResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified GetMyselDetailInstrumentResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselDetailInstrumentResponse} message GetMyselDetailInstrumentResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    GetMyselDetailInstrumentResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.instruments != null && message.instruments.length)
+                            for (var i = 0; i < message.instruments.length; ++i)
+                                $root.pj.sakuchin.percussion.proto.Instrument.encode(message.instruments[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified GetMyselDetailInstrumentResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselDetailInstrumentResponse} message GetMyselDetailInstrumentResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    GetMyselDetailInstrumentResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a GetMyselDetailInstrumentResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse} GetMyselDetailInstrumentResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    GetMyselDetailInstrumentResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.instruments && message.instruments.length))
+                                    message.instruments = [];
+                                message.instruments.push($root.pj.sakuchin.percussion.proto.Instrument.decode(reader, reader.uint32()));
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a GetMyselDetailInstrumentResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse} GetMyselDetailInstrumentResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    GetMyselDetailInstrumentResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a GetMyselDetailInstrumentResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    GetMyselDetailInstrumentResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.instruments != null && message.hasOwnProperty("instruments")) {
+                            if (!Array.isArray(message.instruments))
+                                return "instruments: array expected";
+                            for (var i = 0; i < message.instruments.length; ++i) {
+                                var error = $root.pj.sakuchin.percussion.proto.Instrument.verify(message.instruments[i]);
+                                if (error)
+                                    return "instruments." + error;
+                            }
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a GetMyselDetailInstrumentResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse} GetMyselDetailInstrumentResponse
+                     */
+                    GetMyselDetailInstrumentResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse();
+                        if (object.instruments) {
+                            if (!Array.isArray(object.instruments))
+                                throw TypeError(".pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse.instruments: array expected");
+                            message.instruments = [];
+                            for (var i = 0; i < object.instruments.length; ++i) {
+                                if (typeof object.instruments[i] !== "object")
+                                    throw TypeError(".pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse.instruments: object expected");
+                                message.instruments[i] = $root.pj.sakuchin.percussion.proto.Instrument.fromObject(object.instruments[i]);
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a GetMyselDetailInstrumentResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse} message GetMyselDetailInstrumentResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    GetMyselDetailInstrumentResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.instruments = [];
+                        if (message.instruments && message.instruments.length) {
+                            object.instruments = [];
+                            for (var j = 0; j < message.instruments.length; ++j)
+                                object.instruments[j] = $root.pj.sakuchin.percussion.proto.Instrument.toObject(message.instruments[j], options);
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this GetMyselDetailInstrumentResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    GetMyselDetailInstrumentResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return GetMyselDetailInstrumentResponse;
+                })();
+
+                proto.PostMyselDetailInstrumentRequest = (function() {
+
+                    /**
+                     * Properties of a PostMyselDetailInstrumentRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IPostMyselDetailInstrumentRequest
+                     * @property {number|null} [instrumentId] PostMyselDetailInstrumentRequest instrumentId
+                     */
+
+                    /**
+                     * Constructs a new PostMyselDetailInstrumentRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a PostMyselDetailInstrumentRequest.
+                     * @implements IPostMyselDetailInstrumentRequest
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselDetailInstrumentRequest=} [properties] Properties to set
+                     */
+                    function PostMyselDetailInstrumentRequest(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PostMyselDetailInstrumentRequest instrumentId.
+                     * @member {number} instrumentId
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest
+                     * @instance
+                     */
+                    PostMyselDetailInstrumentRequest.prototype.instrumentId = 0;
+
+                    /**
+                     * Creates a new PostMyselDetailInstrumentRequest instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselDetailInstrumentRequest=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest} PostMyselDetailInstrumentRequest instance
+                     */
+                    PostMyselDetailInstrumentRequest.create = function create(properties) {
+                        return new PostMyselDetailInstrumentRequest(properties);
+                    };
+
+                    /**
+                     * Encodes the specified PostMyselDetailInstrumentRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselDetailInstrumentRequest} message PostMyselDetailInstrumentRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostMyselDetailInstrumentRequest.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.instrumentId != null && Object.hasOwnProperty.call(message, "instrumentId"))
+                            writer.uint32(/* id 1, wireType 0 =*/8).int32(message.instrumentId);
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PostMyselDetailInstrumentRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselDetailInstrumentRequest} message PostMyselDetailInstrumentRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostMyselDetailInstrumentRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PostMyselDetailInstrumentRequest message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest} PostMyselDetailInstrumentRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostMyselDetailInstrumentRequest.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.instrumentId = reader.int32();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PostMyselDetailInstrumentRequest message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest} PostMyselDetailInstrumentRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostMyselDetailInstrumentRequest.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PostMyselDetailInstrumentRequest message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PostMyselDetailInstrumentRequest.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.instrumentId != null && message.hasOwnProperty("instrumentId"))
+                            if (!$util.isInteger(message.instrumentId))
+                                return "instrumentId: integer expected";
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PostMyselDetailInstrumentRequest message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest} PostMyselDetailInstrumentRequest
+                     */
+                    PostMyselDetailInstrumentRequest.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest();
+                        if (object.instrumentId != null)
+                            message.instrumentId = object.instrumentId | 0;
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PostMyselDetailInstrumentRequest message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest} message PostMyselDetailInstrumentRequest
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PostMyselDetailInstrumentRequest.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            object.instrumentId = 0;
+                        if (message.instrumentId != null && message.hasOwnProperty("instrumentId"))
+                            object.instrumentId = message.instrumentId;
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PostMyselDetailInstrumentRequest to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PostMyselDetailInstrumentRequest.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PostMyselDetailInstrumentRequest;
+                })();
+
+                proto.PostMyselDetailInstrumentResponse = (function() {
+
+                    /**
+                     * Properties of a PostMyselDetailInstrumentResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IPostMyselDetailInstrumentResponse
+                     * @property {Array.<pj.sakuchin.percussion.proto.IInstrument>|null} [instruments] PostMyselDetailInstrumentResponse instruments
+                     */
+
+                    /**
+                     * Constructs a new PostMyselDetailInstrumentResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a PostMyselDetailInstrumentResponse.
+                     * @implements IPostMyselDetailInstrumentResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselDetailInstrumentResponse=} [properties] Properties to set
+                     */
+                    function PostMyselDetailInstrumentResponse(properties) {
+                        this.instruments = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PostMyselDetailInstrumentResponse instruments.
+                     * @member {Array.<pj.sakuchin.percussion.proto.IInstrument>} instruments
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse
+                     * @instance
+                     */
+                    PostMyselDetailInstrumentResponse.prototype.instruments = $util.emptyArray;
+
+                    /**
+                     * Creates a new PostMyselDetailInstrumentResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselDetailInstrumentResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse} PostMyselDetailInstrumentResponse instance
+                     */
+                    PostMyselDetailInstrumentResponse.create = function create(properties) {
+                        return new PostMyselDetailInstrumentResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified PostMyselDetailInstrumentResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselDetailInstrumentResponse} message PostMyselDetailInstrumentResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostMyselDetailInstrumentResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.instruments != null && message.instruments.length)
+                            for (var i = 0; i < message.instruments.length; ++i)
+                                $root.pj.sakuchin.percussion.proto.Instrument.encode(message.instruments[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PostMyselDetailInstrumentResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselDetailInstrumentResponse} message PostMyselDetailInstrumentResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostMyselDetailInstrumentResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PostMyselDetailInstrumentResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse} PostMyselDetailInstrumentResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostMyselDetailInstrumentResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.instruments && message.instruments.length))
+                                    message.instruments = [];
+                                message.instruments.push($root.pj.sakuchin.percussion.proto.Instrument.decode(reader, reader.uint32()));
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PostMyselDetailInstrumentResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse} PostMyselDetailInstrumentResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostMyselDetailInstrumentResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PostMyselDetailInstrumentResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PostMyselDetailInstrumentResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.instruments != null && message.hasOwnProperty("instruments")) {
+                            if (!Array.isArray(message.instruments))
+                                return "instruments: array expected";
+                            for (var i = 0; i < message.instruments.length; ++i) {
+                                var error = $root.pj.sakuchin.percussion.proto.Instrument.verify(message.instruments[i]);
+                                if (error)
+                                    return "instruments." + error;
+                            }
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PostMyselDetailInstrumentResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse} PostMyselDetailInstrumentResponse
+                     */
+                    PostMyselDetailInstrumentResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse();
+                        if (object.instruments) {
+                            if (!Array.isArray(object.instruments))
+                                throw TypeError(".pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse.instruments: array expected");
+                            message.instruments = [];
+                            for (var i = 0; i < object.instruments.length; ++i) {
+                                if (typeof object.instruments[i] !== "object")
+                                    throw TypeError(".pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse.instruments: object expected");
+                                message.instruments[i] = $root.pj.sakuchin.percussion.proto.Instrument.fromObject(object.instruments[i]);
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PostMyselDetailInstrumentResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse} message PostMyselDetailInstrumentResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PostMyselDetailInstrumentResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.instruments = [];
+                        if (message.instruments && message.instruments.length) {
+                            object.instruments = [];
+                            for (var j = 0; j < message.instruments.length; ++j)
+                                object.instruments[j] = $root.pj.sakuchin.percussion.proto.Instrument.toObject(message.instruments[j], options);
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PostMyselDetailInstrumentResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PostMyselDetailInstrumentResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PostMyselDetailInstrumentResponse;
+                })();
+
+                proto.DeleteMyselDetailInstrumentRequest = (function() {
+
+                    /**
+                     * Properties of a DeleteMyselDetailInstrumentRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IDeleteMyselDetailInstrumentRequest
+                     * @property {number|null} [instrumentId] DeleteMyselDetailInstrumentRequest instrumentId
+                     */
+
+                    /**
+                     * Constructs a new DeleteMyselDetailInstrumentRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a DeleteMyselDetailInstrumentRequest.
+                     * @implements IDeleteMyselDetailInstrumentRequest
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselDetailInstrumentRequest=} [properties] Properties to set
+                     */
+                    function DeleteMyselDetailInstrumentRequest(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * DeleteMyselDetailInstrumentRequest instrumentId.
+                     * @member {number} instrumentId
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest
+                     * @instance
+                     */
+                    DeleteMyselDetailInstrumentRequest.prototype.instrumentId = 0;
+
+                    /**
+                     * Creates a new DeleteMyselDetailInstrumentRequest instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselDetailInstrumentRequest=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest} DeleteMyselDetailInstrumentRequest instance
+                     */
+                    DeleteMyselDetailInstrumentRequest.create = function create(properties) {
+                        return new DeleteMyselDetailInstrumentRequest(properties);
+                    };
+
+                    /**
+                     * Encodes the specified DeleteMyselDetailInstrumentRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselDetailInstrumentRequest} message DeleteMyselDetailInstrumentRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    DeleteMyselDetailInstrumentRequest.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.instrumentId != null && Object.hasOwnProperty.call(message, "instrumentId"))
+                            writer.uint32(/* id 1, wireType 0 =*/8).int32(message.instrumentId);
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified DeleteMyselDetailInstrumentRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselDetailInstrumentRequest} message DeleteMyselDetailInstrumentRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    DeleteMyselDetailInstrumentRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a DeleteMyselDetailInstrumentRequest message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest} DeleteMyselDetailInstrumentRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    DeleteMyselDetailInstrumentRequest.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.instrumentId = reader.int32();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a DeleteMyselDetailInstrumentRequest message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest} DeleteMyselDetailInstrumentRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    DeleteMyselDetailInstrumentRequest.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a DeleteMyselDetailInstrumentRequest message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    DeleteMyselDetailInstrumentRequest.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.instrumentId != null && message.hasOwnProperty("instrumentId"))
+                            if (!$util.isInteger(message.instrumentId))
+                                return "instrumentId: integer expected";
+                        return null;
+                    };
+
+                    /**
+                     * Creates a DeleteMyselDetailInstrumentRequest message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest} DeleteMyselDetailInstrumentRequest
+                     */
+                    DeleteMyselDetailInstrumentRequest.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest();
+                        if (object.instrumentId != null)
+                            message.instrumentId = object.instrumentId | 0;
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a DeleteMyselDetailInstrumentRequest message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest} message DeleteMyselDetailInstrumentRequest
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    DeleteMyselDetailInstrumentRequest.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            object.instrumentId = 0;
+                        if (message.instrumentId != null && message.hasOwnProperty("instrumentId"))
+                            object.instrumentId = message.instrumentId;
+                        return object;
+                    };
+
+                    /**
+                     * Converts this DeleteMyselDetailInstrumentRequest to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    DeleteMyselDetailInstrumentRequest.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return DeleteMyselDetailInstrumentRequest;
+                })();
+
+                proto.DeleteMyselDetailInstrumentResponse = (function() {
+
+                    /**
+                     * Properties of a DeleteMyselDetailInstrumentResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IDeleteMyselDetailInstrumentResponse
+                     * @property {Array.<pj.sakuchin.percussion.proto.IInstrument>|null} [instruments] DeleteMyselDetailInstrumentResponse instruments
+                     */
+
+                    /**
+                     * Constructs a new DeleteMyselDetailInstrumentResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a DeleteMyselDetailInstrumentResponse.
+                     * @implements IDeleteMyselDetailInstrumentResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselDetailInstrumentResponse=} [properties] Properties to set
+                     */
+                    function DeleteMyselDetailInstrumentResponse(properties) {
+                        this.instruments = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * DeleteMyselDetailInstrumentResponse instruments.
+                     * @member {Array.<pj.sakuchin.percussion.proto.IInstrument>} instruments
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse
+                     * @instance
+                     */
+                    DeleteMyselDetailInstrumentResponse.prototype.instruments = $util.emptyArray;
+
+                    /**
+                     * Creates a new DeleteMyselDetailInstrumentResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselDetailInstrumentResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse} DeleteMyselDetailInstrumentResponse instance
+                     */
+                    DeleteMyselDetailInstrumentResponse.create = function create(properties) {
+                        return new DeleteMyselDetailInstrumentResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified DeleteMyselDetailInstrumentResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselDetailInstrumentResponse} message DeleteMyselDetailInstrumentResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    DeleteMyselDetailInstrumentResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.instruments != null && message.instruments.length)
+                            for (var i = 0; i < message.instruments.length; ++i)
+                                $root.pj.sakuchin.percussion.proto.Instrument.encode(message.instruments[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified DeleteMyselDetailInstrumentResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselDetailInstrumentResponse} message DeleteMyselDetailInstrumentResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    DeleteMyselDetailInstrumentResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a DeleteMyselDetailInstrumentResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse} DeleteMyselDetailInstrumentResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    DeleteMyselDetailInstrumentResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.instruments && message.instruments.length))
+                                    message.instruments = [];
+                                message.instruments.push($root.pj.sakuchin.percussion.proto.Instrument.decode(reader, reader.uint32()));
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a DeleteMyselDetailInstrumentResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse} DeleteMyselDetailInstrumentResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    DeleteMyselDetailInstrumentResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a DeleteMyselDetailInstrumentResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    DeleteMyselDetailInstrumentResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.instruments != null && message.hasOwnProperty("instruments")) {
+                            if (!Array.isArray(message.instruments))
+                                return "instruments: array expected";
+                            for (var i = 0; i < message.instruments.length; ++i) {
+                                var error = $root.pj.sakuchin.percussion.proto.Instrument.verify(message.instruments[i]);
+                                if (error)
+                                    return "instruments." + error;
+                            }
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a DeleteMyselDetailInstrumentResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse} DeleteMyselDetailInstrumentResponse
+                     */
+                    DeleteMyselDetailInstrumentResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse();
+                        if (object.instruments) {
+                            if (!Array.isArray(object.instruments))
+                                throw TypeError(".pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse.instruments: array expected");
+                            message.instruments = [];
+                            for (var i = 0; i < object.instruments.length; ++i) {
+                                if (typeof object.instruments[i] !== "object")
+                                    throw TypeError(".pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse.instruments: object expected");
+                                message.instruments[i] = $root.pj.sakuchin.percussion.proto.Instrument.fromObject(object.instruments[i]);
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a DeleteMyselDetailInstrumentResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse} message DeleteMyselDetailInstrumentResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    DeleteMyselDetailInstrumentResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.instruments = [];
+                        if (message.instruments && message.instruments.length) {
+                            object.instruments = [];
+                            for (var j = 0; j < message.instruments.length; ++j)
+                                object.instruments[j] = $root.pj.sakuchin.percussion.proto.Instrument.toObject(message.instruments[j], options);
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this DeleteMyselDetailInstrumentResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    DeleteMyselDetailInstrumentResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return DeleteMyselDetailInstrumentResponse;
+                })();
+
+                proto.GetMyselfDetailStudioResponse = (function() {
+
+                    /**
+                     * Properties of a GetMyselfDetailStudioResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IGetMyselfDetailStudioResponse
+                     * @property {Array.<pj.sakuchin.percussion.proto.IStudio>|null} [studios] GetMyselfDetailStudioResponse studios
+                     */
+
+                    /**
+                     * Constructs a new GetMyselfDetailStudioResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a GetMyselfDetailStudioResponse.
+                     * @implements IGetMyselfDetailStudioResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselfDetailStudioResponse=} [properties] Properties to set
+                     */
+                    function GetMyselfDetailStudioResponse(properties) {
+                        this.studios = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * GetMyselfDetailStudioResponse studios.
+                     * @member {Array.<pj.sakuchin.percussion.proto.IStudio>} studios
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse
+                     * @instance
+                     */
+                    GetMyselfDetailStudioResponse.prototype.studios = $util.emptyArray;
+
+                    /**
+                     * Creates a new GetMyselfDetailStudioResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselfDetailStudioResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse} GetMyselfDetailStudioResponse instance
+                     */
+                    GetMyselfDetailStudioResponse.create = function create(properties) {
+                        return new GetMyselfDetailStudioResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified GetMyselfDetailStudioResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselfDetailStudioResponse} message GetMyselfDetailStudioResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    GetMyselfDetailStudioResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.studios != null && message.studios.length)
+                            for (var i = 0; i < message.studios.length; ++i)
+                                $root.pj.sakuchin.percussion.proto.Studio.encode(message.studios[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified GetMyselfDetailStudioResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselfDetailStudioResponse} message GetMyselfDetailStudioResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    GetMyselfDetailStudioResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a GetMyselfDetailStudioResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse} GetMyselfDetailStudioResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    GetMyselfDetailStudioResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.studios && message.studios.length))
+                                    message.studios = [];
+                                message.studios.push($root.pj.sakuchin.percussion.proto.Studio.decode(reader, reader.uint32()));
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a GetMyselfDetailStudioResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse} GetMyselfDetailStudioResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    GetMyselfDetailStudioResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a GetMyselfDetailStudioResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    GetMyselfDetailStudioResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.studios != null && message.hasOwnProperty("studios")) {
+                            if (!Array.isArray(message.studios))
+                                return "studios: array expected";
+                            for (var i = 0; i < message.studios.length; ++i) {
+                                var error = $root.pj.sakuchin.percussion.proto.Studio.verify(message.studios[i]);
+                                if (error)
+                                    return "studios." + error;
+                            }
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a GetMyselfDetailStudioResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse} GetMyselfDetailStudioResponse
+                     */
+                    GetMyselfDetailStudioResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse();
+                        if (object.studios) {
+                            if (!Array.isArray(object.studios))
+                                throw TypeError(".pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse.studios: array expected");
+                            message.studios = [];
+                            for (var i = 0; i < object.studios.length; ++i) {
+                                if (typeof object.studios[i] !== "object")
+                                    throw TypeError(".pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse.studios: object expected");
+                                message.studios[i] = $root.pj.sakuchin.percussion.proto.Studio.fromObject(object.studios[i]);
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a GetMyselfDetailStudioResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse} message GetMyselfDetailStudioResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    GetMyselfDetailStudioResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.studios = [];
+                        if (message.studios && message.studios.length) {
+                            object.studios = [];
+                            for (var j = 0; j < message.studios.length; ++j)
+                                object.studios[j] = $root.pj.sakuchin.percussion.proto.Studio.toObject(message.studios[j], options);
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this GetMyselfDetailStudioResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    GetMyselfDetailStudioResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return GetMyselfDetailStudioResponse;
+                })();
+
+                proto.PostMyselDetailStudioRequest = (function() {
+
+                    /**
+                     * Properties of a PostMyselDetailStudioRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IPostMyselDetailStudioRequest
+                     * @property {number|null} [studioId] PostMyselDetailStudioRequest studioId
+                     */
+
+                    /**
+                     * Constructs a new PostMyselDetailStudioRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a PostMyselDetailStudioRequest.
+                     * @implements IPostMyselDetailStudioRequest
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselDetailStudioRequest=} [properties] Properties to set
+                     */
+                    function PostMyselDetailStudioRequest(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PostMyselDetailStudioRequest studioId.
+                     * @member {number} studioId
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest
+                     * @instance
+                     */
+                    PostMyselDetailStudioRequest.prototype.studioId = 0;
+
+                    /**
+                     * Creates a new PostMyselDetailStudioRequest instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselDetailStudioRequest=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest} PostMyselDetailStudioRequest instance
+                     */
+                    PostMyselDetailStudioRequest.create = function create(properties) {
+                        return new PostMyselDetailStudioRequest(properties);
+                    };
+
+                    /**
+                     * Encodes the specified PostMyselDetailStudioRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselDetailStudioRequest} message PostMyselDetailStudioRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostMyselDetailStudioRequest.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.studioId != null && Object.hasOwnProperty.call(message, "studioId"))
+                            writer.uint32(/* id 1, wireType 0 =*/8).int32(message.studioId);
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PostMyselDetailStudioRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselDetailStudioRequest} message PostMyselDetailStudioRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostMyselDetailStudioRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PostMyselDetailStudioRequest message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest} PostMyselDetailStudioRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostMyselDetailStudioRequest.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.studioId = reader.int32();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PostMyselDetailStudioRequest message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest} PostMyselDetailStudioRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostMyselDetailStudioRequest.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PostMyselDetailStudioRequest message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PostMyselDetailStudioRequest.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.studioId != null && message.hasOwnProperty("studioId"))
+                            if (!$util.isInteger(message.studioId))
+                                return "studioId: integer expected";
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PostMyselDetailStudioRequest message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest} PostMyselDetailStudioRequest
+                     */
+                    PostMyselDetailStudioRequest.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest();
+                        if (object.studioId != null)
+                            message.studioId = object.studioId | 0;
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PostMyselDetailStudioRequest message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest} message PostMyselDetailStudioRequest
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PostMyselDetailStudioRequest.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            object.studioId = 0;
+                        if (message.studioId != null && message.hasOwnProperty("studioId"))
+                            object.studioId = message.studioId;
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PostMyselDetailStudioRequest to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PostMyselDetailStudioRequest.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PostMyselDetailStudioRequest;
+                })();
+
+                proto.PostMyselDetailStudioResponse = (function() {
+
+                    /**
+                     * Properties of a PostMyselDetailStudioResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IPostMyselDetailStudioResponse
+                     * @property {Array.<pj.sakuchin.percussion.proto.IStudio>|null} [studios] PostMyselDetailStudioResponse studios
+                     */
+
+                    /**
+                     * Constructs a new PostMyselDetailStudioResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a PostMyselDetailStudioResponse.
+                     * @implements IPostMyselDetailStudioResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselDetailStudioResponse=} [properties] Properties to set
+                     */
+                    function PostMyselDetailStudioResponse(properties) {
+                        this.studios = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PostMyselDetailStudioResponse studios.
+                     * @member {Array.<pj.sakuchin.percussion.proto.IStudio>} studios
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse
+                     * @instance
+                     */
+                    PostMyselDetailStudioResponse.prototype.studios = $util.emptyArray;
+
+                    /**
+                     * Creates a new PostMyselDetailStudioResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselDetailStudioResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse} PostMyselDetailStudioResponse instance
+                     */
+                    PostMyselDetailStudioResponse.create = function create(properties) {
+                        return new PostMyselDetailStudioResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified PostMyselDetailStudioResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselDetailStudioResponse} message PostMyselDetailStudioResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostMyselDetailStudioResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.studios != null && message.studios.length)
+                            for (var i = 0; i < message.studios.length; ++i)
+                                $root.pj.sakuchin.percussion.proto.Studio.encode(message.studios[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PostMyselDetailStudioResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselDetailStudioResponse} message PostMyselDetailStudioResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostMyselDetailStudioResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PostMyselDetailStudioResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse} PostMyselDetailStudioResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostMyselDetailStudioResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.studios && message.studios.length))
+                                    message.studios = [];
+                                message.studios.push($root.pj.sakuchin.percussion.proto.Studio.decode(reader, reader.uint32()));
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PostMyselDetailStudioResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse} PostMyselDetailStudioResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostMyselDetailStudioResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PostMyselDetailStudioResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PostMyselDetailStudioResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.studios != null && message.hasOwnProperty("studios")) {
+                            if (!Array.isArray(message.studios))
+                                return "studios: array expected";
+                            for (var i = 0; i < message.studios.length; ++i) {
+                                var error = $root.pj.sakuchin.percussion.proto.Studio.verify(message.studios[i]);
+                                if (error)
+                                    return "studios." + error;
+                            }
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PostMyselDetailStudioResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse} PostMyselDetailStudioResponse
+                     */
+                    PostMyselDetailStudioResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse();
+                        if (object.studios) {
+                            if (!Array.isArray(object.studios))
+                                throw TypeError(".pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse.studios: array expected");
+                            message.studios = [];
+                            for (var i = 0; i < object.studios.length; ++i) {
+                                if (typeof object.studios[i] !== "object")
+                                    throw TypeError(".pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse.studios: object expected");
+                                message.studios[i] = $root.pj.sakuchin.percussion.proto.Studio.fromObject(object.studios[i]);
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PostMyselDetailStudioResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse} message PostMyselDetailStudioResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PostMyselDetailStudioResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.studios = [];
+                        if (message.studios && message.studios.length) {
+                            object.studios = [];
+                            for (var j = 0; j < message.studios.length; ++j)
+                                object.studios[j] = $root.pj.sakuchin.percussion.proto.Studio.toObject(message.studios[j], options);
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PostMyselDetailStudioResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PostMyselDetailStudioResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PostMyselDetailStudioResponse;
+                })();
+
+                proto.DeleteMyselfDetailStudioRequest = (function() {
+
+                    /**
+                     * Properties of a DeleteMyselfDetailStudioRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IDeleteMyselfDetailStudioRequest
+                     * @property {number|null} [studioId] DeleteMyselfDetailStudioRequest studioId
+                     */
+
+                    /**
+                     * Constructs a new DeleteMyselfDetailStudioRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a DeleteMyselfDetailStudioRequest.
+                     * @implements IDeleteMyselfDetailStudioRequest
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselfDetailStudioRequest=} [properties] Properties to set
+                     */
+                    function DeleteMyselfDetailStudioRequest(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * DeleteMyselfDetailStudioRequest studioId.
+                     * @member {number} studioId
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest
+                     * @instance
+                     */
+                    DeleteMyselfDetailStudioRequest.prototype.studioId = 0;
+
+                    /**
+                     * Creates a new DeleteMyselfDetailStudioRequest instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselfDetailStudioRequest=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest} DeleteMyselfDetailStudioRequest instance
+                     */
+                    DeleteMyselfDetailStudioRequest.create = function create(properties) {
+                        return new DeleteMyselfDetailStudioRequest(properties);
+                    };
+
+                    /**
+                     * Encodes the specified DeleteMyselfDetailStudioRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselfDetailStudioRequest} message DeleteMyselfDetailStudioRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    DeleteMyselfDetailStudioRequest.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.studioId != null && Object.hasOwnProperty.call(message, "studioId"))
+                            writer.uint32(/* id 1, wireType 0 =*/8).int32(message.studioId);
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified DeleteMyselfDetailStudioRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselfDetailStudioRequest} message DeleteMyselfDetailStudioRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    DeleteMyselfDetailStudioRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a DeleteMyselfDetailStudioRequest message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest} DeleteMyselfDetailStudioRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    DeleteMyselfDetailStudioRequest.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.studioId = reader.int32();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a DeleteMyselfDetailStudioRequest message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest} DeleteMyselfDetailStudioRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    DeleteMyselfDetailStudioRequest.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a DeleteMyselfDetailStudioRequest message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    DeleteMyselfDetailStudioRequest.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.studioId != null && message.hasOwnProperty("studioId"))
+                            if (!$util.isInteger(message.studioId))
+                                return "studioId: integer expected";
+                        return null;
+                    };
+
+                    /**
+                     * Creates a DeleteMyselfDetailStudioRequest message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest} DeleteMyselfDetailStudioRequest
+                     */
+                    DeleteMyselfDetailStudioRequest.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest();
+                        if (object.studioId != null)
+                            message.studioId = object.studioId | 0;
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a DeleteMyselfDetailStudioRequest message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest} message DeleteMyselfDetailStudioRequest
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    DeleteMyselfDetailStudioRequest.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            object.studioId = 0;
+                        if (message.studioId != null && message.hasOwnProperty("studioId"))
+                            object.studioId = message.studioId;
+                        return object;
+                    };
+
+                    /**
+                     * Converts this DeleteMyselfDetailStudioRequest to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    DeleteMyselfDetailStudioRequest.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return DeleteMyselfDetailStudioRequest;
+                })();
+
+                proto.DeleteMyselDetailStudioResponse = (function() {
+
+                    /**
+                     * Properties of a DeleteMyselDetailStudioResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IDeleteMyselDetailStudioResponse
+                     * @property {Array.<pj.sakuchin.percussion.proto.IStudio>|null} [studios] DeleteMyselDetailStudioResponse studios
+                     */
+
+                    /**
+                     * Constructs a new DeleteMyselDetailStudioResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a DeleteMyselDetailStudioResponse.
+                     * @implements IDeleteMyselDetailStudioResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselDetailStudioResponse=} [properties] Properties to set
+                     */
+                    function DeleteMyselDetailStudioResponse(properties) {
+                        this.studios = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * DeleteMyselDetailStudioResponse studios.
+                     * @member {Array.<pj.sakuchin.percussion.proto.IStudio>} studios
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse
+                     * @instance
+                     */
+                    DeleteMyselDetailStudioResponse.prototype.studios = $util.emptyArray;
+
+                    /**
+                     * Creates a new DeleteMyselDetailStudioResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselDetailStudioResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse} DeleteMyselDetailStudioResponse instance
+                     */
+                    DeleteMyselDetailStudioResponse.create = function create(properties) {
+                        return new DeleteMyselDetailStudioResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified DeleteMyselDetailStudioResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselDetailStudioResponse} message DeleteMyselDetailStudioResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    DeleteMyselDetailStudioResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.studios != null && message.studios.length)
+                            for (var i = 0; i < message.studios.length; ++i)
+                                $root.pj.sakuchin.percussion.proto.Studio.encode(message.studios[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified DeleteMyselDetailStudioResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselDetailStudioResponse} message DeleteMyselDetailStudioResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    DeleteMyselDetailStudioResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a DeleteMyselDetailStudioResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse} DeleteMyselDetailStudioResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    DeleteMyselDetailStudioResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.studios && message.studios.length))
+                                    message.studios = [];
+                                message.studios.push($root.pj.sakuchin.percussion.proto.Studio.decode(reader, reader.uint32()));
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a DeleteMyselDetailStudioResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse} DeleteMyselDetailStudioResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    DeleteMyselDetailStudioResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a DeleteMyselDetailStudioResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    DeleteMyselDetailStudioResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.studios != null && message.hasOwnProperty("studios")) {
+                            if (!Array.isArray(message.studios))
+                                return "studios: array expected";
+                            for (var i = 0; i < message.studios.length; ++i) {
+                                var error = $root.pj.sakuchin.percussion.proto.Studio.verify(message.studios[i]);
+                                if (error)
+                                    return "studios." + error;
+                            }
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a DeleteMyselDetailStudioResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse} DeleteMyselDetailStudioResponse
+                     */
+                    DeleteMyselDetailStudioResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse();
+                        if (object.studios) {
+                            if (!Array.isArray(object.studios))
+                                throw TypeError(".pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse.studios: array expected");
+                            message.studios = [];
+                            for (var i = 0; i < object.studios.length; ++i) {
+                                if (typeof object.studios[i] !== "object")
+                                    throw TypeError(".pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse.studios: object expected");
+                                message.studios[i] = $root.pj.sakuchin.percussion.proto.Studio.fromObject(object.studios[i]);
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a DeleteMyselDetailStudioResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse} message DeleteMyselDetailStudioResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    DeleteMyselDetailStudioResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.studios = [];
+                        if (message.studios && message.studios.length) {
+                            object.studios = [];
+                            for (var j = 0; j < message.studios.length; ++j)
+                                object.studios[j] = $root.pj.sakuchin.percussion.proto.Studio.toObject(message.studios[j], options);
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this DeleteMyselDetailStudioResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    DeleteMyselDetailStudioResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return DeleteMyselDetailStudioResponse;
+                })();
+
+                proto.GetMyselfDetailFollowersResponse = (function() {
+
+                    /**
+                     * Properties of a GetMyselfDetailFollowersResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IGetMyselfDetailFollowersResponse
+                     * @property {Array.<pj.sakuchin.percussion.proto.IPlayer>|null} [players] GetMyselfDetailFollowersResponse players
+                     */
+
+                    /**
+                     * Constructs a new GetMyselfDetailFollowersResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a GetMyselfDetailFollowersResponse.
+                     * @implements IGetMyselfDetailFollowersResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselfDetailFollowersResponse=} [properties] Properties to set
+                     */
+                    function GetMyselfDetailFollowersResponse(properties) {
+                        this.players = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * GetMyselfDetailFollowersResponse players.
+                     * @member {Array.<pj.sakuchin.percussion.proto.IPlayer>} players
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse
+                     * @instance
+                     */
+                    GetMyselfDetailFollowersResponse.prototype.players = $util.emptyArray;
+
+                    /**
+                     * Creates a new GetMyselfDetailFollowersResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselfDetailFollowersResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse} GetMyselfDetailFollowersResponse instance
+                     */
+                    GetMyselfDetailFollowersResponse.create = function create(properties) {
+                        return new GetMyselfDetailFollowersResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified GetMyselfDetailFollowersResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselfDetailFollowersResponse} message GetMyselfDetailFollowersResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    GetMyselfDetailFollowersResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.players != null && message.players.length)
+                            for (var i = 0; i < message.players.length; ++i)
+                                $root.pj.sakuchin.percussion.proto.Player.encode(message.players[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified GetMyselfDetailFollowersResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselfDetailFollowersResponse} message GetMyselfDetailFollowersResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    GetMyselfDetailFollowersResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a GetMyselfDetailFollowersResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse} GetMyselfDetailFollowersResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    GetMyselfDetailFollowersResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.players && message.players.length))
+                                    message.players = [];
+                                message.players.push($root.pj.sakuchin.percussion.proto.Player.decode(reader, reader.uint32()));
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a GetMyselfDetailFollowersResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse} GetMyselfDetailFollowersResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    GetMyselfDetailFollowersResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a GetMyselfDetailFollowersResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    GetMyselfDetailFollowersResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.players != null && message.hasOwnProperty("players")) {
+                            if (!Array.isArray(message.players))
+                                return "players: array expected";
+                            for (var i = 0; i < message.players.length; ++i) {
+                                var error = $root.pj.sakuchin.percussion.proto.Player.verify(message.players[i]);
+                                if (error)
+                                    return "players." + error;
+                            }
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a GetMyselfDetailFollowersResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse} GetMyselfDetailFollowersResponse
+                     */
+                    GetMyselfDetailFollowersResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse();
+                        if (object.players) {
+                            if (!Array.isArray(object.players))
+                                throw TypeError(".pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse.players: array expected");
+                            message.players = [];
+                            for (var i = 0; i < object.players.length; ++i) {
+                                if (typeof object.players[i] !== "object")
+                                    throw TypeError(".pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse.players: object expected");
+                                message.players[i] = $root.pj.sakuchin.percussion.proto.Player.fromObject(object.players[i]);
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a GetMyselfDetailFollowersResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse} message GetMyselfDetailFollowersResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    GetMyselfDetailFollowersResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.players = [];
+                        if (message.players && message.players.length) {
+                            object.players = [];
+                            for (var j = 0; j < message.players.length; ++j)
+                                object.players[j] = $root.pj.sakuchin.percussion.proto.Player.toObject(message.players[j], options);
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this GetMyselfDetailFollowersResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    GetMyselfDetailFollowersResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return GetMyselfDetailFollowersResponse;
+                })();
+
+                proto.GetMyselfDetailFolloweesResponse = (function() {
+
+                    /**
+                     * Properties of a GetMyselfDetailFolloweesResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IGetMyselfDetailFolloweesResponse
+                     * @property {Array.<pj.sakuchin.percussion.proto.IPlayer>|null} [players] GetMyselfDetailFolloweesResponse players
+                     */
+
+                    /**
+                     * Constructs a new GetMyselfDetailFolloweesResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a GetMyselfDetailFolloweesResponse.
+                     * @implements IGetMyselfDetailFolloweesResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselfDetailFolloweesResponse=} [properties] Properties to set
+                     */
+                    function GetMyselfDetailFolloweesResponse(properties) {
+                        this.players = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * GetMyselfDetailFolloweesResponse players.
+                     * @member {Array.<pj.sakuchin.percussion.proto.IPlayer>} players
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse
+                     * @instance
+                     */
+                    GetMyselfDetailFolloweesResponse.prototype.players = $util.emptyArray;
+
+                    /**
+                     * Creates a new GetMyselfDetailFolloweesResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselfDetailFolloweesResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse} GetMyselfDetailFolloweesResponse instance
+                     */
+                    GetMyselfDetailFolloweesResponse.create = function create(properties) {
+                        return new GetMyselfDetailFolloweesResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified GetMyselfDetailFolloweesResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselfDetailFolloweesResponse} message GetMyselfDetailFolloweesResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    GetMyselfDetailFolloweesResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.players != null && message.players.length)
+                            for (var i = 0; i < message.players.length; ++i)
+                                $root.pj.sakuchin.percussion.proto.Player.encode(message.players[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified GetMyselfDetailFolloweesResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IGetMyselfDetailFolloweesResponse} message GetMyselfDetailFolloweesResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    GetMyselfDetailFolloweesResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a GetMyselfDetailFolloweesResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse} GetMyselfDetailFolloweesResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    GetMyselfDetailFolloweesResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.players && message.players.length))
+                                    message.players = [];
+                                message.players.push($root.pj.sakuchin.percussion.proto.Player.decode(reader, reader.uint32()));
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a GetMyselfDetailFolloweesResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse} GetMyselfDetailFolloweesResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    GetMyselfDetailFolloweesResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a GetMyselfDetailFolloweesResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    GetMyselfDetailFolloweesResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.players != null && message.hasOwnProperty("players")) {
+                            if (!Array.isArray(message.players))
+                                return "players: array expected";
+                            for (var i = 0; i < message.players.length; ++i) {
+                                var error = $root.pj.sakuchin.percussion.proto.Player.verify(message.players[i]);
+                                if (error)
+                                    return "players." + error;
+                            }
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a GetMyselfDetailFolloweesResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse} GetMyselfDetailFolloweesResponse
+                     */
+                    GetMyselfDetailFolloweesResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse();
+                        if (object.players) {
+                            if (!Array.isArray(object.players))
+                                throw TypeError(".pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse.players: array expected");
+                            message.players = [];
+                            for (var i = 0; i < object.players.length; ++i) {
+                                if (typeof object.players[i] !== "object")
+                                    throw TypeError(".pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse.players: object expected");
+                                message.players[i] = $root.pj.sakuchin.percussion.proto.Player.fromObject(object.players[i]);
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a GetMyselfDetailFolloweesResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse} message GetMyselfDetailFolloweesResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    GetMyselfDetailFolloweesResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.players = [];
+                        if (message.players && message.players.length) {
+                            object.players = [];
+                            for (var j = 0; j < message.players.length; ++j)
+                                object.players[j] = $root.pj.sakuchin.percussion.proto.Player.toObject(message.players[j], options);
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this GetMyselfDetailFolloweesResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    GetMyselfDetailFolloweesResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return GetMyselfDetailFolloweesResponse;
+                })();
+
+                proto.PostMyselfDetailFolloweeRequest = (function() {
+
+                    /**
+                     * Properties of a PostMyselfDetailFolloweeRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IPostMyselfDetailFolloweeRequest
+                     * @property {string|null} [playerId] PostMyselfDetailFolloweeRequest playerId
+                     */
+
+                    /**
+                     * Constructs a new PostMyselfDetailFolloweeRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a PostMyselfDetailFolloweeRequest.
+                     * @implements IPostMyselfDetailFolloweeRequest
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselfDetailFolloweeRequest=} [properties] Properties to set
+                     */
+                    function PostMyselfDetailFolloweeRequest(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PostMyselfDetailFolloweeRequest playerId.
+                     * @member {string} playerId
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest
+                     * @instance
+                     */
+                    PostMyselfDetailFolloweeRequest.prototype.playerId = "";
+
+                    /**
+                     * Creates a new PostMyselfDetailFolloweeRequest instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselfDetailFolloweeRequest=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest} PostMyselfDetailFolloweeRequest instance
+                     */
+                    PostMyselfDetailFolloweeRequest.create = function create(properties) {
+                        return new PostMyselfDetailFolloweeRequest(properties);
+                    };
+
+                    /**
+                     * Encodes the specified PostMyselfDetailFolloweeRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselfDetailFolloweeRequest} message PostMyselfDetailFolloweeRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostMyselfDetailFolloweeRequest.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.playerId != null && Object.hasOwnProperty.call(message, "playerId"))
+                            writer.uint32(/* id 1, wireType 2 =*/10).string(message.playerId);
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PostMyselfDetailFolloweeRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselfDetailFolloweeRequest} message PostMyselfDetailFolloweeRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostMyselfDetailFolloweeRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PostMyselfDetailFolloweeRequest message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest} PostMyselfDetailFolloweeRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostMyselfDetailFolloweeRequest.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.playerId = reader.string();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PostMyselfDetailFolloweeRequest message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest} PostMyselfDetailFolloweeRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostMyselfDetailFolloweeRequest.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PostMyselfDetailFolloweeRequest message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PostMyselfDetailFolloweeRequest.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.playerId != null && message.hasOwnProperty("playerId"))
+                            if (!$util.isString(message.playerId))
+                                return "playerId: string expected";
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PostMyselfDetailFolloweeRequest message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest} PostMyselfDetailFolloweeRequest
+                     */
+                    PostMyselfDetailFolloweeRequest.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest();
+                        if (object.playerId != null)
+                            message.playerId = String(object.playerId);
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PostMyselfDetailFolloweeRequest message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest} message PostMyselfDetailFolloweeRequest
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PostMyselfDetailFolloweeRequest.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            object.playerId = "";
+                        if (message.playerId != null && message.hasOwnProperty("playerId"))
+                            object.playerId = message.playerId;
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PostMyselfDetailFolloweeRequest to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PostMyselfDetailFolloweeRequest.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PostMyselfDetailFolloweeRequest;
+                })();
+
+                proto.PostMyselfDetailFolloweesResponse = (function() {
+
+                    /**
+                     * Properties of a PostMyselfDetailFolloweesResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IPostMyselfDetailFolloweesResponse
+                     * @property {Array.<pj.sakuchin.percussion.proto.IPlayer>|null} [players] PostMyselfDetailFolloweesResponse players
+                     */
+
+                    /**
+                     * Constructs a new PostMyselfDetailFolloweesResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a PostMyselfDetailFolloweesResponse.
+                     * @implements IPostMyselfDetailFolloweesResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselfDetailFolloweesResponse=} [properties] Properties to set
+                     */
+                    function PostMyselfDetailFolloweesResponse(properties) {
+                        this.players = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PostMyselfDetailFolloweesResponse players.
+                     * @member {Array.<pj.sakuchin.percussion.proto.IPlayer>} players
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse
+                     * @instance
+                     */
+                    PostMyselfDetailFolloweesResponse.prototype.players = $util.emptyArray;
+
+                    /**
+                     * Creates a new PostMyselfDetailFolloweesResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselfDetailFolloweesResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse} PostMyselfDetailFolloweesResponse instance
+                     */
+                    PostMyselfDetailFolloweesResponse.create = function create(properties) {
+                        return new PostMyselfDetailFolloweesResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified PostMyselfDetailFolloweesResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselfDetailFolloweesResponse} message PostMyselfDetailFolloweesResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostMyselfDetailFolloweesResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.players != null && message.players.length)
+                            for (var i = 0; i < message.players.length; ++i)
+                                $root.pj.sakuchin.percussion.proto.Player.encode(message.players[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PostMyselfDetailFolloweesResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPostMyselfDetailFolloweesResponse} message PostMyselfDetailFolloweesResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PostMyselfDetailFolloweesResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PostMyselfDetailFolloweesResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse} PostMyselfDetailFolloweesResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostMyselfDetailFolloweesResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.players && message.players.length))
+                                    message.players = [];
+                                message.players.push($root.pj.sakuchin.percussion.proto.Player.decode(reader, reader.uint32()));
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PostMyselfDetailFolloweesResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse} PostMyselfDetailFolloweesResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PostMyselfDetailFolloweesResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PostMyselfDetailFolloweesResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PostMyselfDetailFolloweesResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.players != null && message.hasOwnProperty("players")) {
+                            if (!Array.isArray(message.players))
+                                return "players: array expected";
+                            for (var i = 0; i < message.players.length; ++i) {
+                                var error = $root.pj.sakuchin.percussion.proto.Player.verify(message.players[i]);
+                                if (error)
+                                    return "players." + error;
+                            }
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PostMyselfDetailFolloweesResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse} PostMyselfDetailFolloweesResponse
+                     */
+                    PostMyselfDetailFolloweesResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse();
+                        if (object.players) {
+                            if (!Array.isArray(object.players))
+                                throw TypeError(".pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse.players: array expected");
+                            message.players = [];
+                            for (var i = 0; i < object.players.length; ++i) {
+                                if (typeof object.players[i] !== "object")
+                                    throw TypeError(".pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse.players: object expected");
+                                message.players[i] = $root.pj.sakuchin.percussion.proto.Player.fromObject(object.players[i]);
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PostMyselfDetailFolloweesResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse} message PostMyselfDetailFolloweesResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PostMyselfDetailFolloweesResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.players = [];
+                        if (message.players && message.players.length) {
+                            object.players = [];
+                            for (var j = 0; j < message.players.length; ++j)
+                                object.players[j] = $root.pj.sakuchin.percussion.proto.Player.toObject(message.players[j], options);
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PostMyselfDetailFolloweesResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PostMyselfDetailFolloweesResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PostMyselfDetailFolloweesResponse;
+                })();
+
+                proto.DeleteMyselfDetailFolloweeRequest = (function() {
+
+                    /**
+                     * Properties of a DeleteMyselfDetailFolloweeRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IDeleteMyselfDetailFolloweeRequest
+                     * @property {string|null} [playerId] DeleteMyselfDetailFolloweeRequest playerId
+                     */
+
+                    /**
+                     * Constructs a new DeleteMyselfDetailFolloweeRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a DeleteMyselfDetailFolloweeRequest.
+                     * @implements IDeleteMyselfDetailFolloweeRequest
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselfDetailFolloweeRequest=} [properties] Properties to set
+                     */
+                    function DeleteMyselfDetailFolloweeRequest(properties) {
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * DeleteMyselfDetailFolloweeRequest playerId.
+                     * @member {string} playerId
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest
+                     * @instance
+                     */
+                    DeleteMyselfDetailFolloweeRequest.prototype.playerId = "";
+
+                    /**
+                     * Creates a new DeleteMyselfDetailFolloweeRequest instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselfDetailFolloweeRequest=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest} DeleteMyselfDetailFolloweeRequest instance
+                     */
+                    DeleteMyselfDetailFolloweeRequest.create = function create(properties) {
+                        return new DeleteMyselfDetailFolloweeRequest(properties);
+                    };
+
+                    /**
+                     * Encodes the specified DeleteMyselfDetailFolloweeRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselfDetailFolloweeRequest} message DeleteMyselfDetailFolloweeRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    DeleteMyselfDetailFolloweeRequest.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.playerId != null && Object.hasOwnProperty.call(message, "playerId"))
+                            writer.uint32(/* id 1, wireType 2 =*/10).string(message.playerId);
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified DeleteMyselfDetailFolloweeRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselfDetailFolloweeRequest} message DeleteMyselfDetailFolloweeRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    DeleteMyselfDetailFolloweeRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a DeleteMyselfDetailFolloweeRequest message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest} DeleteMyselfDetailFolloweeRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    DeleteMyselfDetailFolloweeRequest.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                message.playerId = reader.string();
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a DeleteMyselfDetailFolloweeRequest message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest} DeleteMyselfDetailFolloweeRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    DeleteMyselfDetailFolloweeRequest.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a DeleteMyselfDetailFolloweeRequest message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    DeleteMyselfDetailFolloweeRequest.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.playerId != null && message.hasOwnProperty("playerId"))
+                            if (!$util.isString(message.playerId))
+                                return "playerId: string expected";
+                        return null;
+                    };
+
+                    /**
+                     * Creates a DeleteMyselfDetailFolloweeRequest message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest} DeleteMyselfDetailFolloweeRequest
+                     */
+                    DeleteMyselfDetailFolloweeRequest.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest();
+                        if (object.playerId != null)
+                            message.playerId = String(object.playerId);
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a DeleteMyselfDetailFolloweeRequest message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest} message DeleteMyselfDetailFolloweeRequest
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    DeleteMyselfDetailFolloweeRequest.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.defaults)
+                            object.playerId = "";
+                        if (message.playerId != null && message.hasOwnProperty("playerId"))
+                            object.playerId = message.playerId;
+                        return object;
+                    };
+
+                    /**
+                     * Converts this DeleteMyselfDetailFolloweeRequest to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    DeleteMyselfDetailFolloweeRequest.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return DeleteMyselfDetailFolloweeRequest;
+                })();
+
+                proto.DeleteMyselfDetailFolloweesResponse = (function() {
+
+                    /**
+                     * Properties of a DeleteMyselfDetailFolloweesResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IDeleteMyselfDetailFolloweesResponse
+                     * @property {Array.<pj.sakuchin.percussion.proto.IPlayer>|null} [players] DeleteMyselfDetailFolloweesResponse players
+                     */
+
+                    /**
+                     * Constructs a new DeleteMyselfDetailFolloweesResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a DeleteMyselfDetailFolloweesResponse.
+                     * @implements IDeleteMyselfDetailFolloweesResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselfDetailFolloweesResponse=} [properties] Properties to set
+                     */
+                    function DeleteMyselfDetailFolloweesResponse(properties) {
+                        this.players = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * DeleteMyselfDetailFolloweesResponse players.
+                     * @member {Array.<pj.sakuchin.percussion.proto.IPlayer>} players
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse
+                     * @instance
+                     */
+                    DeleteMyselfDetailFolloweesResponse.prototype.players = $util.emptyArray;
+
+                    /**
+                     * Creates a new DeleteMyselfDetailFolloweesResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselfDetailFolloweesResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse} DeleteMyselfDetailFolloweesResponse instance
+                     */
+                    DeleteMyselfDetailFolloweesResponse.create = function create(properties) {
+                        return new DeleteMyselfDetailFolloweesResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified DeleteMyselfDetailFolloweesResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselfDetailFolloweesResponse} message DeleteMyselfDetailFolloweesResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    DeleteMyselfDetailFolloweesResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.players != null && message.players.length)
+                            for (var i = 0; i < message.players.length; ++i)
+                                $root.pj.sakuchin.percussion.proto.Player.encode(message.players[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified DeleteMyselfDetailFolloweesResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IDeleteMyselfDetailFolloweesResponse} message DeleteMyselfDetailFolloweesResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    DeleteMyselfDetailFolloweesResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a DeleteMyselfDetailFolloweesResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse} DeleteMyselfDetailFolloweesResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    DeleteMyselfDetailFolloweesResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.players && message.players.length))
+                                    message.players = [];
+                                message.players.push($root.pj.sakuchin.percussion.proto.Player.decode(reader, reader.uint32()));
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a DeleteMyselfDetailFolloweesResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse} DeleteMyselfDetailFolloweesResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    DeleteMyselfDetailFolloweesResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a DeleteMyselfDetailFolloweesResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    DeleteMyselfDetailFolloweesResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.players != null && message.hasOwnProperty("players")) {
+                            if (!Array.isArray(message.players))
+                                return "players: array expected";
+                            for (var i = 0; i < message.players.length; ++i) {
+                                var error = $root.pj.sakuchin.percussion.proto.Player.verify(message.players[i]);
+                                if (error)
+                                    return "players." + error;
+                            }
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a DeleteMyselfDetailFolloweesResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse} DeleteMyselfDetailFolloweesResponse
+                     */
+                    DeleteMyselfDetailFolloweesResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse();
+                        if (object.players) {
+                            if (!Array.isArray(object.players))
+                                throw TypeError(".pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse.players: array expected");
+                            message.players = [];
+                            for (var i = 0; i < object.players.length; ++i) {
+                                if (typeof object.players[i] !== "object")
+                                    throw TypeError(".pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse.players: object expected");
+                                message.players[i] = $root.pj.sakuchin.percussion.proto.Player.fromObject(object.players[i]);
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a DeleteMyselfDetailFolloweesResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse} message DeleteMyselfDetailFolloweesResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    DeleteMyselfDetailFolloweesResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.players = [];
+                        if (message.players && message.players.length) {
+                            object.players = [];
+                            for (var j = 0; j < message.players.length; ++j)
+                                object.players[j] = $root.pj.sakuchin.percussion.proto.Player.toObject(message.players[j], options);
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this DeleteMyselfDetailFolloweesResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    DeleteMyselfDetailFolloweesResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return DeleteMyselfDetailFolloweesResponse;
                 })();
 
                 proto.Player = (function() {
@@ -4534,198 +9726,6 @@ $root.pj = (function() {
                     return GetPlayerDetailResponse;
                 })();
 
-                proto.PutPlayDetailReqest = (function() {
-
-                    /**
-                     * Properties of a PutPlayDetailReqest.
-                     * @memberof pj.sakuchin.percussion.proto
-                     * @interface IPutPlayDetailReqest
-                     * @property {pj.sakuchin.percussion.proto.IPlayerDetail|null} [detail] PutPlayDetailReqest detail
-                     */
-
-                    /**
-                     * Constructs a new PutPlayDetailReqest.
-                     * @memberof pj.sakuchin.percussion.proto
-                     * @classdesc Represents a PutPlayDetailReqest.
-                     * @implements IPutPlayDetailReqest
-                     * @constructor
-                     * @param {pj.sakuchin.percussion.proto.IPutPlayDetailReqest=} [properties] Properties to set
-                     */
-                    function PutPlayDetailReqest(properties) {
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-
-                    /**
-                     * PutPlayDetailReqest detail.
-                     * @member {pj.sakuchin.percussion.proto.IPlayerDetail|null|undefined} detail
-                     * @memberof pj.sakuchin.percussion.proto.PutPlayDetailReqest
-                     * @instance
-                     */
-                    PutPlayDetailReqest.prototype.detail = null;
-
-                    /**
-                     * Creates a new PutPlayDetailReqest instance using the specified properties.
-                     * @function create
-                     * @memberof pj.sakuchin.percussion.proto.PutPlayDetailReqest
-                     * @static
-                     * @param {pj.sakuchin.percussion.proto.IPutPlayDetailReqest=} [properties] Properties to set
-                     * @returns {pj.sakuchin.percussion.proto.PutPlayDetailReqest} PutPlayDetailReqest instance
-                     */
-                    PutPlayDetailReqest.create = function create(properties) {
-                        return new PutPlayDetailReqest(properties);
-                    };
-
-                    /**
-                     * Encodes the specified PutPlayDetailReqest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutPlayDetailReqest.verify|verify} messages.
-                     * @function encode
-                     * @memberof pj.sakuchin.percussion.proto.PutPlayDetailReqest
-                     * @static
-                     * @param {pj.sakuchin.percussion.proto.IPutPlayDetailReqest} message PutPlayDetailReqest message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    PutPlayDetailReqest.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.detail != null && Object.hasOwnProperty.call(message, "detail"))
-                            $root.pj.sakuchin.percussion.proto.PlayerDetail.encode(message.detail, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                        return writer;
-                    };
-
-                    /**
-                     * Encodes the specified PutPlayDetailReqest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutPlayDetailReqest.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof pj.sakuchin.percussion.proto.PutPlayDetailReqest
-                     * @static
-                     * @param {pj.sakuchin.percussion.proto.IPutPlayDetailReqest} message PutPlayDetailReqest message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    PutPlayDetailReqest.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-
-                    /**
-                     * Decodes a PutPlayDetailReqest message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof pj.sakuchin.percussion.proto.PutPlayDetailReqest
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {pj.sakuchin.percussion.proto.PutPlayDetailReqest} PutPlayDetailReqest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    PutPlayDetailReqest.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PutPlayDetailReqest();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                message.detail = $root.pj.sakuchin.percussion.proto.PlayerDetail.decode(reader, reader.uint32());
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-
-                    /**
-                     * Decodes a PutPlayDetailReqest message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof pj.sakuchin.percussion.proto.PutPlayDetailReqest
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {pj.sakuchin.percussion.proto.PutPlayDetailReqest} PutPlayDetailReqest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    PutPlayDetailReqest.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-
-                    /**
-                     * Verifies a PutPlayDetailReqest message.
-                     * @function verify
-                     * @memberof pj.sakuchin.percussion.proto.PutPlayDetailReqest
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    PutPlayDetailReqest.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.detail != null && message.hasOwnProperty("detail")) {
-                            var error = $root.pj.sakuchin.percussion.proto.PlayerDetail.verify(message.detail);
-                            if (error)
-                                return "detail." + error;
-                        }
-                        return null;
-                    };
-
-                    /**
-                     * Creates a PutPlayDetailReqest message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof pj.sakuchin.percussion.proto.PutPlayDetailReqest
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {pj.sakuchin.percussion.proto.PutPlayDetailReqest} PutPlayDetailReqest
-                     */
-                    PutPlayDetailReqest.fromObject = function fromObject(object) {
-                        if (object instanceof $root.pj.sakuchin.percussion.proto.PutPlayDetailReqest)
-                            return object;
-                        var message = new $root.pj.sakuchin.percussion.proto.PutPlayDetailReqest();
-                        if (object.detail != null) {
-                            if (typeof object.detail !== "object")
-                                throw TypeError(".pj.sakuchin.percussion.proto.PutPlayDetailReqest.detail: object expected");
-                            message.detail = $root.pj.sakuchin.percussion.proto.PlayerDetail.fromObject(object.detail);
-                        }
-                        return message;
-                    };
-
-                    /**
-                     * Creates a plain object from a PutPlayDetailReqest message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof pj.sakuchin.percussion.proto.PutPlayDetailReqest
-                     * @static
-                     * @param {pj.sakuchin.percussion.proto.PutPlayDetailReqest} message PutPlayDetailReqest
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    PutPlayDetailReqest.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.defaults)
-                            object.detail = null;
-                        if (message.detail != null && message.hasOwnProperty("detail"))
-                            object.detail = $root.pj.sakuchin.percussion.proto.PlayerDetail.toObject(message.detail, options);
-                        return object;
-                    };
-
-                    /**
-                     * Converts this PutPlayDetailReqest to JSON.
-                     * @function toJSON
-                     * @memberof pj.sakuchin.percussion.proto.PutPlayDetailReqest
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    PutPlayDetailReqest.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-
-                    return PutPlayDetailReqest;
-                })();
-
                 proto.GetPlayerDetailAreaResponse = (function() {
 
                     /**
@@ -4932,214 +9932,6 @@ $root.pj = (function() {
                     };
 
                     return GetPlayerDetailAreaResponse;
-                })();
-
-                proto.PutPlayerDetailAreaRequest = (function() {
-
-                    /**
-                     * Properties of a PutPlayerDetailAreaRequest.
-                     * @memberof pj.sakuchin.percussion.proto
-                     * @interface IPutPlayerDetailAreaRequest
-                     * @property {Array.<pj.sakuchin.percussion.proto.ICity>|null} [activeAreas] PutPlayerDetailAreaRequest activeAreas
-                     */
-
-                    /**
-                     * Constructs a new PutPlayerDetailAreaRequest.
-                     * @memberof pj.sakuchin.percussion.proto
-                     * @classdesc Represents a PutPlayerDetailAreaRequest.
-                     * @implements IPutPlayerDetailAreaRequest
-                     * @constructor
-                     * @param {pj.sakuchin.percussion.proto.IPutPlayerDetailAreaRequest=} [properties] Properties to set
-                     */
-                    function PutPlayerDetailAreaRequest(properties) {
-                        this.activeAreas = [];
-                        if (properties)
-                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
-                                if (properties[keys[i]] != null)
-                                    this[keys[i]] = properties[keys[i]];
-                    }
-
-                    /**
-                     * PutPlayerDetailAreaRequest activeAreas.
-                     * @member {Array.<pj.sakuchin.percussion.proto.ICity>} activeAreas
-                     * @memberof pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest
-                     * @instance
-                     */
-                    PutPlayerDetailAreaRequest.prototype.activeAreas = $util.emptyArray;
-
-                    /**
-                     * Creates a new PutPlayerDetailAreaRequest instance using the specified properties.
-                     * @function create
-                     * @memberof pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest
-                     * @static
-                     * @param {pj.sakuchin.percussion.proto.IPutPlayerDetailAreaRequest=} [properties] Properties to set
-                     * @returns {pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest} PutPlayerDetailAreaRequest instance
-                     */
-                    PutPlayerDetailAreaRequest.create = function create(properties) {
-                        return new PutPlayerDetailAreaRequest(properties);
-                    };
-
-                    /**
-                     * Encodes the specified PutPlayerDetailAreaRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest.verify|verify} messages.
-                     * @function encode
-                     * @memberof pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest
-                     * @static
-                     * @param {pj.sakuchin.percussion.proto.IPutPlayerDetailAreaRequest} message PutPlayerDetailAreaRequest message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    PutPlayerDetailAreaRequest.encode = function encode(message, writer) {
-                        if (!writer)
-                            writer = $Writer.create();
-                        if (message.activeAreas != null && message.activeAreas.length)
-                            for (var i = 0; i < message.activeAreas.length; ++i)
-                                $root.pj.sakuchin.percussion.proto.City.encode(message.activeAreas[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                        return writer;
-                    };
-
-                    /**
-                     * Encodes the specified PutPlayerDetailAreaRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest.verify|verify} messages.
-                     * @function encodeDelimited
-                     * @memberof pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest
-                     * @static
-                     * @param {pj.sakuchin.percussion.proto.IPutPlayerDetailAreaRequest} message PutPlayerDetailAreaRequest message or plain object to encode
-                     * @param {$protobuf.Writer} [writer] Writer to encode to
-                     * @returns {$protobuf.Writer} Writer
-                     */
-                    PutPlayerDetailAreaRequest.encodeDelimited = function encodeDelimited(message, writer) {
-                        return this.encode(message, writer).ldelim();
-                    };
-
-                    /**
-                     * Decodes a PutPlayerDetailAreaRequest message from the specified reader or buffer.
-                     * @function decode
-                     * @memberof pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @param {number} [length] Message length if known beforehand
-                     * @returns {pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest} PutPlayerDetailAreaRequest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    PutPlayerDetailAreaRequest.decode = function decode(reader, length) {
-                        if (!(reader instanceof $Reader))
-                            reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest();
-                        while (reader.pos < end) {
-                            var tag = reader.uint32();
-                            switch (tag >>> 3) {
-                            case 1:
-                                if (!(message.activeAreas && message.activeAreas.length))
-                                    message.activeAreas = [];
-                                message.activeAreas.push($root.pj.sakuchin.percussion.proto.City.decode(reader, reader.uint32()));
-                                break;
-                            default:
-                                reader.skipType(tag & 7);
-                                break;
-                            }
-                        }
-                        return message;
-                    };
-
-                    /**
-                     * Decodes a PutPlayerDetailAreaRequest message from the specified reader or buffer, length delimited.
-                     * @function decodeDelimited
-                     * @memberof pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest
-                     * @static
-                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest} PutPlayerDetailAreaRequest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    PutPlayerDetailAreaRequest.decodeDelimited = function decodeDelimited(reader) {
-                        if (!(reader instanceof $Reader))
-                            reader = new $Reader(reader);
-                        return this.decode(reader, reader.uint32());
-                    };
-
-                    /**
-                     * Verifies a PutPlayerDetailAreaRequest message.
-                     * @function verify
-                     * @memberof pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest
-                     * @static
-                     * @param {Object.<string,*>} message Plain object to verify
-                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
-                     */
-                    PutPlayerDetailAreaRequest.verify = function verify(message) {
-                        if (typeof message !== "object" || message === null)
-                            return "object expected";
-                        if (message.activeAreas != null && message.hasOwnProperty("activeAreas")) {
-                            if (!Array.isArray(message.activeAreas))
-                                return "activeAreas: array expected";
-                            for (var i = 0; i < message.activeAreas.length; ++i) {
-                                var error = $root.pj.sakuchin.percussion.proto.City.verify(message.activeAreas[i]);
-                                if (error)
-                                    return "activeAreas." + error;
-                            }
-                        }
-                        return null;
-                    };
-
-                    /**
-                     * Creates a PutPlayerDetailAreaRequest message from a plain object. Also converts values to their respective internal types.
-                     * @function fromObject
-                     * @memberof pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest
-                     * @static
-                     * @param {Object.<string,*>} object Plain object
-                     * @returns {pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest} PutPlayerDetailAreaRequest
-                     */
-                    PutPlayerDetailAreaRequest.fromObject = function fromObject(object) {
-                        if (object instanceof $root.pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest)
-                            return object;
-                        var message = new $root.pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest();
-                        if (object.activeAreas) {
-                            if (!Array.isArray(object.activeAreas))
-                                throw TypeError(".pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest.activeAreas: array expected");
-                            message.activeAreas = [];
-                            for (var i = 0; i < object.activeAreas.length; ++i) {
-                                if (typeof object.activeAreas[i] !== "object")
-                                    throw TypeError(".pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest.activeAreas: object expected");
-                                message.activeAreas[i] = $root.pj.sakuchin.percussion.proto.City.fromObject(object.activeAreas[i]);
-                            }
-                        }
-                        return message;
-                    };
-
-                    /**
-                     * Creates a plain object from a PutPlayerDetailAreaRequest message. Also converts values to other types if specified.
-                     * @function toObject
-                     * @memberof pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest
-                     * @static
-                     * @param {pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest} message PutPlayerDetailAreaRequest
-                     * @param {$protobuf.IConversionOptions} [options] Conversion options
-                     * @returns {Object.<string,*>} Plain object
-                     */
-                    PutPlayerDetailAreaRequest.toObject = function toObject(message, options) {
-                        if (!options)
-                            options = {};
-                        var object = {};
-                        if (options.arrays || options.defaults)
-                            object.activeAreas = [];
-                        if (message.activeAreas && message.activeAreas.length) {
-                            object.activeAreas = [];
-                            for (var j = 0; j < message.activeAreas.length; ++j)
-                                object.activeAreas[j] = $root.pj.sakuchin.percussion.proto.City.toObject(message.activeAreas[j], options);
-                        }
-                        return object;
-                    };
-
-                    /**
-                     * Converts this PutPlayerDetailAreaRequest to JSON.
-                     * @function toJSON
-                     * @memberof pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest
-                     * @instance
-                     * @returns {Object.<string,*>} JSON object
-                     */
-                    PutPlayerDetailAreaRequest.prototype.toJSON = function toJSON() {
-                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
-                    };
-
-                    return PutPlayerDetailAreaRequest;
                 })();
 
                 proto.Studio = (function() {
@@ -6077,24 +10869,24 @@ $root.pj = (function() {
                     return PutStudioRequest;
                 })();
 
-                proto.GetStudioEditorsResponse = (function() {
+                proto.GetStudioHistoryEditResponse = (function() {
 
                     /**
-                     * Properties of a GetStudioEditorsResponse.
+                     * Properties of a GetStudioHistoryEditResponse.
                      * @memberof pj.sakuchin.percussion.proto
-                     * @interface IGetStudioEditorsResponse
-                     * @property {Array.<pj.sakuchin.percussion.proto.IEditHistory>|null} [history] GetStudioEditorsResponse history
+                     * @interface IGetStudioHistoryEditResponse
+                     * @property {Array.<pj.sakuchin.percussion.proto.IEditHistory>|null} [history] GetStudioHistoryEditResponse history
                      */
 
                     /**
-                     * Constructs a new GetStudioEditorsResponse.
+                     * Constructs a new GetStudioHistoryEditResponse.
                      * @memberof pj.sakuchin.percussion.proto
-                     * @classdesc Represents a GetStudioEditorsResponse.
-                     * @implements IGetStudioEditorsResponse
+                     * @classdesc Represents a GetStudioHistoryEditResponse.
+                     * @implements IGetStudioHistoryEditResponse
                      * @constructor
-                     * @param {pj.sakuchin.percussion.proto.IGetStudioEditorsResponse=} [properties] Properties to set
+                     * @param {pj.sakuchin.percussion.proto.IGetStudioHistoryEditResponse=} [properties] Properties to set
                      */
-                    function GetStudioEditorsResponse(properties) {
+                    function GetStudioHistoryEditResponse(properties) {
                         this.history = [];
                         if (properties)
                             for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
@@ -6103,35 +10895,35 @@ $root.pj = (function() {
                     }
 
                     /**
-                     * GetStudioEditorsResponse history.
+                     * GetStudioHistoryEditResponse history.
                      * @member {Array.<pj.sakuchin.percussion.proto.IEditHistory>} history
-                     * @memberof pj.sakuchin.percussion.proto.GetStudioEditorsResponse
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse
                      * @instance
                      */
-                    GetStudioEditorsResponse.prototype.history = $util.emptyArray;
+                    GetStudioHistoryEditResponse.prototype.history = $util.emptyArray;
 
                     /**
-                     * Creates a new GetStudioEditorsResponse instance using the specified properties.
+                     * Creates a new GetStudioHistoryEditResponse instance using the specified properties.
                      * @function create
-                     * @memberof pj.sakuchin.percussion.proto.GetStudioEditorsResponse
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse
                      * @static
-                     * @param {pj.sakuchin.percussion.proto.IGetStudioEditorsResponse=} [properties] Properties to set
-                     * @returns {pj.sakuchin.percussion.proto.GetStudioEditorsResponse} GetStudioEditorsResponse instance
+                     * @param {pj.sakuchin.percussion.proto.IGetStudioHistoryEditResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse} GetStudioHistoryEditResponse instance
                      */
-                    GetStudioEditorsResponse.create = function create(properties) {
-                        return new GetStudioEditorsResponse(properties);
+                    GetStudioHistoryEditResponse.create = function create(properties) {
+                        return new GetStudioHistoryEditResponse(properties);
                     };
 
                     /**
-                     * Encodes the specified GetStudioEditorsResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetStudioEditorsResponse.verify|verify} messages.
+                     * Encodes the specified GetStudioHistoryEditResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse.verify|verify} messages.
                      * @function encode
-                     * @memberof pj.sakuchin.percussion.proto.GetStudioEditorsResponse
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse
                      * @static
-                     * @param {pj.sakuchin.percussion.proto.IGetStudioEditorsResponse} message GetStudioEditorsResponse message or plain object to encode
+                     * @param {pj.sakuchin.percussion.proto.IGetStudioHistoryEditResponse} message GetStudioHistoryEditResponse message or plain object to encode
                      * @param {$protobuf.Writer} [writer] Writer to encode to
                      * @returns {$protobuf.Writer} Writer
                      */
-                    GetStudioEditorsResponse.encode = function encode(message, writer) {
+                    GetStudioHistoryEditResponse.encode = function encode(message, writer) {
                         if (!writer)
                             writer = $Writer.create();
                         if (message.history != null && message.history.length)
@@ -6141,33 +10933,33 @@ $root.pj = (function() {
                     };
 
                     /**
-                     * Encodes the specified GetStudioEditorsResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetStudioEditorsResponse.verify|verify} messages.
+                     * Encodes the specified GetStudioHistoryEditResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse.verify|verify} messages.
                      * @function encodeDelimited
-                     * @memberof pj.sakuchin.percussion.proto.GetStudioEditorsResponse
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse
                      * @static
-                     * @param {pj.sakuchin.percussion.proto.IGetStudioEditorsResponse} message GetStudioEditorsResponse message or plain object to encode
+                     * @param {pj.sakuchin.percussion.proto.IGetStudioHistoryEditResponse} message GetStudioHistoryEditResponse message or plain object to encode
                      * @param {$protobuf.Writer} [writer] Writer to encode to
                      * @returns {$protobuf.Writer} Writer
                      */
-                    GetStudioEditorsResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                    GetStudioHistoryEditResponse.encodeDelimited = function encodeDelimited(message, writer) {
                         return this.encode(message, writer).ldelim();
                     };
 
                     /**
-                     * Decodes a GetStudioEditorsResponse message from the specified reader or buffer.
+                     * Decodes a GetStudioHistoryEditResponse message from the specified reader or buffer.
                      * @function decode
-                     * @memberof pj.sakuchin.percussion.proto.GetStudioEditorsResponse
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse
                      * @static
                      * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                      * @param {number} [length] Message length if known beforehand
-                     * @returns {pj.sakuchin.percussion.proto.GetStudioEditorsResponse} GetStudioEditorsResponse
+                     * @returns {pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse} GetStudioHistoryEditResponse
                      * @throws {Error} If the payload is not a reader or valid buffer
                      * @throws {$protobuf.util.ProtocolError} If required fields are missing
                      */
-                    GetStudioEditorsResponse.decode = function decode(reader, length) {
+                    GetStudioHistoryEditResponse.decode = function decode(reader, length) {
                         if (!(reader instanceof $Reader))
                             reader = $Reader.create(reader);
-                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.GetStudioEditorsResponse();
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse();
                         while (reader.pos < end) {
                             var tag = reader.uint32();
                             switch (tag >>> 3) {
@@ -6185,30 +10977,30 @@ $root.pj = (function() {
                     };
 
                     /**
-                     * Decodes a GetStudioEditorsResponse message from the specified reader or buffer, length delimited.
+                     * Decodes a GetStudioHistoryEditResponse message from the specified reader or buffer, length delimited.
                      * @function decodeDelimited
-                     * @memberof pj.sakuchin.percussion.proto.GetStudioEditorsResponse
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse
                      * @static
                      * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {pj.sakuchin.percussion.proto.GetStudioEditorsResponse} GetStudioEditorsResponse
+                     * @returns {pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse} GetStudioHistoryEditResponse
                      * @throws {Error} If the payload is not a reader or valid buffer
                      * @throws {$protobuf.util.ProtocolError} If required fields are missing
                      */
-                    GetStudioEditorsResponse.decodeDelimited = function decodeDelimited(reader) {
+                    GetStudioHistoryEditResponse.decodeDelimited = function decodeDelimited(reader) {
                         if (!(reader instanceof $Reader))
                             reader = new $Reader(reader);
                         return this.decode(reader, reader.uint32());
                     };
 
                     /**
-                     * Verifies a GetStudioEditorsResponse message.
+                     * Verifies a GetStudioHistoryEditResponse message.
                      * @function verify
-                     * @memberof pj.sakuchin.percussion.proto.GetStudioEditorsResponse
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse
                      * @static
                      * @param {Object.<string,*>} message Plain object to verify
                      * @returns {string|null} `null` if valid, otherwise the reason why it is not
                      */
-                    GetStudioEditorsResponse.verify = function verify(message) {
+                    GetStudioHistoryEditResponse.verify = function verify(message) {
                         if (typeof message !== "object" || message === null)
                             return "object expected";
                         if (message.history != null && message.hasOwnProperty("history")) {
@@ -6224,24 +11016,24 @@ $root.pj = (function() {
                     };
 
                     /**
-                     * Creates a GetStudioEditorsResponse message from a plain object. Also converts values to their respective internal types.
+                     * Creates a GetStudioHistoryEditResponse message from a plain object. Also converts values to their respective internal types.
                      * @function fromObject
-                     * @memberof pj.sakuchin.percussion.proto.GetStudioEditorsResponse
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse
                      * @static
                      * @param {Object.<string,*>} object Plain object
-                     * @returns {pj.sakuchin.percussion.proto.GetStudioEditorsResponse} GetStudioEditorsResponse
+                     * @returns {pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse} GetStudioHistoryEditResponse
                      */
-                    GetStudioEditorsResponse.fromObject = function fromObject(object) {
-                        if (object instanceof $root.pj.sakuchin.percussion.proto.GetStudioEditorsResponse)
+                    GetStudioHistoryEditResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse)
                             return object;
-                        var message = new $root.pj.sakuchin.percussion.proto.GetStudioEditorsResponse();
+                        var message = new $root.pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse();
                         if (object.history) {
                             if (!Array.isArray(object.history))
-                                throw TypeError(".pj.sakuchin.percussion.proto.GetStudioEditorsResponse.history: array expected");
+                                throw TypeError(".pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse.history: array expected");
                             message.history = [];
                             for (var i = 0; i < object.history.length; ++i) {
                                 if (typeof object.history[i] !== "object")
-                                    throw TypeError(".pj.sakuchin.percussion.proto.GetStudioEditorsResponse.history: object expected");
+                                    throw TypeError(".pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse.history: object expected");
                                 message.history[i] = $root.pj.sakuchin.percussion.proto.EditHistory.fromObject(object.history[i]);
                             }
                         }
@@ -6249,15 +11041,15 @@ $root.pj = (function() {
                     };
 
                     /**
-                     * Creates a plain object from a GetStudioEditorsResponse message. Also converts values to other types if specified.
+                     * Creates a plain object from a GetStudioHistoryEditResponse message. Also converts values to other types if specified.
                      * @function toObject
-                     * @memberof pj.sakuchin.percussion.proto.GetStudioEditorsResponse
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse
                      * @static
-                     * @param {pj.sakuchin.percussion.proto.GetStudioEditorsResponse} message GetStudioEditorsResponse
+                     * @param {pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse} message GetStudioHistoryEditResponse
                      * @param {$protobuf.IConversionOptions} [options] Conversion options
                      * @returns {Object.<string,*>} Plain object
                      */
-                    GetStudioEditorsResponse.toObject = function toObject(message, options) {
+                    GetStudioHistoryEditResponse.toObject = function toObject(message, options) {
                         if (!options)
                             options = {};
                         var object = {};
@@ -6272,17 +11064,17 @@ $root.pj = (function() {
                     };
 
                     /**
-                     * Converts this GetStudioEditorsResponse to JSON.
+                     * Converts this GetStudioHistoryEditResponse to JSON.
                      * @function toJSON
-                     * @memberof pj.sakuchin.percussion.proto.GetStudioEditorsResponse
+                     * @memberof pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse
                      * @instance
                      * @returns {Object.<string,*>} JSON object
                      */
-                    GetStudioEditorsResponse.prototype.toJSON = function toJSON() {
+                    GetStudioHistoryEditResponse.prototype.toJSON = function toJSON() {
                         return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                     };
 
-                    return GetStudioEditorsResponse;
+                    return GetStudioHistoryEditResponse;
                 })();
 
                 proto.GetSuggestCityResponse = (function() {

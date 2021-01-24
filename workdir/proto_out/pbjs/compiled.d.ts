@@ -1008,91 +1008,91 @@ export namespace pj {
                     public toJSON(): { [k: string]: any };
                 }
 
-                /** Properties of a GetInstrumentEditorsResponse. */
-                interface IGetInstrumentEditorsResponse {
+                /** Properties of a GetInstrumentHistoryEditResponse. */
+                interface IGetInstrumentHistoryEditResponse {
 
-                    /** GetInstrumentEditorsResponse history */
+                    /** GetInstrumentHistoryEditResponse history */
                     history?: (pj.sakuchin.percussion.proto.IEditHistory[]|null);
                 }
 
-                /** Represents a GetInstrumentEditorsResponse. */
-                class GetInstrumentEditorsResponse implements IGetInstrumentEditorsResponse {
+                /** Represents a GetInstrumentHistoryEditResponse. */
+                class GetInstrumentHistoryEditResponse implements IGetInstrumentHistoryEditResponse {
 
                     /**
-                     * Constructs a new GetInstrumentEditorsResponse.
+                     * Constructs a new GetInstrumentHistoryEditResponse.
                      * @param [properties] Properties to set
                      */
-                    constructor(properties?: pj.sakuchin.percussion.proto.IGetInstrumentEditorsResponse);
+                    constructor(properties?: pj.sakuchin.percussion.proto.IGetInstrumentHistoryEditResponse);
 
-                    /** GetInstrumentEditorsResponse history. */
+                    /** GetInstrumentHistoryEditResponse history. */
                     public history: pj.sakuchin.percussion.proto.IEditHistory[];
 
                     /**
-                     * Creates a new GetInstrumentEditorsResponse instance using the specified properties.
+                     * Creates a new GetInstrumentHistoryEditResponse instance using the specified properties.
                      * @param [properties] Properties to set
-                     * @returns GetInstrumentEditorsResponse instance
+                     * @returns GetInstrumentHistoryEditResponse instance
                      */
-                    public static create(properties?: pj.sakuchin.percussion.proto.IGetInstrumentEditorsResponse): pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse;
+                    public static create(properties?: pj.sakuchin.percussion.proto.IGetInstrumentHistoryEditResponse): pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse;
 
                     /**
-                     * Encodes the specified GetInstrumentEditorsResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse.verify|verify} messages.
-                     * @param message GetInstrumentEditorsResponse message or plain object to encode
+                     * Encodes the specified GetInstrumentHistoryEditResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse.verify|verify} messages.
+                     * @param message GetInstrumentHistoryEditResponse message or plain object to encode
                      * @param [writer] Writer to encode to
                      * @returns Writer
                      */
-                    public static encode(message: pj.sakuchin.percussion.proto.IGetInstrumentEditorsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+                    public static encode(message: pj.sakuchin.percussion.proto.IGetInstrumentHistoryEditResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
                     /**
-                     * Encodes the specified GetInstrumentEditorsResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse.verify|verify} messages.
-                     * @param message GetInstrumentEditorsResponse message or plain object to encode
+                     * Encodes the specified GetInstrumentHistoryEditResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse.verify|verify} messages.
+                     * @param message GetInstrumentHistoryEditResponse message or plain object to encode
                      * @param [writer] Writer to encode to
                      * @returns Writer
                      */
-                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IGetInstrumentEditorsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IGetInstrumentHistoryEditResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
                     /**
-                     * Decodes a GetInstrumentEditorsResponse message from the specified reader or buffer.
+                     * Decodes a GetInstrumentHistoryEditResponse message from the specified reader or buffer.
                      * @param reader Reader or buffer to decode from
                      * @param [length] Message length if known beforehand
-                     * @returns GetInstrumentEditorsResponse
+                     * @returns GetInstrumentHistoryEditResponse
                      * @throws {Error} If the payload is not a reader or valid buffer
                      * @throws {$protobuf.util.ProtocolError} If required fields are missing
                      */
-                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse;
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse;
 
                     /**
-                     * Decodes a GetInstrumentEditorsResponse message from the specified reader or buffer, length delimited.
+                     * Decodes a GetInstrumentHistoryEditResponse message from the specified reader or buffer, length delimited.
                      * @param reader Reader or buffer to decode from
-                     * @returns GetInstrumentEditorsResponse
+                     * @returns GetInstrumentHistoryEditResponse
                      * @throws {Error} If the payload is not a reader or valid buffer
                      * @throws {$protobuf.util.ProtocolError} If required fields are missing
                      */
-                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse;
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse;
 
                     /**
-                     * Verifies a GetInstrumentEditorsResponse message.
+                     * Verifies a GetInstrumentHistoryEditResponse message.
                      * @param message Plain object to verify
                      * @returns `null` if valid, otherwise the reason why it is not
                      */
                     public static verify(message: { [k: string]: any }): (string|null);
 
                     /**
-                     * Creates a GetInstrumentEditorsResponse message from a plain object. Also converts values to their respective internal types.
+                     * Creates a GetInstrumentHistoryEditResponse message from a plain object. Also converts values to their respective internal types.
                      * @param object Plain object
-                     * @returns GetInstrumentEditorsResponse
+                     * @returns GetInstrumentHistoryEditResponse
                      */
-                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse;
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse;
 
                     /**
-                     * Creates a plain object from a GetInstrumentEditorsResponse message. Also converts values to other types if specified.
-                     * @param message GetInstrumentEditorsResponse
+                     * Creates a plain object from a GetInstrumentHistoryEditResponse message. Also converts values to other types if specified.
+                     * @param message GetInstrumentHistoryEditResponse
                      * @param [options] Conversion options
                      * @returns Plain object
                      */
-                    public static toObject(message: pj.sakuchin.percussion.proto.GetInstrumentEditorsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+                    public static toObject(message: pj.sakuchin.percussion.proto.GetInstrumentHistoryEditResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
                     /**
-                     * Converts this GetInstrumentEditorsResponse to JSON.
+                     * Converts this GetInstrumentHistoryEditResponse to JSON.
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
@@ -1453,6 +1453,2346 @@ export namespace pj {
 
                     /**
                      * Converts this PostLoginResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a GetMyselfDetailResponse. */
+                interface IGetMyselfDetailResponse {
+
+                    /** GetMyselfDetailResponse detail */
+                    detail?: (pj.sakuchin.percussion.proto.IPlayerDetail|null);
+                }
+
+                /** Represents a GetMyselfDetailResponse. */
+                class GetMyselfDetailResponse implements IGetMyselfDetailResponse {
+
+                    /**
+                     * Constructs a new GetMyselfDetailResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IGetMyselfDetailResponse);
+
+                    /** GetMyselfDetailResponse detail. */
+                    public detail?: (pj.sakuchin.percussion.proto.IPlayerDetail|null);
+
+                    /**
+                     * Creates a new GetMyselfDetailResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns GetMyselfDetailResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IGetMyselfDetailResponse): pj.sakuchin.percussion.proto.GetMyselfDetailResponse;
+
+                    /**
+                     * Encodes the specified GetMyselfDetailResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselfDetailResponse.verify|verify} messages.
+                     * @param message GetMyselfDetailResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IGetMyselfDetailResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified GetMyselfDetailResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselfDetailResponse.verify|verify} messages.
+                     * @param message GetMyselfDetailResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IGetMyselfDetailResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a GetMyselfDetailResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns GetMyselfDetailResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.GetMyselfDetailResponse;
+
+                    /**
+                     * Decodes a GetMyselfDetailResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns GetMyselfDetailResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.GetMyselfDetailResponse;
+
+                    /**
+                     * Verifies a GetMyselfDetailResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a GetMyselfDetailResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns GetMyselfDetailResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.GetMyselfDetailResponse;
+
+                    /**
+                     * Creates a plain object from a GetMyselfDetailResponse message. Also converts values to other types if specified.
+                     * @param message GetMyselfDetailResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.GetMyselfDetailResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this GetMyselfDetailResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PutMyselfDetailRequest. */
+                interface IPutMyselfDetailRequest {
+
+                    /** PutMyselfDetailRequest detail */
+                    detail?: (pj.sakuchin.percussion.proto.IPlayerDetail|null);
+                }
+
+                /** Represents a PutMyselfDetailRequest. */
+                class PutMyselfDetailRequest implements IPutMyselfDetailRequest {
+
+                    /**
+                     * Constructs a new PutMyselfDetailRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPutMyselfDetailRequest);
+
+                    /** PutMyselfDetailRequest detail. */
+                    public detail?: (pj.sakuchin.percussion.proto.IPlayerDetail|null);
+
+                    /**
+                     * Creates a new PutMyselfDetailRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PutMyselfDetailRequest instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPutMyselfDetailRequest): pj.sakuchin.percussion.proto.PutMyselfDetailRequest;
+
+                    /**
+                     * Encodes the specified PutMyselfDetailRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselfDetailRequest.verify|verify} messages.
+                     * @param message PutMyselfDetailRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPutMyselfDetailRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PutMyselfDetailRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselfDetailRequest.verify|verify} messages.
+                     * @param message PutMyselfDetailRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPutMyselfDetailRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PutMyselfDetailRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PutMyselfDetailRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PutMyselfDetailRequest;
+
+                    /**
+                     * Decodes a PutMyselfDetailRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PutMyselfDetailRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PutMyselfDetailRequest;
+
+                    /**
+                     * Verifies a PutMyselfDetailRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PutMyselfDetailRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PutMyselfDetailRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PutMyselfDetailRequest;
+
+                    /**
+                     * Creates a plain object from a PutMyselfDetailRequest message. Also converts values to other types if specified.
+                     * @param message PutMyselfDetailRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PutMyselfDetailRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PutMyselfDetailRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PutMyselfDetailResponse. */
+                interface IPutMyselfDetailResponse {
+
+                    /** PutMyselfDetailResponse detail */
+                    detail?: (pj.sakuchin.percussion.proto.IPlayerDetail|null);
+                }
+
+                /** Represents a PutMyselfDetailResponse. */
+                class PutMyselfDetailResponse implements IPutMyselfDetailResponse {
+
+                    /**
+                     * Constructs a new PutMyselfDetailResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPutMyselfDetailResponse);
+
+                    /** PutMyselfDetailResponse detail. */
+                    public detail?: (pj.sakuchin.percussion.proto.IPlayerDetail|null);
+
+                    /**
+                     * Creates a new PutMyselfDetailResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PutMyselfDetailResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPutMyselfDetailResponse): pj.sakuchin.percussion.proto.PutMyselfDetailResponse;
+
+                    /**
+                     * Encodes the specified PutMyselfDetailResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselfDetailResponse.verify|verify} messages.
+                     * @param message PutMyselfDetailResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPutMyselfDetailResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PutMyselfDetailResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselfDetailResponse.verify|verify} messages.
+                     * @param message PutMyselfDetailResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPutMyselfDetailResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PutMyselfDetailResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PutMyselfDetailResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PutMyselfDetailResponse;
+
+                    /**
+                     * Decodes a PutMyselfDetailResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PutMyselfDetailResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PutMyselfDetailResponse;
+
+                    /**
+                     * Verifies a PutMyselfDetailResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PutMyselfDetailResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PutMyselfDetailResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PutMyselfDetailResponse;
+
+                    /**
+                     * Creates a plain object from a PutMyselfDetailResponse message. Also converts values to other types if specified.
+                     * @param message PutMyselfDetailResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PutMyselfDetailResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PutMyselfDetailResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a GetMyselfDetailAreaResponse. */
+                interface IGetMyselfDetailAreaResponse {
+
+                    /** GetMyselfDetailAreaResponse cities */
+                    cities?: (pj.sakuchin.percussion.proto.ICity[]|null);
+                }
+
+                /** Represents a GetMyselfDetailAreaResponse. */
+                class GetMyselfDetailAreaResponse implements IGetMyselfDetailAreaResponse {
+
+                    /**
+                     * Constructs a new GetMyselfDetailAreaResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IGetMyselfDetailAreaResponse);
+
+                    /** GetMyselfDetailAreaResponse cities. */
+                    public cities: pj.sakuchin.percussion.proto.ICity[];
+
+                    /**
+                     * Creates a new GetMyselfDetailAreaResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns GetMyselfDetailAreaResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IGetMyselfDetailAreaResponse): pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse;
+
+                    /**
+                     * Encodes the specified GetMyselfDetailAreaResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse.verify|verify} messages.
+                     * @param message GetMyselfDetailAreaResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IGetMyselfDetailAreaResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified GetMyselfDetailAreaResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse.verify|verify} messages.
+                     * @param message GetMyselfDetailAreaResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IGetMyselfDetailAreaResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a GetMyselfDetailAreaResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns GetMyselfDetailAreaResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse;
+
+                    /**
+                     * Decodes a GetMyselfDetailAreaResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns GetMyselfDetailAreaResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse;
+
+                    /**
+                     * Verifies a GetMyselfDetailAreaResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a GetMyselfDetailAreaResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns GetMyselfDetailAreaResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse;
+
+                    /**
+                     * Creates a plain object from a GetMyselfDetailAreaResponse message. Also converts values to other types if specified.
+                     * @param message GetMyselfDetailAreaResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.GetMyselfDetailAreaResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this GetMyselfDetailAreaResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PostMyselfDetailAreaRequest. */
+                interface IPostMyselfDetailAreaRequest {
+
+                    /** PostMyselfDetailAreaRequest cityId */
+                    cityId?: (string|null);
+                }
+
+                /** Represents a PostMyselfDetailAreaRequest. */
+                class PostMyselfDetailAreaRequest implements IPostMyselfDetailAreaRequest {
+
+                    /**
+                     * Constructs a new PostMyselfDetailAreaRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPostMyselfDetailAreaRequest);
+
+                    /** PostMyselfDetailAreaRequest cityId. */
+                    public cityId: string;
+
+                    /**
+                     * Creates a new PostMyselfDetailAreaRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PostMyselfDetailAreaRequest instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPostMyselfDetailAreaRequest): pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest;
+
+                    /**
+                     * Encodes the specified PostMyselfDetailAreaRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest.verify|verify} messages.
+                     * @param message PostMyselfDetailAreaRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPostMyselfDetailAreaRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PostMyselfDetailAreaRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest.verify|verify} messages.
+                     * @param message PostMyselfDetailAreaRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPostMyselfDetailAreaRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PostMyselfDetailAreaRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PostMyselfDetailAreaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest;
+
+                    /**
+                     * Decodes a PostMyselfDetailAreaRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PostMyselfDetailAreaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest;
+
+                    /**
+                     * Verifies a PostMyselfDetailAreaRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PostMyselfDetailAreaRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PostMyselfDetailAreaRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest;
+
+                    /**
+                     * Creates a plain object from a PostMyselfDetailAreaRequest message. Also converts values to other types if specified.
+                     * @param message PostMyselfDetailAreaRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PostMyselfDetailAreaRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PostMyselfDetailAreaRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PostMyselfDetailAreaResponse. */
+                interface IPostMyselfDetailAreaResponse {
+
+                    /** PostMyselfDetailAreaResponse cities */
+                    cities?: (pj.sakuchin.percussion.proto.ICity[]|null);
+                }
+
+                /** Represents a PostMyselfDetailAreaResponse. */
+                class PostMyselfDetailAreaResponse implements IPostMyselfDetailAreaResponse {
+
+                    /**
+                     * Constructs a new PostMyselfDetailAreaResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPostMyselfDetailAreaResponse);
+
+                    /** PostMyselfDetailAreaResponse cities. */
+                    public cities: pj.sakuchin.percussion.proto.ICity[];
+
+                    /**
+                     * Creates a new PostMyselfDetailAreaResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PostMyselfDetailAreaResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPostMyselfDetailAreaResponse): pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse;
+
+                    /**
+                     * Encodes the specified PostMyselfDetailAreaResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse.verify|verify} messages.
+                     * @param message PostMyselfDetailAreaResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPostMyselfDetailAreaResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PostMyselfDetailAreaResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse.verify|verify} messages.
+                     * @param message PostMyselfDetailAreaResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPostMyselfDetailAreaResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PostMyselfDetailAreaResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PostMyselfDetailAreaResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse;
+
+                    /**
+                     * Decodes a PostMyselfDetailAreaResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PostMyselfDetailAreaResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse;
+
+                    /**
+                     * Verifies a PostMyselfDetailAreaResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PostMyselfDetailAreaResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PostMyselfDetailAreaResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse;
+
+                    /**
+                     * Creates a plain object from a PostMyselfDetailAreaResponse message. Also converts values to other types if specified.
+                     * @param message PostMyselfDetailAreaResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PostMyselfDetailAreaResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PostMyselfDetailAreaResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a DeleteMyselfDetailAreaRequest. */
+                interface IDeleteMyselfDetailAreaRequest {
+
+                    /** DeleteMyselfDetailAreaRequest cityId */
+                    cityId?: (string|null);
+                }
+
+                /** Represents a DeleteMyselfDetailAreaRequest. */
+                class DeleteMyselfDetailAreaRequest implements IDeleteMyselfDetailAreaRequest {
+
+                    /**
+                     * Constructs a new DeleteMyselfDetailAreaRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IDeleteMyselfDetailAreaRequest);
+
+                    /** DeleteMyselfDetailAreaRequest cityId. */
+                    public cityId: string;
+
+                    /**
+                     * Creates a new DeleteMyselfDetailAreaRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns DeleteMyselfDetailAreaRequest instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IDeleteMyselfDetailAreaRequest): pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest;
+
+                    /**
+                     * Encodes the specified DeleteMyselfDetailAreaRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest.verify|verify} messages.
+                     * @param message DeleteMyselfDetailAreaRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IDeleteMyselfDetailAreaRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified DeleteMyselfDetailAreaRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest.verify|verify} messages.
+                     * @param message DeleteMyselfDetailAreaRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IDeleteMyselfDetailAreaRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a DeleteMyselfDetailAreaRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns DeleteMyselfDetailAreaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest;
+
+                    /**
+                     * Decodes a DeleteMyselfDetailAreaRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns DeleteMyselfDetailAreaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest;
+
+                    /**
+                     * Verifies a DeleteMyselfDetailAreaRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a DeleteMyselfDetailAreaRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns DeleteMyselfDetailAreaRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest;
+
+                    /**
+                     * Creates a plain object from a DeleteMyselfDetailAreaRequest message. Also converts values to other types if specified.
+                     * @param message DeleteMyselfDetailAreaRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this DeleteMyselfDetailAreaRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a DeleteMyselfDetailAreaResponse. */
+                interface IDeleteMyselfDetailAreaResponse {
+
+                    /** DeleteMyselfDetailAreaResponse cities */
+                    cities?: (pj.sakuchin.percussion.proto.ICity[]|null);
+                }
+
+                /** Represents a DeleteMyselfDetailAreaResponse. */
+                class DeleteMyselfDetailAreaResponse implements IDeleteMyselfDetailAreaResponse {
+
+                    /**
+                     * Constructs a new DeleteMyselfDetailAreaResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IDeleteMyselfDetailAreaResponse);
+
+                    /** DeleteMyselfDetailAreaResponse cities. */
+                    public cities: pj.sakuchin.percussion.proto.ICity[];
+
+                    /**
+                     * Creates a new DeleteMyselfDetailAreaResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns DeleteMyselfDetailAreaResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IDeleteMyselfDetailAreaResponse): pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse;
+
+                    /**
+                     * Encodes the specified DeleteMyselfDetailAreaResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse.verify|verify} messages.
+                     * @param message DeleteMyselfDetailAreaResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IDeleteMyselfDetailAreaResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified DeleteMyselfDetailAreaResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse.verify|verify} messages.
+                     * @param message DeleteMyselfDetailAreaResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IDeleteMyselfDetailAreaResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a DeleteMyselfDetailAreaResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns DeleteMyselfDetailAreaResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse;
+
+                    /**
+                     * Decodes a DeleteMyselfDetailAreaResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns DeleteMyselfDetailAreaResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse;
+
+                    /**
+                     * Verifies a DeleteMyselfDetailAreaResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a DeleteMyselfDetailAreaResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns DeleteMyselfDetailAreaResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse;
+
+                    /**
+                     * Creates a plain object from a DeleteMyselfDetailAreaResponse message. Also converts values to other types if specified.
+                     * @param message DeleteMyselfDetailAreaResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.DeleteMyselfDetailAreaResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this DeleteMyselfDetailAreaResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PutMyselfDetailAreaRequest. */
+                interface IPutMyselfDetailAreaRequest {
+
+                    /** PutMyselfDetailAreaRequest area */
+                    area?: (pj.sakuchin.percussion.proto.ICity[]|null);
+                }
+
+                /** Represents a PutMyselfDetailAreaRequest. */
+                class PutMyselfDetailAreaRequest implements IPutMyselfDetailAreaRequest {
+
+                    /**
+                     * Constructs a new PutMyselfDetailAreaRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPutMyselfDetailAreaRequest);
+
+                    /** PutMyselfDetailAreaRequest area. */
+                    public area: pj.sakuchin.percussion.proto.ICity[];
+
+                    /**
+                     * Creates a new PutMyselfDetailAreaRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PutMyselfDetailAreaRequest instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPutMyselfDetailAreaRequest): pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest;
+
+                    /**
+                     * Encodes the specified PutMyselfDetailAreaRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest.verify|verify} messages.
+                     * @param message PutMyselfDetailAreaRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPutMyselfDetailAreaRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PutMyselfDetailAreaRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest.verify|verify} messages.
+                     * @param message PutMyselfDetailAreaRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPutMyselfDetailAreaRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PutMyselfDetailAreaRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PutMyselfDetailAreaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest;
+
+                    /**
+                     * Decodes a PutMyselfDetailAreaRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PutMyselfDetailAreaRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest;
+
+                    /**
+                     * Verifies a PutMyselfDetailAreaRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PutMyselfDetailAreaRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PutMyselfDetailAreaRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest;
+
+                    /**
+                     * Creates a plain object from a PutMyselfDetailAreaRequest message. Also converts values to other types if specified.
+                     * @param message PutMyselfDetailAreaRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PutMyselfDetailAreaRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PutMyselfDetailAreaResponse. */
+                interface IPutMyselfDetailAreaResponse {
+
+                    /** PutMyselfDetailAreaResponse cities */
+                    cities?: (pj.sakuchin.percussion.proto.ICity[]|null);
+                }
+
+                /** Represents a PutMyselfDetailAreaResponse. */
+                class PutMyselfDetailAreaResponse implements IPutMyselfDetailAreaResponse {
+
+                    /**
+                     * Constructs a new PutMyselfDetailAreaResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPutMyselfDetailAreaResponse);
+
+                    /** PutMyselfDetailAreaResponse cities. */
+                    public cities: pj.sakuchin.percussion.proto.ICity[];
+
+                    /**
+                     * Creates a new PutMyselfDetailAreaResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PutMyselfDetailAreaResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPutMyselfDetailAreaResponse): pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse;
+
+                    /**
+                     * Encodes the specified PutMyselfDetailAreaResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse.verify|verify} messages.
+                     * @param message PutMyselfDetailAreaResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPutMyselfDetailAreaResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PutMyselfDetailAreaResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse.verify|verify} messages.
+                     * @param message PutMyselfDetailAreaResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPutMyselfDetailAreaResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PutMyselfDetailAreaResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PutMyselfDetailAreaResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse;
+
+                    /**
+                     * Decodes a PutMyselfDetailAreaResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PutMyselfDetailAreaResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse;
+
+                    /**
+                     * Verifies a PutMyselfDetailAreaResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PutMyselfDetailAreaResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PutMyselfDetailAreaResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse;
+
+                    /**
+                     * Creates a plain object from a PutMyselfDetailAreaResponse message. Also converts values to other types if specified.
+                     * @param message PutMyselfDetailAreaResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PutMyselfDetailAreaResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PutMyselfDetailAreaResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a GetMyselDetailInstrumentResponse. */
+                interface IGetMyselDetailInstrumentResponse {
+
+                    /** GetMyselDetailInstrumentResponse instruments */
+                    instruments?: (pj.sakuchin.percussion.proto.IInstrument[]|null);
+                }
+
+                /** Represents a GetMyselDetailInstrumentResponse. */
+                class GetMyselDetailInstrumentResponse implements IGetMyselDetailInstrumentResponse {
+
+                    /**
+                     * Constructs a new GetMyselDetailInstrumentResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IGetMyselDetailInstrumentResponse);
+
+                    /** GetMyselDetailInstrumentResponse instruments. */
+                    public instruments: pj.sakuchin.percussion.proto.IInstrument[];
+
+                    /**
+                     * Creates a new GetMyselDetailInstrumentResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns GetMyselDetailInstrumentResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IGetMyselDetailInstrumentResponse): pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse;
+
+                    /**
+                     * Encodes the specified GetMyselDetailInstrumentResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse.verify|verify} messages.
+                     * @param message GetMyselDetailInstrumentResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IGetMyselDetailInstrumentResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified GetMyselDetailInstrumentResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse.verify|verify} messages.
+                     * @param message GetMyselDetailInstrumentResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IGetMyselDetailInstrumentResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a GetMyselDetailInstrumentResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns GetMyselDetailInstrumentResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse;
+
+                    /**
+                     * Decodes a GetMyselDetailInstrumentResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns GetMyselDetailInstrumentResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse;
+
+                    /**
+                     * Verifies a GetMyselDetailInstrumentResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a GetMyselDetailInstrumentResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns GetMyselDetailInstrumentResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse;
+
+                    /**
+                     * Creates a plain object from a GetMyselDetailInstrumentResponse message. Also converts values to other types if specified.
+                     * @param message GetMyselDetailInstrumentResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.GetMyselDetailInstrumentResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this GetMyselDetailInstrumentResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PostMyselDetailInstrumentRequest. */
+                interface IPostMyselDetailInstrumentRequest {
+
+                    /** PostMyselDetailInstrumentRequest instrumentId */
+                    instrumentId?: (number|null);
+                }
+
+                /** Represents a PostMyselDetailInstrumentRequest. */
+                class PostMyselDetailInstrumentRequest implements IPostMyselDetailInstrumentRequest {
+
+                    /**
+                     * Constructs a new PostMyselDetailInstrumentRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPostMyselDetailInstrumentRequest);
+
+                    /** PostMyselDetailInstrumentRequest instrumentId. */
+                    public instrumentId: number;
+
+                    /**
+                     * Creates a new PostMyselDetailInstrumentRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PostMyselDetailInstrumentRequest instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPostMyselDetailInstrumentRequest): pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest;
+
+                    /**
+                     * Encodes the specified PostMyselDetailInstrumentRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest.verify|verify} messages.
+                     * @param message PostMyselDetailInstrumentRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPostMyselDetailInstrumentRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PostMyselDetailInstrumentRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest.verify|verify} messages.
+                     * @param message PostMyselDetailInstrumentRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPostMyselDetailInstrumentRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PostMyselDetailInstrumentRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PostMyselDetailInstrumentRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest;
+
+                    /**
+                     * Decodes a PostMyselDetailInstrumentRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PostMyselDetailInstrumentRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest;
+
+                    /**
+                     * Verifies a PostMyselDetailInstrumentRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PostMyselDetailInstrumentRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PostMyselDetailInstrumentRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest;
+
+                    /**
+                     * Creates a plain object from a PostMyselDetailInstrumentRequest message. Also converts values to other types if specified.
+                     * @param message PostMyselDetailInstrumentRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PostMyselDetailInstrumentRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PostMyselDetailInstrumentRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PostMyselDetailInstrumentResponse. */
+                interface IPostMyselDetailInstrumentResponse {
+
+                    /** PostMyselDetailInstrumentResponse instruments */
+                    instruments?: (pj.sakuchin.percussion.proto.IInstrument[]|null);
+                }
+
+                /** Represents a PostMyselDetailInstrumentResponse. */
+                class PostMyselDetailInstrumentResponse implements IPostMyselDetailInstrumentResponse {
+
+                    /**
+                     * Constructs a new PostMyselDetailInstrumentResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPostMyselDetailInstrumentResponse);
+
+                    /** PostMyselDetailInstrumentResponse instruments. */
+                    public instruments: pj.sakuchin.percussion.proto.IInstrument[];
+
+                    /**
+                     * Creates a new PostMyselDetailInstrumentResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PostMyselDetailInstrumentResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPostMyselDetailInstrumentResponse): pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse;
+
+                    /**
+                     * Encodes the specified PostMyselDetailInstrumentResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse.verify|verify} messages.
+                     * @param message PostMyselDetailInstrumentResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPostMyselDetailInstrumentResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PostMyselDetailInstrumentResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse.verify|verify} messages.
+                     * @param message PostMyselDetailInstrumentResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPostMyselDetailInstrumentResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PostMyselDetailInstrumentResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PostMyselDetailInstrumentResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse;
+
+                    /**
+                     * Decodes a PostMyselDetailInstrumentResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PostMyselDetailInstrumentResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse;
+
+                    /**
+                     * Verifies a PostMyselDetailInstrumentResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PostMyselDetailInstrumentResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PostMyselDetailInstrumentResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse;
+
+                    /**
+                     * Creates a plain object from a PostMyselDetailInstrumentResponse message. Also converts values to other types if specified.
+                     * @param message PostMyselDetailInstrumentResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PostMyselDetailInstrumentResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PostMyselDetailInstrumentResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a DeleteMyselDetailInstrumentRequest. */
+                interface IDeleteMyselDetailInstrumentRequest {
+
+                    /** DeleteMyselDetailInstrumentRequest instrumentId */
+                    instrumentId?: (number|null);
+                }
+
+                /** Represents a DeleteMyselDetailInstrumentRequest. */
+                class DeleteMyselDetailInstrumentRequest implements IDeleteMyselDetailInstrumentRequest {
+
+                    /**
+                     * Constructs a new DeleteMyselDetailInstrumentRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IDeleteMyselDetailInstrumentRequest);
+
+                    /** DeleteMyselDetailInstrumentRequest instrumentId. */
+                    public instrumentId: number;
+
+                    /**
+                     * Creates a new DeleteMyselDetailInstrumentRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns DeleteMyselDetailInstrumentRequest instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IDeleteMyselDetailInstrumentRequest): pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest;
+
+                    /**
+                     * Encodes the specified DeleteMyselDetailInstrumentRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest.verify|verify} messages.
+                     * @param message DeleteMyselDetailInstrumentRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IDeleteMyselDetailInstrumentRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified DeleteMyselDetailInstrumentRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest.verify|verify} messages.
+                     * @param message DeleteMyselDetailInstrumentRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IDeleteMyselDetailInstrumentRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a DeleteMyselDetailInstrumentRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns DeleteMyselDetailInstrumentRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest;
+
+                    /**
+                     * Decodes a DeleteMyselDetailInstrumentRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns DeleteMyselDetailInstrumentRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest;
+
+                    /**
+                     * Verifies a DeleteMyselDetailInstrumentRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a DeleteMyselDetailInstrumentRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns DeleteMyselDetailInstrumentRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest;
+
+                    /**
+                     * Creates a plain object from a DeleteMyselDetailInstrumentRequest message. Also converts values to other types if specified.
+                     * @param message DeleteMyselDetailInstrumentRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this DeleteMyselDetailInstrumentRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a DeleteMyselDetailInstrumentResponse. */
+                interface IDeleteMyselDetailInstrumentResponse {
+
+                    /** DeleteMyselDetailInstrumentResponse instruments */
+                    instruments?: (pj.sakuchin.percussion.proto.IInstrument[]|null);
+                }
+
+                /** Represents a DeleteMyselDetailInstrumentResponse. */
+                class DeleteMyselDetailInstrumentResponse implements IDeleteMyselDetailInstrumentResponse {
+
+                    /**
+                     * Constructs a new DeleteMyselDetailInstrumentResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IDeleteMyselDetailInstrumentResponse);
+
+                    /** DeleteMyselDetailInstrumentResponse instruments. */
+                    public instruments: pj.sakuchin.percussion.proto.IInstrument[];
+
+                    /**
+                     * Creates a new DeleteMyselDetailInstrumentResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns DeleteMyselDetailInstrumentResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IDeleteMyselDetailInstrumentResponse): pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse;
+
+                    /**
+                     * Encodes the specified DeleteMyselDetailInstrumentResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse.verify|verify} messages.
+                     * @param message DeleteMyselDetailInstrumentResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IDeleteMyselDetailInstrumentResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified DeleteMyselDetailInstrumentResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse.verify|verify} messages.
+                     * @param message DeleteMyselDetailInstrumentResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IDeleteMyselDetailInstrumentResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a DeleteMyselDetailInstrumentResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns DeleteMyselDetailInstrumentResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse;
+
+                    /**
+                     * Decodes a DeleteMyselDetailInstrumentResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns DeleteMyselDetailInstrumentResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse;
+
+                    /**
+                     * Verifies a DeleteMyselDetailInstrumentResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a DeleteMyselDetailInstrumentResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns DeleteMyselDetailInstrumentResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse;
+
+                    /**
+                     * Creates a plain object from a DeleteMyselDetailInstrumentResponse message. Also converts values to other types if specified.
+                     * @param message DeleteMyselDetailInstrumentResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.DeleteMyselDetailInstrumentResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this DeleteMyselDetailInstrumentResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a GetMyselfDetailStudioResponse. */
+                interface IGetMyselfDetailStudioResponse {
+
+                    /** GetMyselfDetailStudioResponse studios */
+                    studios?: (pj.sakuchin.percussion.proto.IStudio[]|null);
+                }
+
+                /** Represents a GetMyselfDetailStudioResponse. */
+                class GetMyselfDetailStudioResponse implements IGetMyselfDetailStudioResponse {
+
+                    /**
+                     * Constructs a new GetMyselfDetailStudioResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IGetMyselfDetailStudioResponse);
+
+                    /** GetMyselfDetailStudioResponse studios. */
+                    public studios: pj.sakuchin.percussion.proto.IStudio[];
+
+                    /**
+                     * Creates a new GetMyselfDetailStudioResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns GetMyselfDetailStudioResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IGetMyselfDetailStudioResponse): pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse;
+
+                    /**
+                     * Encodes the specified GetMyselfDetailStudioResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse.verify|verify} messages.
+                     * @param message GetMyselfDetailStudioResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IGetMyselfDetailStudioResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified GetMyselfDetailStudioResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse.verify|verify} messages.
+                     * @param message GetMyselfDetailStudioResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IGetMyselfDetailStudioResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a GetMyselfDetailStudioResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns GetMyselfDetailStudioResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse;
+
+                    /**
+                     * Decodes a GetMyselfDetailStudioResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns GetMyselfDetailStudioResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse;
+
+                    /**
+                     * Verifies a GetMyselfDetailStudioResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a GetMyselfDetailStudioResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns GetMyselfDetailStudioResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse;
+
+                    /**
+                     * Creates a plain object from a GetMyselfDetailStudioResponse message. Also converts values to other types if specified.
+                     * @param message GetMyselfDetailStudioResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.GetMyselfDetailStudioResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this GetMyselfDetailStudioResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PostMyselDetailStudioRequest. */
+                interface IPostMyselDetailStudioRequest {
+
+                    /** PostMyselDetailStudioRequest studioId */
+                    studioId?: (number|null);
+                }
+
+                /** Represents a PostMyselDetailStudioRequest. */
+                class PostMyselDetailStudioRequest implements IPostMyselDetailStudioRequest {
+
+                    /**
+                     * Constructs a new PostMyselDetailStudioRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPostMyselDetailStudioRequest);
+
+                    /** PostMyselDetailStudioRequest studioId. */
+                    public studioId: number;
+
+                    /**
+                     * Creates a new PostMyselDetailStudioRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PostMyselDetailStudioRequest instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPostMyselDetailStudioRequest): pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest;
+
+                    /**
+                     * Encodes the specified PostMyselDetailStudioRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest.verify|verify} messages.
+                     * @param message PostMyselDetailStudioRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPostMyselDetailStudioRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PostMyselDetailStudioRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest.verify|verify} messages.
+                     * @param message PostMyselDetailStudioRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPostMyselDetailStudioRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PostMyselDetailStudioRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PostMyselDetailStudioRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest;
+
+                    /**
+                     * Decodes a PostMyselDetailStudioRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PostMyselDetailStudioRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest;
+
+                    /**
+                     * Verifies a PostMyselDetailStudioRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PostMyselDetailStudioRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PostMyselDetailStudioRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest;
+
+                    /**
+                     * Creates a plain object from a PostMyselDetailStudioRequest message. Also converts values to other types if specified.
+                     * @param message PostMyselDetailStudioRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PostMyselDetailStudioRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PostMyselDetailStudioRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PostMyselDetailStudioResponse. */
+                interface IPostMyselDetailStudioResponse {
+
+                    /** PostMyselDetailStudioResponse studios */
+                    studios?: (pj.sakuchin.percussion.proto.IStudio[]|null);
+                }
+
+                /** Represents a PostMyselDetailStudioResponse. */
+                class PostMyselDetailStudioResponse implements IPostMyselDetailStudioResponse {
+
+                    /**
+                     * Constructs a new PostMyselDetailStudioResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPostMyselDetailStudioResponse);
+
+                    /** PostMyselDetailStudioResponse studios. */
+                    public studios: pj.sakuchin.percussion.proto.IStudio[];
+
+                    /**
+                     * Creates a new PostMyselDetailStudioResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PostMyselDetailStudioResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPostMyselDetailStudioResponse): pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse;
+
+                    /**
+                     * Encodes the specified PostMyselDetailStudioResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse.verify|verify} messages.
+                     * @param message PostMyselDetailStudioResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPostMyselDetailStudioResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PostMyselDetailStudioResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse.verify|verify} messages.
+                     * @param message PostMyselDetailStudioResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPostMyselDetailStudioResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PostMyselDetailStudioResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PostMyselDetailStudioResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse;
+
+                    /**
+                     * Decodes a PostMyselDetailStudioResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PostMyselDetailStudioResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse;
+
+                    /**
+                     * Verifies a PostMyselDetailStudioResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PostMyselDetailStudioResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PostMyselDetailStudioResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse;
+
+                    /**
+                     * Creates a plain object from a PostMyselDetailStudioResponse message. Also converts values to other types if specified.
+                     * @param message PostMyselDetailStudioResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PostMyselDetailStudioResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PostMyselDetailStudioResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a DeleteMyselfDetailStudioRequest. */
+                interface IDeleteMyselfDetailStudioRequest {
+
+                    /** DeleteMyselfDetailStudioRequest studioId */
+                    studioId?: (number|null);
+                }
+
+                /** Represents a DeleteMyselfDetailStudioRequest. */
+                class DeleteMyselfDetailStudioRequest implements IDeleteMyselfDetailStudioRequest {
+
+                    /**
+                     * Constructs a new DeleteMyselfDetailStudioRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IDeleteMyselfDetailStudioRequest);
+
+                    /** DeleteMyselfDetailStudioRequest studioId. */
+                    public studioId: number;
+
+                    /**
+                     * Creates a new DeleteMyselfDetailStudioRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns DeleteMyselfDetailStudioRequest instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IDeleteMyselfDetailStudioRequest): pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest;
+
+                    /**
+                     * Encodes the specified DeleteMyselfDetailStudioRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest.verify|verify} messages.
+                     * @param message DeleteMyselfDetailStudioRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IDeleteMyselfDetailStudioRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified DeleteMyselfDetailStudioRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest.verify|verify} messages.
+                     * @param message DeleteMyselfDetailStudioRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IDeleteMyselfDetailStudioRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a DeleteMyselfDetailStudioRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns DeleteMyselfDetailStudioRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest;
+
+                    /**
+                     * Decodes a DeleteMyselfDetailStudioRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns DeleteMyselfDetailStudioRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest;
+
+                    /**
+                     * Verifies a DeleteMyselfDetailStudioRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a DeleteMyselfDetailStudioRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns DeleteMyselfDetailStudioRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest;
+
+                    /**
+                     * Creates a plain object from a DeleteMyselfDetailStudioRequest message. Also converts values to other types if specified.
+                     * @param message DeleteMyselfDetailStudioRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.DeleteMyselfDetailStudioRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this DeleteMyselfDetailStudioRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a DeleteMyselDetailStudioResponse. */
+                interface IDeleteMyselDetailStudioResponse {
+
+                    /** DeleteMyselDetailStudioResponse studios */
+                    studios?: (pj.sakuchin.percussion.proto.IStudio[]|null);
+                }
+
+                /** Represents a DeleteMyselDetailStudioResponse. */
+                class DeleteMyselDetailStudioResponse implements IDeleteMyselDetailStudioResponse {
+
+                    /**
+                     * Constructs a new DeleteMyselDetailStudioResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IDeleteMyselDetailStudioResponse);
+
+                    /** DeleteMyselDetailStudioResponse studios. */
+                    public studios: pj.sakuchin.percussion.proto.IStudio[];
+
+                    /**
+                     * Creates a new DeleteMyselDetailStudioResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns DeleteMyselDetailStudioResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IDeleteMyselDetailStudioResponse): pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse;
+
+                    /**
+                     * Encodes the specified DeleteMyselDetailStudioResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse.verify|verify} messages.
+                     * @param message DeleteMyselDetailStudioResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IDeleteMyselDetailStudioResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified DeleteMyselDetailStudioResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse.verify|verify} messages.
+                     * @param message DeleteMyselDetailStudioResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IDeleteMyselDetailStudioResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a DeleteMyselDetailStudioResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns DeleteMyselDetailStudioResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse;
+
+                    /**
+                     * Decodes a DeleteMyselDetailStudioResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns DeleteMyselDetailStudioResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse;
+
+                    /**
+                     * Verifies a DeleteMyselDetailStudioResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a DeleteMyselDetailStudioResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns DeleteMyselDetailStudioResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse;
+
+                    /**
+                     * Creates a plain object from a DeleteMyselDetailStudioResponse message. Also converts values to other types if specified.
+                     * @param message DeleteMyselDetailStudioResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.DeleteMyselDetailStudioResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this DeleteMyselDetailStudioResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a GetMyselfDetailFollowersResponse. */
+                interface IGetMyselfDetailFollowersResponse {
+
+                    /** GetMyselfDetailFollowersResponse players */
+                    players?: (pj.sakuchin.percussion.proto.IPlayer[]|null);
+                }
+
+                /** Represents a GetMyselfDetailFollowersResponse. */
+                class GetMyselfDetailFollowersResponse implements IGetMyselfDetailFollowersResponse {
+
+                    /**
+                     * Constructs a new GetMyselfDetailFollowersResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IGetMyselfDetailFollowersResponse);
+
+                    /** GetMyselfDetailFollowersResponse players. */
+                    public players: pj.sakuchin.percussion.proto.IPlayer[];
+
+                    /**
+                     * Creates a new GetMyselfDetailFollowersResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns GetMyselfDetailFollowersResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IGetMyselfDetailFollowersResponse): pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse;
+
+                    /**
+                     * Encodes the specified GetMyselfDetailFollowersResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse.verify|verify} messages.
+                     * @param message GetMyselfDetailFollowersResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IGetMyselfDetailFollowersResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified GetMyselfDetailFollowersResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse.verify|verify} messages.
+                     * @param message GetMyselfDetailFollowersResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IGetMyselfDetailFollowersResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a GetMyselfDetailFollowersResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns GetMyselfDetailFollowersResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse;
+
+                    /**
+                     * Decodes a GetMyselfDetailFollowersResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns GetMyselfDetailFollowersResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse;
+
+                    /**
+                     * Verifies a GetMyselfDetailFollowersResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a GetMyselfDetailFollowersResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns GetMyselfDetailFollowersResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse;
+
+                    /**
+                     * Creates a plain object from a GetMyselfDetailFollowersResponse message. Also converts values to other types if specified.
+                     * @param message GetMyselfDetailFollowersResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.GetMyselfDetailFollowersResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this GetMyselfDetailFollowersResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a GetMyselfDetailFolloweesResponse. */
+                interface IGetMyselfDetailFolloweesResponse {
+
+                    /** GetMyselfDetailFolloweesResponse players */
+                    players?: (pj.sakuchin.percussion.proto.IPlayer[]|null);
+                }
+
+                /** Represents a GetMyselfDetailFolloweesResponse. */
+                class GetMyselfDetailFolloweesResponse implements IGetMyselfDetailFolloweesResponse {
+
+                    /**
+                     * Constructs a new GetMyselfDetailFolloweesResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IGetMyselfDetailFolloweesResponse);
+
+                    /** GetMyselfDetailFolloweesResponse players. */
+                    public players: pj.sakuchin.percussion.proto.IPlayer[];
+
+                    /**
+                     * Creates a new GetMyselfDetailFolloweesResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns GetMyselfDetailFolloweesResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IGetMyselfDetailFolloweesResponse): pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse;
+
+                    /**
+                     * Encodes the specified GetMyselfDetailFolloweesResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse.verify|verify} messages.
+                     * @param message GetMyselfDetailFolloweesResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IGetMyselfDetailFolloweesResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified GetMyselfDetailFolloweesResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse.verify|verify} messages.
+                     * @param message GetMyselfDetailFolloweesResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IGetMyselfDetailFolloweesResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a GetMyselfDetailFolloweesResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns GetMyselfDetailFolloweesResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse;
+
+                    /**
+                     * Decodes a GetMyselfDetailFolloweesResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns GetMyselfDetailFolloweesResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse;
+
+                    /**
+                     * Verifies a GetMyselfDetailFolloweesResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a GetMyselfDetailFolloweesResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns GetMyselfDetailFolloweesResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse;
+
+                    /**
+                     * Creates a plain object from a GetMyselfDetailFolloweesResponse message. Also converts values to other types if specified.
+                     * @param message GetMyselfDetailFolloweesResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.GetMyselfDetailFolloweesResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this GetMyselfDetailFolloweesResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PostMyselfDetailFolloweeRequest. */
+                interface IPostMyselfDetailFolloweeRequest {
+
+                    /** PostMyselfDetailFolloweeRequest playerId */
+                    playerId?: (string|null);
+                }
+
+                /** Represents a PostMyselfDetailFolloweeRequest. */
+                class PostMyselfDetailFolloweeRequest implements IPostMyselfDetailFolloweeRequest {
+
+                    /**
+                     * Constructs a new PostMyselfDetailFolloweeRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPostMyselfDetailFolloweeRequest);
+
+                    /** PostMyselfDetailFolloweeRequest playerId. */
+                    public playerId: string;
+
+                    /**
+                     * Creates a new PostMyselfDetailFolloweeRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PostMyselfDetailFolloweeRequest instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPostMyselfDetailFolloweeRequest): pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest;
+
+                    /**
+                     * Encodes the specified PostMyselfDetailFolloweeRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest.verify|verify} messages.
+                     * @param message PostMyselfDetailFolloweeRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPostMyselfDetailFolloweeRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PostMyselfDetailFolloweeRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest.verify|verify} messages.
+                     * @param message PostMyselfDetailFolloweeRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPostMyselfDetailFolloweeRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PostMyselfDetailFolloweeRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PostMyselfDetailFolloweeRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest;
+
+                    /**
+                     * Decodes a PostMyselfDetailFolloweeRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PostMyselfDetailFolloweeRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest;
+
+                    /**
+                     * Verifies a PostMyselfDetailFolloweeRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PostMyselfDetailFolloweeRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PostMyselfDetailFolloweeRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest;
+
+                    /**
+                     * Creates a plain object from a PostMyselfDetailFolloweeRequest message. Also converts values to other types if specified.
+                     * @param message PostMyselfDetailFolloweeRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PostMyselfDetailFolloweeRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PostMyselfDetailFolloweeRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PostMyselfDetailFolloweesResponse. */
+                interface IPostMyselfDetailFolloweesResponse {
+
+                    /** PostMyselfDetailFolloweesResponse players */
+                    players?: (pj.sakuchin.percussion.proto.IPlayer[]|null);
+                }
+
+                /** Represents a PostMyselfDetailFolloweesResponse. */
+                class PostMyselfDetailFolloweesResponse implements IPostMyselfDetailFolloweesResponse {
+
+                    /**
+                     * Constructs a new PostMyselfDetailFolloweesResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPostMyselfDetailFolloweesResponse);
+
+                    /** PostMyselfDetailFolloweesResponse players. */
+                    public players: pj.sakuchin.percussion.proto.IPlayer[];
+
+                    /**
+                     * Creates a new PostMyselfDetailFolloweesResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PostMyselfDetailFolloweesResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPostMyselfDetailFolloweesResponse): pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse;
+
+                    /**
+                     * Encodes the specified PostMyselfDetailFolloweesResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse.verify|verify} messages.
+                     * @param message PostMyselfDetailFolloweesResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPostMyselfDetailFolloweesResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PostMyselfDetailFolloweesResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse.verify|verify} messages.
+                     * @param message PostMyselfDetailFolloweesResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPostMyselfDetailFolloweesResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PostMyselfDetailFolloweesResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PostMyselfDetailFolloweesResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse;
+
+                    /**
+                     * Decodes a PostMyselfDetailFolloweesResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PostMyselfDetailFolloweesResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse;
+
+                    /**
+                     * Verifies a PostMyselfDetailFolloweesResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PostMyselfDetailFolloweesResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PostMyselfDetailFolloweesResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse;
+
+                    /**
+                     * Creates a plain object from a PostMyselfDetailFolloweesResponse message. Also converts values to other types if specified.
+                     * @param message PostMyselfDetailFolloweesResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PostMyselfDetailFolloweesResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PostMyselfDetailFolloweesResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a DeleteMyselfDetailFolloweeRequest. */
+                interface IDeleteMyselfDetailFolloweeRequest {
+
+                    /** DeleteMyselfDetailFolloweeRequest playerId */
+                    playerId?: (string|null);
+                }
+
+                /** Represents a DeleteMyselfDetailFolloweeRequest. */
+                class DeleteMyselfDetailFolloweeRequest implements IDeleteMyselfDetailFolloweeRequest {
+
+                    /**
+                     * Constructs a new DeleteMyselfDetailFolloweeRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IDeleteMyselfDetailFolloweeRequest);
+
+                    /** DeleteMyselfDetailFolloweeRequest playerId. */
+                    public playerId: string;
+
+                    /**
+                     * Creates a new DeleteMyselfDetailFolloweeRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns DeleteMyselfDetailFolloweeRequest instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IDeleteMyselfDetailFolloweeRequest): pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest;
+
+                    /**
+                     * Encodes the specified DeleteMyselfDetailFolloweeRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest.verify|verify} messages.
+                     * @param message DeleteMyselfDetailFolloweeRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IDeleteMyselfDetailFolloweeRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified DeleteMyselfDetailFolloweeRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest.verify|verify} messages.
+                     * @param message DeleteMyselfDetailFolloweeRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IDeleteMyselfDetailFolloweeRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a DeleteMyselfDetailFolloweeRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns DeleteMyselfDetailFolloweeRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest;
+
+                    /**
+                     * Decodes a DeleteMyselfDetailFolloweeRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns DeleteMyselfDetailFolloweeRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest;
+
+                    /**
+                     * Verifies a DeleteMyselfDetailFolloweeRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a DeleteMyselfDetailFolloweeRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns DeleteMyselfDetailFolloweeRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest;
+
+                    /**
+                     * Creates a plain object from a DeleteMyselfDetailFolloweeRequest message. Also converts values to other types if specified.
+                     * @param message DeleteMyselfDetailFolloweeRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweeRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this DeleteMyselfDetailFolloweeRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a DeleteMyselfDetailFolloweesResponse. */
+                interface IDeleteMyselfDetailFolloweesResponse {
+
+                    /** DeleteMyselfDetailFolloweesResponse players */
+                    players?: (pj.sakuchin.percussion.proto.IPlayer[]|null);
+                }
+
+                /** Represents a DeleteMyselfDetailFolloweesResponse. */
+                class DeleteMyselfDetailFolloweesResponse implements IDeleteMyselfDetailFolloweesResponse {
+
+                    /**
+                     * Constructs a new DeleteMyselfDetailFolloweesResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IDeleteMyselfDetailFolloweesResponse);
+
+                    /** DeleteMyselfDetailFolloweesResponse players. */
+                    public players: pj.sakuchin.percussion.proto.IPlayer[];
+
+                    /**
+                     * Creates a new DeleteMyselfDetailFolloweesResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns DeleteMyselfDetailFolloweesResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IDeleteMyselfDetailFolloweesResponse): pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse;
+
+                    /**
+                     * Encodes the specified DeleteMyselfDetailFolloweesResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse.verify|verify} messages.
+                     * @param message DeleteMyselfDetailFolloweesResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IDeleteMyselfDetailFolloweesResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified DeleteMyselfDetailFolloweesResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse.verify|verify} messages.
+                     * @param message DeleteMyselfDetailFolloweesResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IDeleteMyselfDetailFolloweesResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a DeleteMyselfDetailFolloweesResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns DeleteMyselfDetailFolloweesResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse;
+
+                    /**
+                     * Decodes a DeleteMyselfDetailFolloweesResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns DeleteMyselfDetailFolloweesResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse;
+
+                    /**
+                     * Verifies a DeleteMyselfDetailFolloweesResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a DeleteMyselfDetailFolloweesResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns DeleteMyselfDetailFolloweesResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse;
+
+                    /**
+                     * Creates a plain object from a DeleteMyselfDetailFolloweesResponse message. Also converts values to other types if specified.
+                     * @param message DeleteMyselfDetailFolloweesResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.DeleteMyselfDetailFolloweesResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this DeleteMyselfDetailFolloweesResponse to JSON.
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
@@ -1872,96 +4212,6 @@ export namespace pj {
                     public toJSON(): { [k: string]: any };
                 }
 
-                /** Properties of a PutPlayDetailReqest. */
-                interface IPutPlayDetailReqest {
-
-                    /** PutPlayDetailReqest detail */
-                    detail?: (pj.sakuchin.percussion.proto.IPlayerDetail|null);
-                }
-
-                /** Represents a PutPlayDetailReqest. */
-                class PutPlayDetailReqest implements IPutPlayDetailReqest {
-
-                    /**
-                     * Constructs a new PutPlayDetailReqest.
-                     * @param [properties] Properties to set
-                     */
-                    constructor(properties?: pj.sakuchin.percussion.proto.IPutPlayDetailReqest);
-
-                    /** PutPlayDetailReqest detail. */
-                    public detail?: (pj.sakuchin.percussion.proto.IPlayerDetail|null);
-
-                    /**
-                     * Creates a new PutPlayDetailReqest instance using the specified properties.
-                     * @param [properties] Properties to set
-                     * @returns PutPlayDetailReqest instance
-                     */
-                    public static create(properties?: pj.sakuchin.percussion.proto.IPutPlayDetailReqest): pj.sakuchin.percussion.proto.PutPlayDetailReqest;
-
-                    /**
-                     * Encodes the specified PutPlayDetailReqest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutPlayDetailReqest.verify|verify} messages.
-                     * @param message PutPlayDetailReqest message or plain object to encode
-                     * @param [writer] Writer to encode to
-                     * @returns Writer
-                     */
-                    public static encode(message: pj.sakuchin.percussion.proto.IPutPlayDetailReqest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                    /**
-                     * Encodes the specified PutPlayDetailReqest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutPlayDetailReqest.verify|verify} messages.
-                     * @param message PutPlayDetailReqest message or plain object to encode
-                     * @param [writer] Writer to encode to
-                     * @returns Writer
-                     */
-                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPutPlayDetailReqest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                    /**
-                     * Decodes a PutPlayDetailReqest message from the specified reader or buffer.
-                     * @param reader Reader or buffer to decode from
-                     * @param [length] Message length if known beforehand
-                     * @returns PutPlayDetailReqest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PutPlayDetailReqest;
-
-                    /**
-                     * Decodes a PutPlayDetailReqest message from the specified reader or buffer, length delimited.
-                     * @param reader Reader or buffer to decode from
-                     * @returns PutPlayDetailReqest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PutPlayDetailReqest;
-
-                    /**
-                     * Verifies a PutPlayDetailReqest message.
-                     * @param message Plain object to verify
-                     * @returns `null` if valid, otherwise the reason why it is not
-                     */
-                    public static verify(message: { [k: string]: any }): (string|null);
-
-                    /**
-                     * Creates a PutPlayDetailReqest message from a plain object. Also converts values to their respective internal types.
-                     * @param object Plain object
-                     * @returns PutPlayDetailReqest
-                     */
-                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PutPlayDetailReqest;
-
-                    /**
-                     * Creates a plain object from a PutPlayDetailReqest message. Also converts values to other types if specified.
-                     * @param message PutPlayDetailReqest
-                     * @param [options] Conversion options
-                     * @returns Plain object
-                     */
-                    public static toObject(message: pj.sakuchin.percussion.proto.PutPlayDetailReqest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                    /**
-                     * Converts this PutPlayDetailReqest to JSON.
-                     * @returns JSON object
-                     */
-                    public toJSON(): { [k: string]: any };
-                }
-
                 /** Properties of a GetPlayerDetailAreaResponse. */
                 interface IGetPlayerDetailAreaResponse {
 
@@ -2047,96 +4297,6 @@ export namespace pj {
 
                     /**
                      * Converts this GetPlayerDetailAreaResponse to JSON.
-                     * @returns JSON object
-                     */
-                    public toJSON(): { [k: string]: any };
-                }
-
-                /** Properties of a PutPlayerDetailAreaRequest. */
-                interface IPutPlayerDetailAreaRequest {
-
-                    /** PutPlayerDetailAreaRequest activeAreas */
-                    activeAreas?: (pj.sakuchin.percussion.proto.ICity[]|null);
-                }
-
-                /** Represents a PutPlayerDetailAreaRequest. */
-                class PutPlayerDetailAreaRequest implements IPutPlayerDetailAreaRequest {
-
-                    /**
-                     * Constructs a new PutPlayerDetailAreaRequest.
-                     * @param [properties] Properties to set
-                     */
-                    constructor(properties?: pj.sakuchin.percussion.proto.IPutPlayerDetailAreaRequest);
-
-                    /** PutPlayerDetailAreaRequest activeAreas. */
-                    public activeAreas: pj.sakuchin.percussion.proto.ICity[];
-
-                    /**
-                     * Creates a new PutPlayerDetailAreaRequest instance using the specified properties.
-                     * @param [properties] Properties to set
-                     * @returns PutPlayerDetailAreaRequest instance
-                     */
-                    public static create(properties?: pj.sakuchin.percussion.proto.IPutPlayerDetailAreaRequest): pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest;
-
-                    /**
-                     * Encodes the specified PutPlayerDetailAreaRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest.verify|verify} messages.
-                     * @param message PutPlayerDetailAreaRequest message or plain object to encode
-                     * @param [writer] Writer to encode to
-                     * @returns Writer
-                     */
-                    public static encode(message: pj.sakuchin.percussion.proto.IPutPlayerDetailAreaRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                    /**
-                     * Encodes the specified PutPlayerDetailAreaRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest.verify|verify} messages.
-                     * @param message PutPlayerDetailAreaRequest message or plain object to encode
-                     * @param [writer] Writer to encode to
-                     * @returns Writer
-                     */
-                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPutPlayerDetailAreaRequest, writer?: $protobuf.Writer): $protobuf.Writer;
-
-                    /**
-                     * Decodes a PutPlayerDetailAreaRequest message from the specified reader or buffer.
-                     * @param reader Reader or buffer to decode from
-                     * @param [length] Message length if known beforehand
-                     * @returns PutPlayerDetailAreaRequest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest;
-
-                    /**
-                     * Decodes a PutPlayerDetailAreaRequest message from the specified reader or buffer, length delimited.
-                     * @param reader Reader or buffer to decode from
-                     * @returns PutPlayerDetailAreaRequest
-                     * @throws {Error} If the payload is not a reader or valid buffer
-                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
-                     */
-                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest;
-
-                    /**
-                     * Verifies a PutPlayerDetailAreaRequest message.
-                     * @param message Plain object to verify
-                     * @returns `null` if valid, otherwise the reason why it is not
-                     */
-                    public static verify(message: { [k: string]: any }): (string|null);
-
-                    /**
-                     * Creates a PutPlayerDetailAreaRequest message from a plain object. Also converts values to their respective internal types.
-                     * @param object Plain object
-                     * @returns PutPlayerDetailAreaRequest
-                     */
-                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest;
-
-                    /**
-                     * Creates a plain object from a PutPlayerDetailAreaRequest message. Also converts values to other types if specified.
-                     * @param message PutPlayerDetailAreaRequest
-                     * @param [options] Conversion options
-                     * @returns Plain object
-                     */
-                    public static toObject(message: pj.sakuchin.percussion.proto.PutPlayerDetailAreaRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
-
-                    /**
-                     * Converts this PutPlayerDetailAreaRequest to JSON.
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
@@ -2544,91 +4704,91 @@ export namespace pj {
                     public toJSON(): { [k: string]: any };
                 }
 
-                /** Properties of a GetStudioEditorsResponse. */
-                interface IGetStudioEditorsResponse {
+                /** Properties of a GetStudioHistoryEditResponse. */
+                interface IGetStudioHistoryEditResponse {
 
-                    /** GetStudioEditorsResponse history */
+                    /** GetStudioHistoryEditResponse history */
                     history?: (pj.sakuchin.percussion.proto.IEditHistory[]|null);
                 }
 
-                /** Represents a GetStudioEditorsResponse. */
-                class GetStudioEditorsResponse implements IGetStudioEditorsResponse {
+                /** Represents a GetStudioHistoryEditResponse. */
+                class GetStudioHistoryEditResponse implements IGetStudioHistoryEditResponse {
 
                     /**
-                     * Constructs a new GetStudioEditorsResponse.
+                     * Constructs a new GetStudioHistoryEditResponse.
                      * @param [properties] Properties to set
                      */
-                    constructor(properties?: pj.sakuchin.percussion.proto.IGetStudioEditorsResponse);
+                    constructor(properties?: pj.sakuchin.percussion.proto.IGetStudioHistoryEditResponse);
 
-                    /** GetStudioEditorsResponse history. */
+                    /** GetStudioHistoryEditResponse history. */
                     public history: pj.sakuchin.percussion.proto.IEditHistory[];
 
                     /**
-                     * Creates a new GetStudioEditorsResponse instance using the specified properties.
+                     * Creates a new GetStudioHistoryEditResponse instance using the specified properties.
                      * @param [properties] Properties to set
-                     * @returns GetStudioEditorsResponse instance
+                     * @returns GetStudioHistoryEditResponse instance
                      */
-                    public static create(properties?: pj.sakuchin.percussion.proto.IGetStudioEditorsResponse): pj.sakuchin.percussion.proto.GetStudioEditorsResponse;
+                    public static create(properties?: pj.sakuchin.percussion.proto.IGetStudioHistoryEditResponse): pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse;
 
                     /**
-                     * Encodes the specified GetStudioEditorsResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetStudioEditorsResponse.verify|verify} messages.
-                     * @param message GetStudioEditorsResponse message or plain object to encode
+                     * Encodes the specified GetStudioHistoryEditResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse.verify|verify} messages.
+                     * @param message GetStudioHistoryEditResponse message or plain object to encode
                      * @param [writer] Writer to encode to
                      * @returns Writer
                      */
-                    public static encode(message: pj.sakuchin.percussion.proto.IGetStudioEditorsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+                    public static encode(message: pj.sakuchin.percussion.proto.IGetStudioHistoryEditResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
                     /**
-                     * Encodes the specified GetStudioEditorsResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetStudioEditorsResponse.verify|verify} messages.
-                     * @param message GetStudioEditorsResponse message or plain object to encode
+                     * Encodes the specified GetStudioHistoryEditResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse.verify|verify} messages.
+                     * @param message GetStudioHistoryEditResponse message or plain object to encode
                      * @param [writer] Writer to encode to
                      * @returns Writer
                      */
-                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IGetStudioEditorsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IGetStudioHistoryEditResponse, writer?: $protobuf.Writer): $protobuf.Writer;
 
                     /**
-                     * Decodes a GetStudioEditorsResponse message from the specified reader or buffer.
+                     * Decodes a GetStudioHistoryEditResponse message from the specified reader or buffer.
                      * @param reader Reader or buffer to decode from
                      * @param [length] Message length if known beforehand
-                     * @returns GetStudioEditorsResponse
+                     * @returns GetStudioHistoryEditResponse
                      * @throws {Error} If the payload is not a reader or valid buffer
                      * @throws {$protobuf.util.ProtocolError} If required fields are missing
                      */
-                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.GetStudioEditorsResponse;
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse;
 
                     /**
-                     * Decodes a GetStudioEditorsResponse message from the specified reader or buffer, length delimited.
+                     * Decodes a GetStudioHistoryEditResponse message from the specified reader or buffer, length delimited.
                      * @param reader Reader or buffer to decode from
-                     * @returns GetStudioEditorsResponse
+                     * @returns GetStudioHistoryEditResponse
                      * @throws {Error} If the payload is not a reader or valid buffer
                      * @throws {$protobuf.util.ProtocolError} If required fields are missing
                      */
-                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.GetStudioEditorsResponse;
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse;
 
                     /**
-                     * Verifies a GetStudioEditorsResponse message.
+                     * Verifies a GetStudioHistoryEditResponse message.
                      * @param message Plain object to verify
                      * @returns `null` if valid, otherwise the reason why it is not
                      */
                     public static verify(message: { [k: string]: any }): (string|null);
 
                     /**
-                     * Creates a GetStudioEditorsResponse message from a plain object. Also converts values to their respective internal types.
+                     * Creates a GetStudioHistoryEditResponse message from a plain object. Also converts values to their respective internal types.
                      * @param object Plain object
-                     * @returns GetStudioEditorsResponse
+                     * @returns GetStudioHistoryEditResponse
                      */
-                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.GetStudioEditorsResponse;
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse;
 
                     /**
-                     * Creates a plain object from a GetStudioEditorsResponse message. Also converts values to other types if specified.
-                     * @param message GetStudioEditorsResponse
+                     * Creates a plain object from a GetStudioHistoryEditResponse message. Also converts values to other types if specified.
+                     * @param message GetStudioHistoryEditResponse
                      * @param [options] Conversion options
                      * @returns Plain object
                      */
-                    public static toObject(message: pj.sakuchin.percussion.proto.GetStudioEditorsResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+                    public static toObject(message: pj.sakuchin.percussion.proto.GetStudioHistoryEditResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
                     /**
-                     * Converts this GetStudioEditorsResponse to JSON.
+                     * Converts this GetStudioHistoryEditResponse to JSON.
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };

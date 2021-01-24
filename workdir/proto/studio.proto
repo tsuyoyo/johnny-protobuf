@@ -26,6 +26,6 @@ message PutStudioRequest {
     Studio studio = 1;
 }
 
-message GetStudioEditorsResponse {
+message GetStudioHistoryEditResponse {
     repeated EditHistory history = 1;
 }

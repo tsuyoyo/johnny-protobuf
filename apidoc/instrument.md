@@ -64,7 +64,9 @@ Instrument info which's been already registered.
 
 ### Update instrument info [PUT]
 
-When update is success, `200` is returned. This API requires login, otherwise `403` is returned.
+When update is success, `200` is returned. This API requires login, otherwise `403` is returned. 
+
+When instrument info is updated, edit history is logged. Edit history is available in `/instrument/{id}/history/edit`.
 
 | Content-Type header | Request | Response |
 | --- | --- | --- |
@@ -74,9 +76,9 @@ When update is success, `200` is returned. This API requires login, otherwise `4
 + Response 403 (applilcation/json)
 + Response 404 (application/json)
 
-## Edit history of instrument edit  [/instrument/{id}/editors]
+## Edit history of instrument edit  [/instrument/{id}/history/edit]
 
-History of instrument info edit. History is updated when `/instrument/{id}` resource is updated.
+History of instrument info edit.
 
 + Parameters
     + id: `123` (string, required) - Instrument ID.

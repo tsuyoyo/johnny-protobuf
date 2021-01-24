@@ -1,0 +1,117 @@
+syntax = "proto3";
+package pj.sakuchin.percussion.proto;
+
+import "proto/area.proto";
+import "proto/user.proto";
+import "proto/player.proto";
+import "proto/instrument.proto";
+import "proto/studio.proto";
+
+message GetMyselfDetailResponse {
+    PlayerDetail detail = 1;
+}
+
+message PutMyselfDetailRequest {
+    PlayerDetail detail = 1;
+}
+
+message PutMyselfDetailResponse {
+    PlayerDetail detail = 1;
+}
+
+// Area
+message GetMyselfDetailAreaResponse {
+    repeated City cities = 1;
+}
+
+message PostMyselfDetailAreaRequest {
+    string cityId = 1;
+}
+
+message PostMyselfDetailAreaResponse {
+    repeated City cities = 1;
+}
+
+message DeleteMyselfDetailAreaRequest {
+    string cityId = 1;   
+}
+
+message DeleteMyselfDetailAreaResponse {
+    repeated City cities = 1;
+}
+
+message PutMyselfDetailAreaRequest {
+    repeated City area = 1;
+}
+
+message PutMyselfDetailAreaResponse {
+    repeated City cities = 1;
+}
+
+// Instrument
+message GetMyselDetailInstrumentResponse {
+    repeated Instrument instruments = 1;
+}
+
+message PostMyselDetailInstrumentRequest {
+    int32 instrumentId = 1;
+}
+
+message PostMyselDetailInstrumentResponse {
+    repeated Instrument instruments = 1;
+}
+
+message DeleteMyselDetailInstrumentRequest {
+    int32 instrumentId = 1;
+}
+
+message DeleteMyselDetailInstrumentResponse {
+    repeated Instrument instruments = 1;
+}
+
+// Studio
+message GetMyselfDetailStudioResponse {
+    repeated Studio studios = 1;
+}
+
+message PostMyselDetailStudioRequest {
+    int32 studioId = 1;
+}
+
+message PostMyselDetailStudioResponse {
+    repeated Studio studios = 1;
+}
+
+message DeleteMyselfDetailStudioRequest {
+    int32 studioId = 1;
+}
+
+message DeleteMyselDetailStudioResponse {
+    repeated Studio studios = 1;
+}
+
+// Followers
+message GetMyselfDetailFollowersResponse {
+    repeated Player players = 1;
+}
+
+// Followees
+message GetMyselfDetailFolloweesResponse {
+    repeated Player players = 1;
+}
+
+message PostMyselfDetailFolloweeRequest {
+    string playerId = 1;
+}
+
+message PostMyselfDetailFolloweesResponse {
+    repeated Player players = 1;
+}
+
+message DeleteMyselfDetailFolloweeRequest {
+    string playerId = 1;
+}
+
+message DeleteMyselfDetailFolloweesResponse {
+    repeated Player players = 1;
+}

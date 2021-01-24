@@ -30,9 +30,18 @@ When studio's name and ciry are conflicted, `409` is returned.
 + Response 403 (application/json)
 + Response 409 (application/json)
 
-### Update existing studio [PUT]
+## Existing studio [/studio/{id}]
 
-Login is required, otherwise `403` is returned.
+Already registered studio.
+
++ Parameters
+    + id: `123` (string, required) - Studio's ID.
+
+### Update studio info [PUT]
+
+Login is required, otherwise `403` is returned. 
+
+When studio info updated, edit history is logged. Edit history is available in `/studio/{id}/history/edit`,
 
 | Content-Type header | Request | Response |
 | --- | --- | --- |
@@ -42,17 +51,17 @@ Login is required, otherwise `403` is returned.
 + Response 403 (application/json)
 + Response 409 (application/json)
 
-## Edit history of studio edit  [/studio/{id}/editors]
+## Edit history of studio edit [/studio/{id}/history/edit]
 
-History of studio info edit. History is updated when `/studio/{id}` resource is updated.
+History of studio info edit. 
 
 + Parameters
-    + id: `123` (string, required) - Instrument ID.
+    + id: `123` (string, required) - Studio's ID.
 
-### Get editors [GET]
+### Get history [GET]
 
 | Content-Type header | Request | Response |
 | --- | --- | --- |
-| application/protobuf | - | `GetStudioEditorsResponse` |
+| application/protobuf | - | `GetStudioHistoryEditResponse` |
 
 + Response 200 (application/json)
