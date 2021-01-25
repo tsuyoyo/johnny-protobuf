@@ -93,3 +93,13 @@ Players whom the player is following.
 | application/protobuf | - | `GetPlayerDetailFolloweeResponse` |
 
 + Response 200 (application/json)
+
+## Biography [/player/{id}/detail/biography]
+
+### Get followees [GET]
+
+| Content-Type header | Request | Response |
+| --- | --- | --- |
+| application/protobuf | - | (TO be updated) |
+
++ Response 200 (application/json)
