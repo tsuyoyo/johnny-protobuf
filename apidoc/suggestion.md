@@ -4,12 +4,12 @@ API to return suggestion to input.
 
 ## Cities [/suggestion/city{?zip_code}]
 
-Cities in the prefecture. A city object is defined as `City` message.
+Cities which can be suggested by part of zipCode. A city object is defined as `City` message.
 
 + Parameters
     + zip_code: 123 (string) - Part of zip code to get sugggestion.
 
-### Get all cities [GET]
+### Get city suggestions [GET]
 
 | Content-Type header | Request | Response |
 | --- | --- | --- |
