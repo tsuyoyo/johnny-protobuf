@@ -24,3 +24,5 @@ FORMAT: 1A
 <!-- include(./studio.md) -->
 
 <!-- include(./instrument.md) -->
+
+<!-- include(./suggestion.md) -->
