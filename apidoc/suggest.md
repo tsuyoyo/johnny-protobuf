@@ -1,15 +1,19 @@
-## Group Area
+## Group Suggestion
 
-Resources related to areas (cities) in the API.
+API to return suggestion to input.
 
-## Cities of prefecture [/area/prefecture/{prefecture_id}/city]
+## Cities [/suggestion/city{?zip_code}]
 
 Cities in the prefecture. A city object is defined as `City` message.
 
 + Parameters
-    + prefecture_id: 13 (required, number) - ID of prefecture, it has to be one of `Prefecture` enum.
+    + zip_code: 123 (string) - Part of zip code to get sugggestion.
 
 ### Get all cities [GET]
+
+| Content-Type header | Request | Response |
+| --- | --- | --- |
+| application/protobuf | - | `GetSuggestCityResponse` |
 
 + Response 200 (application/json)
     + Body
