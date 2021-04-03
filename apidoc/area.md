@@ -2,7 +2,7 @@
 
 Resources related to areas (cities) in the API.
 
-## Cities of prefecture [/area/prefecture/{prefecture_id}/cities]
+## Cities of prefecture [/area/prefecture/{prefecture_id}/city]
 
 Cities in the prefecture. A city object is defined as `City` message.
 
