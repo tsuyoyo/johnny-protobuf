@@ -33,7 +33,7 @@ message PostMyselfDetailAreaResponse {
 }
 
 message DeleteMyselfDetailAreaRequest {
-    string cityId = 1;   
+    string cityId = 1;
 }
 
 message DeleteMyselfDetailAreaResponse {
@@ -41,7 +41,7 @@ message DeleteMyselfDetailAreaResponse {
 }
 
 message PutMyselfDetailAreaRequest {
-    repeated City area = 1;
+    repeated string cityIds = 1;
 }
 
 message PutMyselfDetailAreaResponse {

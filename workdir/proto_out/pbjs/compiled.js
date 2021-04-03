@@ -5054,7 +5054,7 @@ $root.pj = (function() {
                      * Properties of a PutMyselfDetailAreaRequest.
                      * @memberof pj.sakuchin.percussion.proto
                      * @interface IPutMyselfDetailAreaRequest
-                     * @property {Array.<pj.sakuchin.percussion.proto.ICity>|null} [area] PutMyselfDetailAreaRequest area
+                     * @property {Array.<string>|null} [cityIds] PutMyselfDetailAreaRequest cityIds
                      */
 
                     /**
@@ -5066,7 +5066,7 @@ $root.pj = (function() {
                      * @param {pj.sakuchin.percussion.proto.IPutMyselfDetailAreaRequest=} [properties] Properties to set
                      */
                     function PutMyselfDetailAreaRequest(properties) {
-                        this.area = [];
+                        this.cityIds = [];
                         if (properties)
                             for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                                 if (properties[keys[i]] != null)
@@ -5074,12 +5074,12 @@ $root.pj = (function() {
                     }
 
                     /**
-                     * PutMyselfDetailAreaRequest area.
-                     * @member {Array.<pj.sakuchin.percussion.proto.ICity>} area
+                     * PutMyselfDetailAreaRequest cityIds.
+                     * @member {Array.<string>} cityIds
                      * @memberof pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest
                      * @instance
                      */
-                    PutMyselfDetailAreaRequest.prototype.area = $util.emptyArray;
+                    PutMyselfDetailAreaRequest.prototype.cityIds = $util.emptyArray;
 
                     /**
                      * Creates a new PutMyselfDetailAreaRequest instance using the specified properties.
@@ -5105,9 +5105,9 @@ $root.pj = (function() {
                     PutMyselfDetailAreaRequest.encode = function encode(message, writer) {
                         if (!writer)
                             writer = $Writer.create();
-                        if (message.area != null && message.area.length)
-                            for (var i = 0; i < message.area.length; ++i)
-                                $root.pj.sakuchin.percussion.proto.City.encode(message.area[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        if (message.cityIds != null && message.cityIds.length)
+                            for (var i = 0; i < message.cityIds.length; ++i)
+                                writer.uint32(/* id 1, wireType 2 =*/10).string(message.cityIds[i]);
                         return writer;
                     };
 
@@ -5143,9 +5143,9 @@ $root.pj = (function() {
                             var tag = reader.uint32();
                             switch (tag >>> 3) {
                             case 1:
-                                if (!(message.area && message.area.length))
-                                    message.area = [];
-                                message.area.push($root.pj.sakuchin.percussion.proto.City.decode(reader, reader.uint32()));
+                                if (!(message.cityIds && message.cityIds.length))
+                                    message.cityIds = [];
+                                message.cityIds.push(reader.string());
                                 break;
                             default:
                                 reader.skipType(tag & 7);
@@ -5182,14 +5182,12 @@ $root.pj = (function() {
                     PutMyselfDetailAreaRequest.verify = function verify(message) {
                         if (typeof message !== "object" || message === null)
                             return "object expected";
-                        if (message.area != null && message.hasOwnProperty("area")) {
-                            if (!Array.isArray(message.area))
-                                return "area: array expected";
-                            for (var i = 0; i < message.area.length; ++i) {
-                                var error = $root.pj.sakuchin.percussion.proto.City.verify(message.area[i]);
-                                if (error)
-                                    return "area." + error;
-                            }
+                        if (message.cityIds != null && message.hasOwnProperty("cityIds")) {
+                            if (!Array.isArray(message.cityIds))
+                                return "cityIds: array expected";
+                            for (var i = 0; i < message.cityIds.length; ++i)
+                                if (!$util.isString(message.cityIds[i]))
+                                    return "cityIds: string[] expected";
                         }
                         return null;
                     };
@@ -5206,15 +5204,12 @@ $root.pj = (function() {
                         if (object instanceof $root.pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest)
                             return object;
                         var message = new $root.pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest();
-                        if (object.area) {
-                            if (!Array.isArray(object.area))
-                                throw TypeError(".pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest.area: array expected");
-                            message.area = [];
-                            for (var i = 0; i < object.area.length; ++i) {
-                                if (typeof object.area[i] !== "object")
-                                    throw TypeError(".pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest.area: object expected");
-                                message.area[i] = $root.pj.sakuchin.percussion.proto.City.fromObject(object.area[i]);
-                            }
+                        if (object.cityIds) {
+                            if (!Array.isArray(object.cityIds))
+                                throw TypeError(".pj.sakuchin.percussion.proto.PutMyselfDetailAreaRequest.cityIds: array expected");
+                            message.cityIds = [];
+                            for (var i = 0; i < object.cityIds.length; ++i)
+                                message.cityIds[i] = String(object.cityIds[i]);
                         }
                         return message;
                     };
@@ -5233,11 +5228,11 @@ $root.pj = (function() {
                             options = {};
                         var object = {};
                         if (options.arrays || options.defaults)
-                            object.area = [];
-                        if (message.area && message.area.length) {
-                            object.area = [];
-                            for (var j = 0; j < message.area.length; ++j)
-                                object.area[j] = $root.pj.sakuchin.percussion.proto.City.toObject(message.area[j], options);
+                            object.cityIds = [];
+                        if (message.cityIds && message.cityIds.length) {
+                            object.cityIds = [];
+                            for (var j = 0; j < message.cityIds.length; ++j)
+                                object.cityIds[j] = message.cityIds[j];
                         }
                         return object;
                     };

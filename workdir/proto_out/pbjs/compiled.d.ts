@@ -2181,8 +2181,8 @@ export namespace pj {
                 /** Properties of a PutMyselfDetailAreaRequest. */
                 interface IPutMyselfDetailAreaRequest {
 
-                    /** PutMyselfDetailAreaRequest area */
-                    area?: (pj.sakuchin.percussion.proto.ICity[]|null);
+                    /** PutMyselfDetailAreaRequest cityIds */
+                    cityIds?: (string[]|null);
                 }
 
                 /** Represents a PutMyselfDetailAreaRequest. */
@@ -2194,8 +2194,8 @@ export namespace pj {
                      */
                     constructor(properties?: pj.sakuchin.percussion.proto.IPutMyselfDetailAreaRequest);
 
-                    /** PutMyselfDetailAreaRequest area. */
-                    public area: pj.sakuchin.percussion.proto.ICity[];
+                    /** PutMyselfDetailAreaRequest cityIds. */
+                    public cityIds: string[];
 
                     /**
                      * Creates a new PutMyselfDetailAreaRequest instance using the specified properties.
