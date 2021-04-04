@@ -6062,6 +6062,425 @@ $root.pj = (function() {
                     return PostMyselDetailInstrumentResponse;
                 })();
 
+                proto.PutMyselDetailInstrumentRequest = (function() {
+
+                    /**
+                     * Properties of a PutMyselDetailInstrumentRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IPutMyselDetailInstrumentRequest
+                     * @property {Array.<number>|null} [instrumentIds] PutMyselDetailInstrumentRequest instrumentIds
+                     */
+
+                    /**
+                     * Constructs a new PutMyselDetailInstrumentRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a PutMyselDetailInstrumentRequest.
+                     * @implements IPutMyselDetailInstrumentRequest
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselDetailInstrumentRequest=} [properties] Properties to set
+                     */
+                    function PutMyselDetailInstrumentRequest(properties) {
+                        this.instrumentIds = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PutMyselDetailInstrumentRequest instrumentIds.
+                     * @member {Array.<number>} instrumentIds
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest
+                     * @instance
+                     */
+                    PutMyselDetailInstrumentRequest.prototype.instrumentIds = $util.emptyArray;
+
+                    /**
+                     * Creates a new PutMyselDetailInstrumentRequest instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselDetailInstrumentRequest=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest} PutMyselDetailInstrumentRequest instance
+                     */
+                    PutMyselDetailInstrumentRequest.create = function create(properties) {
+                        return new PutMyselDetailInstrumentRequest(properties);
+                    };
+
+                    /**
+                     * Encodes the specified PutMyselDetailInstrumentRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselDetailInstrumentRequest} message PutMyselDetailInstrumentRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PutMyselDetailInstrumentRequest.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.instrumentIds != null && message.instrumentIds.length) {
+                            writer.uint32(/* id 1, wireType 2 =*/10).fork();
+                            for (var i = 0; i < message.instrumentIds.length; ++i)
+                                writer.int32(message.instrumentIds[i]);
+                            writer.ldelim();
+                        }
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PutMyselDetailInstrumentRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselDetailInstrumentRequest} message PutMyselDetailInstrumentRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PutMyselDetailInstrumentRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PutMyselDetailInstrumentRequest message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest} PutMyselDetailInstrumentRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PutMyselDetailInstrumentRequest.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.instrumentIds && message.instrumentIds.length))
+                                    message.instrumentIds = [];
+                                if ((tag & 7) === 2) {
+                                    var end2 = reader.uint32() + reader.pos;
+                                    while (reader.pos < end2)
+                                        message.instrumentIds.push(reader.int32());
+                                } else
+                                    message.instrumentIds.push(reader.int32());
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PutMyselDetailInstrumentRequest message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest} PutMyselDetailInstrumentRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PutMyselDetailInstrumentRequest.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PutMyselDetailInstrumentRequest message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PutMyselDetailInstrumentRequest.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.instrumentIds != null && message.hasOwnProperty("instrumentIds")) {
+                            if (!Array.isArray(message.instrumentIds))
+                                return "instrumentIds: array expected";
+                            for (var i = 0; i < message.instrumentIds.length; ++i)
+                                if (!$util.isInteger(message.instrumentIds[i]))
+                                    return "instrumentIds: integer[] expected";
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PutMyselDetailInstrumentRequest message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest} PutMyselDetailInstrumentRequest
+                     */
+                    PutMyselDetailInstrumentRequest.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest();
+                        if (object.instrumentIds) {
+                            if (!Array.isArray(object.instrumentIds))
+                                throw TypeError(".pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest.instrumentIds: array expected");
+                            message.instrumentIds = [];
+                            for (var i = 0; i < object.instrumentIds.length; ++i)
+                                message.instrumentIds[i] = object.instrumentIds[i] | 0;
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PutMyselDetailInstrumentRequest message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest} message PutMyselDetailInstrumentRequest
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PutMyselDetailInstrumentRequest.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.instrumentIds = [];
+                        if (message.instrumentIds && message.instrumentIds.length) {
+                            object.instrumentIds = [];
+                            for (var j = 0; j < message.instrumentIds.length; ++j)
+                                object.instrumentIds[j] = message.instrumentIds[j];
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PutMyselDetailInstrumentRequest to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PutMyselDetailInstrumentRequest.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PutMyselDetailInstrumentRequest;
+                })();
+
+                proto.PutMyselDetailInstrumentResponse = (function() {
+
+                    /**
+                     * Properties of a PutMyselDetailInstrumentResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IPutMyselDetailInstrumentResponse
+                     * @property {Array.<pj.sakuchin.percussion.proto.IInstrument>|null} [instruments] PutMyselDetailInstrumentResponse instruments
+                     */
+
+                    /**
+                     * Constructs a new PutMyselDetailInstrumentResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a PutMyselDetailInstrumentResponse.
+                     * @implements IPutMyselDetailInstrumentResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselDetailInstrumentResponse=} [properties] Properties to set
+                     */
+                    function PutMyselDetailInstrumentResponse(properties) {
+                        this.instruments = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PutMyselDetailInstrumentResponse instruments.
+                     * @member {Array.<pj.sakuchin.percussion.proto.IInstrument>} instruments
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse
+                     * @instance
+                     */
+                    PutMyselDetailInstrumentResponse.prototype.instruments = $util.emptyArray;
+
+                    /**
+                     * Creates a new PutMyselDetailInstrumentResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselDetailInstrumentResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse} PutMyselDetailInstrumentResponse instance
+                     */
+                    PutMyselDetailInstrumentResponse.create = function create(properties) {
+                        return new PutMyselDetailInstrumentResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified PutMyselDetailInstrumentResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselDetailInstrumentResponse} message PutMyselDetailInstrumentResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PutMyselDetailInstrumentResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.instruments != null && message.instruments.length)
+                            for (var i = 0; i < message.instruments.length; ++i)
+                                $root.pj.sakuchin.percussion.proto.Instrument.encode(message.instruments[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PutMyselDetailInstrumentResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselDetailInstrumentResponse} message PutMyselDetailInstrumentResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PutMyselDetailInstrumentResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PutMyselDetailInstrumentResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse} PutMyselDetailInstrumentResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PutMyselDetailInstrumentResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.instruments && message.instruments.length))
+                                    message.instruments = [];
+                                message.instruments.push($root.pj.sakuchin.percussion.proto.Instrument.decode(reader, reader.uint32()));
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PutMyselDetailInstrumentResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse} PutMyselDetailInstrumentResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PutMyselDetailInstrumentResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PutMyselDetailInstrumentResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PutMyselDetailInstrumentResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.instruments != null && message.hasOwnProperty("instruments")) {
+                            if (!Array.isArray(message.instruments))
+                                return "instruments: array expected";
+                            for (var i = 0; i < message.instruments.length; ++i) {
+                                var error = $root.pj.sakuchin.percussion.proto.Instrument.verify(message.instruments[i]);
+                                if (error)
+                                    return "instruments." + error;
+                            }
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PutMyselDetailInstrumentResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse} PutMyselDetailInstrumentResponse
+                     */
+                    PutMyselDetailInstrumentResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse();
+                        if (object.instruments) {
+                            if (!Array.isArray(object.instruments))
+                                throw TypeError(".pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse.instruments: array expected");
+                            message.instruments = [];
+                            for (var i = 0; i < object.instruments.length; ++i) {
+                                if (typeof object.instruments[i] !== "object")
+                                    throw TypeError(".pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse.instruments: object expected");
+                                message.instruments[i] = $root.pj.sakuchin.percussion.proto.Instrument.fromObject(object.instruments[i]);
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PutMyselDetailInstrumentResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse} message PutMyselDetailInstrumentResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PutMyselDetailInstrumentResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.instruments = [];
+                        if (message.instruments && message.instruments.length) {
+                            object.instruments = [];
+                            for (var j = 0; j < message.instruments.length; ++j)
+                                object.instruments[j] = $root.pj.sakuchin.percussion.proto.Instrument.toObject(message.instruments[j], options);
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PutMyselDetailInstrumentResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PutMyselDetailInstrumentResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PutMyselDetailInstrumentResponse;
+                })();
+
                 proto.DeleteMyselDetailInstrumentRequest = (function() {
 
                     /**
@@ -7058,6 +7477,425 @@ $root.pj = (function() {
                     };
 
                     return PostMyselDetailStudioResponse;
+                })();
+
+                proto.PutMyselDetailStudioRequest = (function() {
+
+                    /**
+                     * Properties of a PutMyselDetailStudioRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IPutMyselDetailStudioRequest
+                     * @property {Array.<number>|null} [studioIds] PutMyselDetailStudioRequest studioIds
+                     */
+
+                    /**
+                     * Constructs a new PutMyselDetailStudioRequest.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a PutMyselDetailStudioRequest.
+                     * @implements IPutMyselDetailStudioRequest
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselDetailStudioRequest=} [properties] Properties to set
+                     */
+                    function PutMyselDetailStudioRequest(properties) {
+                        this.studioIds = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PutMyselDetailStudioRequest studioIds.
+                     * @member {Array.<number>} studioIds
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest
+                     * @instance
+                     */
+                    PutMyselDetailStudioRequest.prototype.studioIds = $util.emptyArray;
+
+                    /**
+                     * Creates a new PutMyselDetailStudioRequest instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselDetailStudioRequest=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest} PutMyselDetailStudioRequest instance
+                     */
+                    PutMyselDetailStudioRequest.create = function create(properties) {
+                        return new PutMyselDetailStudioRequest(properties);
+                    };
+
+                    /**
+                     * Encodes the specified PutMyselDetailStudioRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselDetailStudioRequest} message PutMyselDetailStudioRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PutMyselDetailStudioRequest.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.studioIds != null && message.studioIds.length) {
+                            writer.uint32(/* id 1, wireType 2 =*/10).fork();
+                            for (var i = 0; i < message.studioIds.length; ++i)
+                                writer.int32(message.studioIds[i]);
+                            writer.ldelim();
+                        }
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PutMyselDetailStudioRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselDetailStudioRequest} message PutMyselDetailStudioRequest message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PutMyselDetailStudioRequest.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PutMyselDetailStudioRequest message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest} PutMyselDetailStudioRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PutMyselDetailStudioRequest.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.studioIds && message.studioIds.length))
+                                    message.studioIds = [];
+                                if ((tag & 7) === 2) {
+                                    var end2 = reader.uint32() + reader.pos;
+                                    while (reader.pos < end2)
+                                        message.studioIds.push(reader.int32());
+                                } else
+                                    message.studioIds.push(reader.int32());
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PutMyselDetailStudioRequest message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest} PutMyselDetailStudioRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PutMyselDetailStudioRequest.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PutMyselDetailStudioRequest message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PutMyselDetailStudioRequest.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.studioIds != null && message.hasOwnProperty("studioIds")) {
+                            if (!Array.isArray(message.studioIds))
+                                return "studioIds: array expected";
+                            for (var i = 0; i < message.studioIds.length; ++i)
+                                if (!$util.isInteger(message.studioIds[i]))
+                                    return "studioIds: integer[] expected";
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PutMyselDetailStudioRequest message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest} PutMyselDetailStudioRequest
+                     */
+                    PutMyselDetailStudioRequest.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest();
+                        if (object.studioIds) {
+                            if (!Array.isArray(object.studioIds))
+                                throw TypeError(".pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest.studioIds: array expected");
+                            message.studioIds = [];
+                            for (var i = 0; i < object.studioIds.length; ++i)
+                                message.studioIds[i] = object.studioIds[i] | 0;
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PutMyselDetailStudioRequest message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest} message PutMyselDetailStudioRequest
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PutMyselDetailStudioRequest.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.studioIds = [];
+                        if (message.studioIds && message.studioIds.length) {
+                            object.studioIds = [];
+                            for (var j = 0; j < message.studioIds.length; ++j)
+                                object.studioIds[j] = message.studioIds[j];
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PutMyselDetailStudioRequest to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PutMyselDetailStudioRequest.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PutMyselDetailStudioRequest;
+                })();
+
+                proto.PutMyselDetailStudioResponse = (function() {
+
+                    /**
+                     * Properties of a PutMyselDetailStudioResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @interface IPutMyselDetailStudioResponse
+                     * @property {Array.<pj.sakuchin.percussion.proto.IInstrument>|null} [studios] PutMyselDetailStudioResponse studios
+                     */
+
+                    /**
+                     * Constructs a new PutMyselDetailStudioResponse.
+                     * @memberof pj.sakuchin.percussion.proto
+                     * @classdesc Represents a PutMyselDetailStudioResponse.
+                     * @implements IPutMyselDetailStudioResponse
+                     * @constructor
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselDetailStudioResponse=} [properties] Properties to set
+                     */
+                    function PutMyselDetailStudioResponse(properties) {
+                        this.studios = [];
+                        if (properties)
+                            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                                if (properties[keys[i]] != null)
+                                    this[keys[i]] = properties[keys[i]];
+                    }
+
+                    /**
+                     * PutMyselDetailStudioResponse studios.
+                     * @member {Array.<pj.sakuchin.percussion.proto.IInstrument>} studios
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse
+                     * @instance
+                     */
+                    PutMyselDetailStudioResponse.prototype.studios = $util.emptyArray;
+
+                    /**
+                     * Creates a new PutMyselDetailStudioResponse instance using the specified properties.
+                     * @function create
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselDetailStudioResponse=} [properties] Properties to set
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse} PutMyselDetailStudioResponse instance
+                     */
+                    PutMyselDetailStudioResponse.create = function create(properties) {
+                        return new PutMyselDetailStudioResponse(properties);
+                    };
+
+                    /**
+                     * Encodes the specified PutMyselDetailStudioResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse.verify|verify} messages.
+                     * @function encode
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselDetailStudioResponse} message PutMyselDetailStudioResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PutMyselDetailStudioResponse.encode = function encode(message, writer) {
+                        if (!writer)
+                            writer = $Writer.create();
+                        if (message.studios != null && message.studios.length)
+                            for (var i = 0; i < message.studios.length; ++i)
+                                $root.pj.sakuchin.percussion.proto.Instrument.encode(message.studios[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+                        return writer;
+                    };
+
+                    /**
+                     * Encodes the specified PutMyselDetailStudioResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse.verify|verify} messages.
+                     * @function encodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.IPutMyselDetailStudioResponse} message PutMyselDetailStudioResponse message or plain object to encode
+                     * @param {$protobuf.Writer} [writer] Writer to encode to
+                     * @returns {$protobuf.Writer} Writer
+                     */
+                    PutMyselDetailStudioResponse.encodeDelimited = function encodeDelimited(message, writer) {
+                        return this.encode(message, writer).ldelim();
+                    };
+
+                    /**
+                     * Decodes a PutMyselDetailStudioResponse message from the specified reader or buffer.
+                     * @function decode
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @param {number} [length] Message length if known beforehand
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse} PutMyselDetailStudioResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PutMyselDetailStudioResponse.decode = function decode(reader, length) {
+                        if (!(reader instanceof $Reader))
+                            reader = $Reader.create(reader);
+                        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse();
+                        while (reader.pos < end) {
+                            var tag = reader.uint32();
+                            switch (tag >>> 3) {
+                            case 1:
+                                if (!(message.studios && message.studios.length))
+                                    message.studios = [];
+                                message.studios.push($root.pj.sakuchin.percussion.proto.Instrument.decode(reader, reader.uint32()));
+                                break;
+                            default:
+                                reader.skipType(tag & 7);
+                                break;
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Decodes a PutMyselDetailStudioResponse message from the specified reader or buffer, length delimited.
+                     * @function decodeDelimited
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse
+                     * @static
+                     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse} PutMyselDetailStudioResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    PutMyselDetailStudioResponse.decodeDelimited = function decodeDelimited(reader) {
+                        if (!(reader instanceof $Reader))
+                            reader = new $Reader(reader);
+                        return this.decode(reader, reader.uint32());
+                    };
+
+                    /**
+                     * Verifies a PutMyselDetailStudioResponse message.
+                     * @function verify
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse
+                     * @static
+                     * @param {Object.<string,*>} message Plain object to verify
+                     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+                     */
+                    PutMyselDetailStudioResponse.verify = function verify(message) {
+                        if (typeof message !== "object" || message === null)
+                            return "object expected";
+                        if (message.studios != null && message.hasOwnProperty("studios")) {
+                            if (!Array.isArray(message.studios))
+                                return "studios: array expected";
+                            for (var i = 0; i < message.studios.length; ++i) {
+                                var error = $root.pj.sakuchin.percussion.proto.Instrument.verify(message.studios[i]);
+                                if (error)
+                                    return "studios." + error;
+                            }
+                        }
+                        return null;
+                    };
+
+                    /**
+                     * Creates a PutMyselDetailStudioResponse message from a plain object. Also converts values to their respective internal types.
+                     * @function fromObject
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse
+                     * @static
+                     * @param {Object.<string,*>} object Plain object
+                     * @returns {pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse} PutMyselDetailStudioResponse
+                     */
+                    PutMyselDetailStudioResponse.fromObject = function fromObject(object) {
+                        if (object instanceof $root.pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse)
+                            return object;
+                        var message = new $root.pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse();
+                        if (object.studios) {
+                            if (!Array.isArray(object.studios))
+                                throw TypeError(".pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse.studios: array expected");
+                            message.studios = [];
+                            for (var i = 0; i < object.studios.length; ++i) {
+                                if (typeof object.studios[i] !== "object")
+                                    throw TypeError(".pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse.studios: object expected");
+                                message.studios[i] = $root.pj.sakuchin.percussion.proto.Instrument.fromObject(object.studios[i]);
+                            }
+                        }
+                        return message;
+                    };
+
+                    /**
+                     * Creates a plain object from a PutMyselDetailStudioResponse message. Also converts values to other types if specified.
+                     * @function toObject
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse
+                     * @static
+                     * @param {pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse} message PutMyselDetailStudioResponse
+                     * @param {$protobuf.IConversionOptions} [options] Conversion options
+                     * @returns {Object.<string,*>} Plain object
+                     */
+                    PutMyselDetailStudioResponse.toObject = function toObject(message, options) {
+                        if (!options)
+                            options = {};
+                        var object = {};
+                        if (options.arrays || options.defaults)
+                            object.studios = [];
+                        if (message.studios && message.studios.length) {
+                            object.studios = [];
+                            for (var j = 0; j < message.studios.length; ++j)
+                                object.studios[j] = $root.pj.sakuchin.percussion.proto.Instrument.toObject(message.studios[j], options);
+                        }
+                        return object;
+                    };
+
+                    /**
+                     * Converts this PutMyselDetailStudioResponse to JSON.
+                     * @function toJSON
+                     * @memberof pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse
+                     * @instance
+                     * @returns {Object.<string,*>} JSON object
+                     */
+                    PutMyselDetailStudioResponse.prototype.toJSON = function toJSON() {
+                        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                    };
+
+                    return PutMyselDetailStudioResponse;
                 })();
 
                 proto.DeleteMyselfDetailStudioRequest = (function() {

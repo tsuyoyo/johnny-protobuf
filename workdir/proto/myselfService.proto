@@ -61,6 +61,14 @@ message PostMyselDetailInstrumentResponse {
     repeated Instrument instruments = 1;
 }
 
+message PutMyselDetailInstrumentRequest {
+    repeated int32 instrumentIds = 1;
+}
+
+message PutMyselDetailInstrumentResponse {
+    repeated Instrument instruments = 1;
+}
+
 message DeleteMyselDetailInstrumentRequest {
     int32 instrumentId = 1;
 }
@@ -80,6 +88,14 @@ message PostMyselDetailStudioRequest {
 
 message PostMyselDetailStudioResponse {
     repeated Studio studios = 1;
+}
+
+message PutMyselDetailStudioRequest {
+    repeated int32 studioIds = 1;
+}
+
+message PutMyselDetailStudioResponse {
+    repeated Instrument studios = 1;
 }
 
 message DeleteMyselfDetailStudioRequest {

@@ -2628,6 +2628,186 @@ export namespace pj {
                     public toJSON(): { [k: string]: any };
                 }
 
+                /** Properties of a PutMyselDetailInstrumentRequest. */
+                interface IPutMyselDetailInstrumentRequest {
+
+                    /** PutMyselDetailInstrumentRequest instrumentIds */
+                    instrumentIds?: (number[]|null);
+                }
+
+                /** Represents a PutMyselDetailInstrumentRequest. */
+                class PutMyselDetailInstrumentRequest implements IPutMyselDetailInstrumentRequest {
+
+                    /**
+                     * Constructs a new PutMyselDetailInstrumentRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPutMyselDetailInstrumentRequest);
+
+                    /** PutMyselDetailInstrumentRequest instrumentIds. */
+                    public instrumentIds: number[];
+
+                    /**
+                     * Creates a new PutMyselDetailInstrumentRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PutMyselDetailInstrumentRequest instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPutMyselDetailInstrumentRequest): pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest;
+
+                    /**
+                     * Encodes the specified PutMyselDetailInstrumentRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest.verify|verify} messages.
+                     * @param message PutMyselDetailInstrumentRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPutMyselDetailInstrumentRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PutMyselDetailInstrumentRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest.verify|verify} messages.
+                     * @param message PutMyselDetailInstrumentRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPutMyselDetailInstrumentRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PutMyselDetailInstrumentRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PutMyselDetailInstrumentRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest;
+
+                    /**
+                     * Decodes a PutMyselDetailInstrumentRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PutMyselDetailInstrumentRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest;
+
+                    /**
+                     * Verifies a PutMyselDetailInstrumentRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PutMyselDetailInstrumentRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PutMyselDetailInstrumentRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest;
+
+                    /**
+                     * Creates a plain object from a PutMyselDetailInstrumentRequest message. Also converts values to other types if specified.
+                     * @param message PutMyselDetailInstrumentRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PutMyselDetailInstrumentRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PutMyselDetailInstrumentRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PutMyselDetailInstrumentResponse. */
+                interface IPutMyselDetailInstrumentResponse {
+
+                    /** PutMyselDetailInstrumentResponse instruments */
+                    instruments?: (pj.sakuchin.percussion.proto.IInstrument[]|null);
+                }
+
+                /** Represents a PutMyselDetailInstrumentResponse. */
+                class PutMyselDetailInstrumentResponse implements IPutMyselDetailInstrumentResponse {
+
+                    /**
+                     * Constructs a new PutMyselDetailInstrumentResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPutMyselDetailInstrumentResponse);
+
+                    /** PutMyselDetailInstrumentResponse instruments. */
+                    public instruments: pj.sakuchin.percussion.proto.IInstrument[];
+
+                    /**
+                     * Creates a new PutMyselDetailInstrumentResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PutMyselDetailInstrumentResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPutMyselDetailInstrumentResponse): pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse;
+
+                    /**
+                     * Encodes the specified PutMyselDetailInstrumentResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse.verify|verify} messages.
+                     * @param message PutMyselDetailInstrumentResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPutMyselDetailInstrumentResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PutMyselDetailInstrumentResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse.verify|verify} messages.
+                     * @param message PutMyselDetailInstrumentResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPutMyselDetailInstrumentResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PutMyselDetailInstrumentResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PutMyselDetailInstrumentResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse;
+
+                    /**
+                     * Decodes a PutMyselDetailInstrumentResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PutMyselDetailInstrumentResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse;
+
+                    /**
+                     * Verifies a PutMyselDetailInstrumentResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PutMyselDetailInstrumentResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PutMyselDetailInstrumentResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse;
+
+                    /**
+                     * Creates a plain object from a PutMyselDetailInstrumentResponse message. Also converts values to other types if specified.
+                     * @param message PutMyselDetailInstrumentResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PutMyselDetailInstrumentResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PutMyselDetailInstrumentResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
                 /** Properties of a DeleteMyselDetailInstrumentRequest. */
                 interface IDeleteMyselDetailInstrumentRequest {
 
@@ -3073,6 +3253,186 @@ export namespace pj {
 
                     /**
                      * Converts this PostMyselDetailStudioResponse to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PutMyselDetailStudioRequest. */
+                interface IPutMyselDetailStudioRequest {
+
+                    /** PutMyselDetailStudioRequest studioIds */
+                    studioIds?: (number[]|null);
+                }
+
+                /** Represents a PutMyselDetailStudioRequest. */
+                class PutMyselDetailStudioRequest implements IPutMyselDetailStudioRequest {
+
+                    /**
+                     * Constructs a new PutMyselDetailStudioRequest.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPutMyselDetailStudioRequest);
+
+                    /** PutMyselDetailStudioRequest studioIds. */
+                    public studioIds: number[];
+
+                    /**
+                     * Creates a new PutMyselDetailStudioRequest instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PutMyselDetailStudioRequest instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPutMyselDetailStudioRequest): pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest;
+
+                    /**
+                     * Encodes the specified PutMyselDetailStudioRequest message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest.verify|verify} messages.
+                     * @param message PutMyselDetailStudioRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPutMyselDetailStudioRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PutMyselDetailStudioRequest message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest.verify|verify} messages.
+                     * @param message PutMyselDetailStudioRequest message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPutMyselDetailStudioRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PutMyselDetailStudioRequest message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PutMyselDetailStudioRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest;
+
+                    /**
+                     * Decodes a PutMyselDetailStudioRequest message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PutMyselDetailStudioRequest
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest;
+
+                    /**
+                     * Verifies a PutMyselDetailStudioRequest message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PutMyselDetailStudioRequest message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PutMyselDetailStudioRequest
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest;
+
+                    /**
+                     * Creates a plain object from a PutMyselDetailStudioRequest message. Also converts values to other types if specified.
+                     * @param message PutMyselDetailStudioRequest
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PutMyselDetailStudioRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PutMyselDetailStudioRequest to JSON.
+                     * @returns JSON object
+                     */
+                    public toJSON(): { [k: string]: any };
+                }
+
+                /** Properties of a PutMyselDetailStudioResponse. */
+                interface IPutMyselDetailStudioResponse {
+
+                    /** PutMyselDetailStudioResponse studios */
+                    studios?: (pj.sakuchin.percussion.proto.IInstrument[]|null);
+                }
+
+                /** Represents a PutMyselDetailStudioResponse. */
+                class PutMyselDetailStudioResponse implements IPutMyselDetailStudioResponse {
+
+                    /**
+                     * Constructs a new PutMyselDetailStudioResponse.
+                     * @param [properties] Properties to set
+                     */
+                    constructor(properties?: pj.sakuchin.percussion.proto.IPutMyselDetailStudioResponse);
+
+                    /** PutMyselDetailStudioResponse studios. */
+                    public studios: pj.sakuchin.percussion.proto.IInstrument[];
+
+                    /**
+                     * Creates a new PutMyselDetailStudioResponse instance using the specified properties.
+                     * @param [properties] Properties to set
+                     * @returns PutMyselDetailStudioResponse instance
+                     */
+                    public static create(properties?: pj.sakuchin.percussion.proto.IPutMyselDetailStudioResponse): pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse;
+
+                    /**
+                     * Encodes the specified PutMyselDetailStudioResponse message. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse.verify|verify} messages.
+                     * @param message PutMyselDetailStudioResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encode(message: pj.sakuchin.percussion.proto.IPutMyselDetailStudioResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Encodes the specified PutMyselDetailStudioResponse message, length delimited. Does not implicitly {@link pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse.verify|verify} messages.
+                     * @param message PutMyselDetailStudioResponse message or plain object to encode
+                     * @param [writer] Writer to encode to
+                     * @returns Writer
+                     */
+                    public static encodeDelimited(message: pj.sakuchin.percussion.proto.IPutMyselDetailStudioResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+                    /**
+                     * Decodes a PutMyselDetailStudioResponse message from the specified reader or buffer.
+                     * @param reader Reader or buffer to decode from
+                     * @param [length] Message length if known beforehand
+                     * @returns PutMyselDetailStudioResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse;
+
+                    /**
+                     * Decodes a PutMyselDetailStudioResponse message from the specified reader or buffer, length delimited.
+                     * @param reader Reader or buffer to decode from
+                     * @returns PutMyselDetailStudioResponse
+                     * @throws {Error} If the payload is not a reader or valid buffer
+                     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+                     */
+                    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse;
+
+                    /**
+                     * Verifies a PutMyselDetailStudioResponse message.
+                     * @param message Plain object to verify
+                     * @returns `null` if valid, otherwise the reason why it is not
+                     */
+                    public static verify(message: { [k: string]: any }): (string|null);
+
+                    /**
+                     * Creates a PutMyselDetailStudioResponse message from a plain object. Also converts values to their respective internal types.
+                     * @param object Plain object
+                     * @returns PutMyselDetailStudioResponse
+                     */
+                    public static fromObject(object: { [k: string]: any }): pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse;
+
+                    /**
+                     * Creates a plain object from a PutMyselDetailStudioResponse message. Also converts values to other types if specified.
+                     * @param message PutMyselDetailStudioResponse
+                     * @param [options] Conversion options
+                     * @returns Plain object
+                     */
+                    public static toObject(message: pj.sakuchin.percussion.proto.PutMyselDetailStudioResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+                    /**
+                     * Converts this PutMyselDetailStudioResponse to JSON.
                      * @returns JSON object
                      */
                     public toJSON(): { [k: string]: any };
