@@ -2723,6 +2723,7 @@ $root.pj = (function() {
                      * @memberof pj.sakuchin.percussion.proto
                      * @interface IPostSignupRequest
                      * @property {string|null} [token] PostSignupRequest token
+                     * @property {string|null} [name] PostSignupRequest name
                      */
 
                     /**
@@ -2747,6 +2748,14 @@ $root.pj = (function() {
                      * @instance
                      */
                     PostSignupRequest.prototype.token = "";
+
+                    /**
+                     * PostSignupRequest name.
+                     * @member {string} name
+                     * @memberof pj.sakuchin.percussion.proto.PostSignupRequest
+                     * @instance
+                     */
+                    PostSignupRequest.prototype.name = "";
 
                     /**
                      * Creates a new PostSignupRequest instance using the specified properties.
@@ -2774,6 +2783,8 @@ $root.pj = (function() {
                             writer = $Writer.create();
                         if (message.token != null && Object.hasOwnProperty.call(message, "token"))
                             writer.uint32(/* id 1, wireType 2 =*/10).string(message.token);
+                        if (message.name != null && Object.hasOwnProperty.call(message, "name"))
+                            writer.uint32(/* id 2, wireType 2 =*/18).string(message.name);
                         return writer;
                     };
 
@@ -2810,6 +2821,9 @@ $root.pj = (function() {
                             switch (tag >>> 3) {
                             case 1:
                                 message.token = reader.string();
+                                break;
+                            case 2:
+                                message.name = reader.string();
                                 break;
                             default:
                                 reader.skipType(tag & 7);
@@ -2849,6 +2863,9 @@ $root.pj = (function() {
                         if (message.token != null && message.hasOwnProperty("token"))
                             if (!$util.isString(message.token))
                                 return "token: string expected";
+                        if (message.name != null && message.hasOwnProperty("name"))
+                            if (!$util.isString(message.name))
+                                return "name: string expected";
                         return null;
                     };
 
@@ -2866,6 +2883,8 @@ $root.pj = (function() {
                         var message = new $root.pj.sakuchin.percussion.proto.PostSignupRequest();
                         if (object.token != null)
                             message.token = String(object.token);
+                        if (object.name != null)
+                            message.name = String(object.name);
                         return message;
                     };
 
@@ -2882,10 +2901,14 @@ $root.pj = (function() {
                         if (!options)
                             options = {};
                         var object = {};
-                        if (options.defaults)
+                        if (options.defaults) {
                             object.token = "";
+                            object.name = "";
+                        }
                         if (message.token != null && message.hasOwnProperty("token"))
                             object.token = message.token;
+                        if (message.name != null && message.hasOwnProperty("name"))
+                            object.name = message.name;
                         return object;
                     };
 

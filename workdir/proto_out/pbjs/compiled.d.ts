@@ -1103,6 +1103,9 @@ export namespace pj {
 
                     /** PostSignupRequest token */
                     token?: (string|null);
+
+                    /** PostSignupRequest name */
+                    name?: (string|null);
                 }
 
                 /** Represents a PostSignupRequest. */
@@ -1116,6 +1119,9 @@ export namespace pj {
 
                     /** PostSignupRequest token. */
                     public token: string;
+
+                    /** PostSignupRequest name. */
+                    public name: string;
 
                     /**
                      * Creates a new PostSignupRequest instance using the specified properties.
