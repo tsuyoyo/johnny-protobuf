@@ -5,6 +5,7 @@ import "proto/player.proto";
 
 message PostSignupRequest {
     string token = 1;
+    string name = 2;
 }
 
 message PostSignupResponse {
@@ -14,7 +15,7 @@ message PostSignupResponse {
 message PostLoginRequest {
     string token = 1;
 }
-  
+
 message PostLoginResponse {
     Player player = 1;
 }
