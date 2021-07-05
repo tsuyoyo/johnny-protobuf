@@ -7,10 +7,17 @@ services:
       dockerfile: ./Dockerfile
     command: >
       sh -c "
+        echo 'Generate TS proto files'
         rm -rf ./proto_out && 
         mkdir -p ./proto_out/pbjs && 
         pbjs --target static-module -p js --wrap commonjs --keep-case -o ./proto_out/pbjs/compiled.js ./proto/*
-        pbts -o proto_out/pbjs/compiled.d.ts ./proto_out/pbjs/compiled.js
+        pbts -o proto_out/pbjs/compiled.d.ts ./proto_out/pbjs/compiled.js        
+
+        echo 'Generate dart proto files'
+        rm -rf ./proto_out/dart
+        mkdir -p ./proto_out/dart
+        /usr/lib/dart/bin/pub --version
+        protoc --dart_out=./proto_out/dart ./proto/* --plugin=protoc-gen-dart=/root/.pub-cache/bin/protoc-gen-dart
       "
     volumes: 
       - ./workdir/:/usr/src/app
