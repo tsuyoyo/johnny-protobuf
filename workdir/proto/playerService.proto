@@ -2,7 +2,6 @@ syntax = "proto3";
 package pj.sakuchin.percussion.proto;
 
 import "proto/area.proto";
-import "proto/user.proto";
 import "proto/player.proto";
 import "proto/studio.proto";
 import "proto/instrument.proto";

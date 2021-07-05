@@ -9766,8 +9766,8 @@ $root.pj = (function() {
                      * @property {string|null} [introduction] PlayerDetail introduction
                      * @property {Array.<pj.sakuchin.percussion.proto.ICity>|null} [activeAreas] PlayerDetail activeAreas
                      * @property {Array.<pj.sakuchin.percussion.proto.IInstrument>|null} [instruments] PlayerDetail instruments
-                     * @property {Array.<pj.sakuchin.percussion.proto.IUser>|null} [followers] PlayerDetail followers
-                     * @property {Array.<pj.sakuchin.percussion.proto.IUser>|null} [followees] PlayerDetail followees
+                     * @property {Array.<pj.sakuchin.percussion.proto.IPlayer>|null} [followers] PlayerDetail followers
+                     * @property {Array.<pj.sakuchin.percussion.proto.IPlayer>|null} [followees] PlayerDetail followees
                      */
 
                     /**
@@ -9839,7 +9839,7 @@ $root.pj = (function() {
 
                     /**
                      * PlayerDetail followers.
-                     * @member {Array.<pj.sakuchin.percussion.proto.IUser>} followers
+                     * @member {Array.<pj.sakuchin.percussion.proto.IPlayer>} followers
                      * @memberof pj.sakuchin.percussion.proto.PlayerDetail
                      * @instance
                      */
@@ -9847,7 +9847,7 @@ $root.pj = (function() {
 
                     /**
                      * PlayerDetail followees.
-                     * @member {Array.<pj.sakuchin.percussion.proto.IUser>} followees
+                     * @member {Array.<pj.sakuchin.percussion.proto.IPlayer>} followees
                      * @memberof pj.sakuchin.percussion.proto.PlayerDetail
                      * @instance
                      */
@@ -9893,10 +9893,10 @@ $root.pj = (function() {
                                 $root.pj.sakuchin.percussion.proto.Instrument.encode(message.instruments[i], writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
                         if (message.followers != null && message.followers.length)
                             for (var i = 0; i < message.followers.length; ++i)
-                                $root.pj.sakuchin.percussion.proto.User.encode(message.followers[i], writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
+                                $root.pj.sakuchin.percussion.proto.Player.encode(message.followers[i], writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
                         if (message.followees != null && message.followees.length)
                             for (var i = 0; i < message.followees.length; ++i)
-                                $root.pj.sakuchin.percussion.proto.User.encode(message.followees[i], writer.uint32(/* id 8, wireType 2 =*/66).fork()).ldelim();
+                                $root.pj.sakuchin.percussion.proto.Player.encode(message.followees[i], writer.uint32(/* id 8, wireType 2 =*/66).fork()).ldelim();
                         return writer;
                     };
 
@@ -9956,12 +9956,12 @@ $root.pj = (function() {
                             case 7:
                                 if (!(message.followers && message.followers.length))
                                     message.followers = [];
-                                message.followers.push($root.pj.sakuchin.percussion.proto.User.decode(reader, reader.uint32()));
+                                message.followers.push($root.pj.sakuchin.percussion.proto.Player.decode(reader, reader.uint32()));
                                 break;
                             case 8:
                                 if (!(message.followees && message.followees.length))
                                     message.followees = [];
-                                message.followees.push($root.pj.sakuchin.percussion.proto.User.decode(reader, reader.uint32()));
+                                message.followees.push($root.pj.sakuchin.percussion.proto.Player.decode(reader, reader.uint32()));
                                 break;
                             default:
                                 reader.skipType(tag & 7);
@@ -10032,7 +10032,7 @@ $root.pj = (function() {
                             if (!Array.isArray(message.followers))
                                 return "followers: array expected";
                             for (var i = 0; i < message.followers.length; ++i) {
-                                var error = $root.pj.sakuchin.percussion.proto.User.verify(message.followers[i]);
+                                var error = $root.pj.sakuchin.percussion.proto.Player.verify(message.followers[i]);
                                 if (error)
                                     return "followers." + error;
                             }
@@ -10041,7 +10041,7 @@ $root.pj = (function() {
                             if (!Array.isArray(message.followees))
                                 return "followees: array expected";
                             for (var i = 0; i < message.followees.length; ++i) {
-                                var error = $root.pj.sakuchin.percussion.proto.User.verify(message.followees[i]);
+                                var error = $root.pj.sakuchin.percussion.proto.Player.verify(message.followees[i]);
                                 if (error)
                                     return "followees." + error;
                             }
@@ -10096,7 +10096,7 @@ $root.pj = (function() {
                             for (var i = 0; i < object.followers.length; ++i) {
                                 if (typeof object.followers[i] !== "object")
                                     throw TypeError(".pj.sakuchin.percussion.proto.PlayerDetail.followers: object expected");
-                                message.followers[i] = $root.pj.sakuchin.percussion.proto.User.fromObject(object.followers[i]);
+                                message.followers[i] = $root.pj.sakuchin.percussion.proto.Player.fromObject(object.followers[i]);
                             }
                         }
                         if (object.followees) {
@@ -10106,7 +10106,7 @@ $root.pj = (function() {
                             for (var i = 0; i < object.followees.length; ++i) {
                                 if (typeof object.followees[i] !== "object")
                                     throw TypeError(".pj.sakuchin.percussion.proto.PlayerDetail.followees: object expected");
-                                message.followees[i] = $root.pj.sakuchin.percussion.proto.User.fromObject(object.followees[i]);
+                                message.followees[i] = $root.pj.sakuchin.percussion.proto.Player.fromObject(object.followees[i]);
                             }
                         }
                         return message;
@@ -10158,12 +10158,12 @@ $root.pj = (function() {
                         if (message.followers && message.followers.length) {
                             object.followers = [];
                             for (var j = 0; j < message.followers.length; ++j)
-                                object.followers[j] = $root.pj.sakuchin.percussion.proto.User.toObject(message.followers[j], options);
+                                object.followers[j] = $root.pj.sakuchin.percussion.proto.Player.toObject(message.followers[j], options);
                         }
                         if (message.followees && message.followees.length) {
                             object.followees = [];
                             for (var j = 0; j < message.followees.length; ++j)
-                                object.followees[j] = $root.pj.sakuchin.percussion.proto.User.toObject(message.followees[j], options);
+                                object.followees[j] = $root.pj.sakuchin.percussion.proto.Player.toObject(message.followees[j], options);
                         }
                         return object;
                     };
