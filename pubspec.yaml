@@ -1,5 +1,0 @@
-name: johnny_proto
-decscription: Johnny proto files in Dart
-version: 0.0.1
-environment:
-  sdk: ">=2.7.0
