@@ -18,6 +18,8 @@ services:
         mkdir -p ./proto_out/dart/lib
         /usr/lib/dart/bin/pub --version
         protoc --dart_out=./proto_out/dart/lib ./proto/* --plugin=protoc-gen-dart=/root/.pub-cache/bin/protoc-gen-dart
+        mv ./proto_out/dart/lib/proto/* ./proto_out/dart/lib/
+        rmdir ./proto_out/dart/lib/proto 
       "
     volumes: 
       - ./workdir/:/usr/src/app
